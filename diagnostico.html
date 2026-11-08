@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Our Story · Diagnóstico de recepción</title>
+<meta name="robots" content="noindex,nofollow">
+<style>
+:root{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#203d39;background:#fbf8f0}
+*{box-sizing:border-box}body{margin:0;line-height:1.6}.wrap{width:min(760px,calc(100% - 36px));margin:4rem auto}
+h1{font-size:clamp(2rem,5vw,3rem);letter-spacing:-.04em;line-height:1.12}p{color:#435950}
+main{background:white;border:1px solid #dbe5da;border-radius:20px;padding:clamp(20px,4vw,40px);box-shadow:0 12px 35px #203d3912}
+button{background:#24483f;color:white;border:0;border-radius:12px;padding:14px 22px;font-size:1rem;cursor:pointer;font-weight:700}
+button:disabled{opacity:.6;cursor:wait}.panel{margin-top:20px;border:1px solid #dce4df;border-radius:12px;padding:18px}
+.status{font-weight:bold}.status.pending{color:#5f6050}.status.good{color:#20633b}.status.bad{color:#a52f22}
+code{padding:.1em .35em;background:#eaf2ec;border-radius:4px;word-break:break-word}
+a{color:#24483f}
+small{color:#5c716b}
+</style>
+</head>
+<body><div class="wrap"><main>
+<p><a href="./index.html">← Volver a Our Story</a></p>
+<h1>Diagnóstico de recepción</h1>
+<p>Esta prueba comprueba las dos funciones de Supabase desde tu dominio de GitHub Pages. No envía archivos, conversaciones ni datos personales. Solo manda un JSON vacío a cada función.</p>
+<p><strong>Estado previsto:</strong> <code>503</code> con recepción desactivada. Es una respuesta correcta porque indica que la función contesta y está impidiendo nuevas aportaciones.</p>
+<button id="go">Comprobar conexión con Supabase</button>
+<div id="register" class="panel"><strong>1. register-donation (ruta swift-endpoint)</strong><div class="status pending">Pendiente de prueba</div><small></small></div>
+<div id="confirm" class="panel"><strong>2. confirm-donation</strong><div class="status pending">Pendiente de prueba</div><small></small></div>
+<p id="summary" role="status" aria-live="polite"></p>
+<p><small>Interpretación: 503 = acceso bloqueado correctamente; 401 = posible JWT obligatorio; 403 = origen no permitido; 404 = dirección incorrecta; error de red/CORS = comprobar configuración y logs; 400 = posible lógica diferente o bloqueo no aplicado. Esta comprobación no prueba la subida completa ni valida la seguridad integral.</small></p>
+</main></div>
+<script>
+const BASE='https://wklvosizkmoslaetxhqc.supabase.co/functions/v1/';
+const PUBLIC_KEY='sb_publishable_RlaWROXaaV08Hmm_-9kc0A_aTl0Htku';
+const jobs=[['register','swift-endpoint'],['confirm','confirm-donation']];
+function classify(status,raw){
+  if(status===503)return {ok:true,desc:'La función responde y mantiene desactivada la recepción.'};
+  if(status===401)return {ok:false,desc:'Acceso denegado (401). Revisa Verify JWT en Supabase.'};
+  if(status===403)return {ok:false,desc:'Origen denegado (403). Revisa ALLOWED_ORIGIN.'};
+  if(status===404)return {ok:false,desc:'No se encontró la ruta (404). Revisa la URL de la función.'};
+  if(status===400)return {ok:false,desc:'Petición inválida (400): se esperaba 503 antes de validar el cuerpo.'};
+  if(status>=500)return {ok:false,desc:'Error de servidor ('+status+'). Consulta los logs.'};
+  return {ok:false,desc:'Respuesta inesperada ('+status+'). '+(raw||'').slice(0,100)};
+}
+async function runOne(id,route){
+  const el=document.getElementById(id),st=el.querySelector('.status'),small=el.querySelector('small');
+  st.textContent='Probando…';st.className='status pending';small.textContent='';
+  try{
+    const controller=new AbortController();
+    const timeout=setTimeout(()=>controller.abort(),12000);
+    let response;
+    try{
+      response=await fetch(BASE+route,{method:'POST',mode:'cors',cache:'no-store',signal:controller.signal,
+        headers:{'Content-Type':'application/json',apikey:PUBLIC_KEY},body:'{}'});
+    }finally{clearTimeout(timeout)}
+    const raw=await response.text();const result=classify(response.status,raw);
+    st.textContent='HTTP '+response.status+' · '+(result.ok?'Esperado':'Revisar');
+    st.className='status '+(result.ok?'good':'bad');
+    small.textContent=result.desc;
+    return result.ok;
+  }catch(err){
+    st.textContent='Error de conexión o CORS';st.className='status bad';
+    small.textContent=err?.name==='AbortError'?'La solicitud ha superado 12 segundos.':'Puede haber un problema de CORS, conexión, ruta o configuración de la función.';
+    return false;
+  }
+}
+document.getElementById('go').addEventListener('click',async()=>{
+  const b=document.getElementById('go');b.disabled=true;
+  try{
+    const results=[];
+    for(const [id,route] of jobs)results.push(await runOne(id,route));
+    document.getElementById('summary').textContent=results.every(Boolean)?
+      '✅ Ambas funciones responden con el bloqueo de recepción activo. Siguiente paso: comprobar la subida de un chat ficticio en un entorno de pruebas.':
+      '⚠️ Hay una respuesta que debemos revisar antes de habilitar envíos.';
+  }finally{b.disabled=false}
+});
+</script>
+</body></html>
