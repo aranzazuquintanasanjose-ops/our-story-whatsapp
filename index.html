@@ -76,7 +76,7 @@
   <script>
 // Solo valores públicos. No publiques claves secretas en GitHub.
 window.OUR_STORY_CONFIG = {
-  supabaseUrl: '',
+  supabaseUrl: 'https://wklvosizkmoslaetxhqc.supabase.co',
   publishableKey: '',
   turnstileSiteKey: '0x4AAAAAAF4_R2q3zVpHa0aN',
   bucket: 'our-story-chats',
@@ -1388,6 +1388,22 @@ if(form){
       const mime=payload.extension==='txt'?'text/plain':'application/zip';
       const {error:uploadError}=await supabase.storage.from(config.bucket).uploadToSignedUrl(signed.path,signed.token,selectedFile,{contentType:mime});
       if(uploadError)throw Error(t('errorUpload'));
+      // Never show a received receipt until the private server has verified the object.
+      // The receipt is retained in case verification needs to be retried.
+      const {data:receipt,error:confirmationError}=await supabase.functions.invoke('confirm-donation',{
+        body:{id:signed.id,withdrawalCode:signed.withdrawalCode}
+      });
+      if(confirmationError||receipt?.ok!==true||!['received','reviewed'].includes(receipt.status)){
+        const errors={
+          es:'El archivo se ha subido, pero aún no hemos podido confirmar la recepción. Conserva este código:',
+          en:'Your file was uploaded, but receipt has not been confirmed. Keep this code:',
+          pt:'O ficheiro foi carregado, mas a receção ainda não foi confirmada. Guarde este código:',
+          fr:'Le fichier a été envoyé, mais sa réception reste à confirmer. Conservez ce code :',
+          it:'Il file è stato caricato, ma la ricezione non è ancora confermata. Conserva questo codice:',
+          de:'Die Datei wurde hochgeladen, aber der Empfang ist noch nicht bestätigt. Bewahre diesen Code auf:'
+        };
+        throw Error((errors[lang]||errors.es)+' '+signed.withdrawalCode);
+      }
       $('withdrawal-code').textContent=signed.withdrawalCode;form.hidden=true;$('success-panel').hidden=false;
       $('success-panel').scrollIntoView({behavior:'smooth',block:'center'});
     }catch(err){showFeedback(status,err.message||t('errorConnection'))}
