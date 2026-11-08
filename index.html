@@ -1,0 +1,1402 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Our Story: descubre la historia de tu chat y colabora de forma voluntaria con una investigación lingüística.">
+  <meta name="theme-color" content="#203c39">
+  <title>Our Story — Every chat has a story</title>
+  <style>
+:root{--ink:#203d39;--muted:#657a74;--mint:#e8f0e9;--cream:#fbf8f0;--peach:#f7d9c4;--leaf:#c5dfb6;--line:#e1e7df;--paper:#fffefa;--shadow:0 15px 45px #203c3913}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);line-height:1.6}h1,h2,h3,h4,p{margin-top:0}h1,h2{font-family:Georgia,"Times New Roman",serif;font-weight:500;letter-spacing:-.04em;line-height:1.07}a{color:inherit}button,input,select{font:inherit}button{cursor:pointer}.shell{width:min(1170px,calc(100% - 64px));margin-inline:auto}.sr-only{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}.announcement{padding:8px 16px;text-align:center;color:#e5eee8;background:#294b43;display:flex;gap:11px;justify-content:center;align-items:center;font-size:11px;letter-spacing:.055em}.pulse-dot{height:7px;width:7px;border-radius:50%;background:#bfe7ab;box-shadow:0 0 0 4px #a6d8ae28}.header{min-height:91px;display:flex;align-items:center;justify-content:space-between;gap:26px}.brand{display:flex;align-items:center;gap:10px;font-family:Georgia,serif;font-size:30px;letter-spacing:-.06em;font-weight:800;text-decoration:none;white-space:nowrap}.brand-light{font-weight:400;font-style:italic}.brand>span:last-child i{color:#dca67c;font-style:normal}.brand-symbol{position:relative;height:40px;width:40px;border-radius:12px;background:var(--ink);display:grid;place-items:center;color:white;font-size:27px;line-height:1}.brand-asterisk{position:absolute;right:-7px;top:-9px;color:#f0b894;font-size:19px}.nav{display:flex;align-items:center;gap:27px}.nav a{text-decoration:none;font-size:13px;font-weight:650;color:#536960}.nav a:hover,.footer a:hover{color:#ad7b5b}.header-actions{display:flex;align-items:center;gap:14px}.lang-wrap{background:#f1f5ef;border:1px solid #dae5d9;padding:8px 10px;border-radius:40px;display:flex;gap:6px;align-items:center;color:#31544a}.lang-wrap select{border:0;outline:0;background:transparent;color:#31544a;font-size:12px;font-weight:700;cursor:pointer;max-width:124px}.header-cta{border-radius:40px;color:white;background:var(--ink);text-decoration:none;font-size:12px;font-weight:750;padding:12px 18px;white-space:nowrap}.header-cta:hover{background:#345a4d}.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center;min-height:642px;padding:60px 0 105px}.hero-copy{position:relative;z-index:2}.eyebrow,.overline{font-size:11px;color:#a47757;font-weight:850;letter-spacing:.13em;text-transform:uppercase}.eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:27px}.dash{width:32px;height:1px;background:#ae876c}.hero h1{font-size:clamp(52px,5.4vw,83px);margin:0 0 27px;line-height:1.08}.hero h1 em,.game-aside h2 em{color:#c78862;font-weight:400}.hero-desc{font-size:16px;line-height:1.9;max-width:540px;color:#60746a}.hero-buttons{display:flex;align-items:center;gap:32px;margin:34px 0 31px}.btn{border:0;display:inline-flex;justify-content:center;align-items:center;gap:28px;border-radius:99px;padding:14px 22px;text-decoration:none;font-weight:800;font-size:13px;transition:transform .2s,background .2s}.btn:hover{transform:translateY(-2px)}.btn-primary{color:white;background:var(--ink)}.btn-primary:hover{background:#365a50}.btn-outline{background:transparent;color:var(--ink);border:1px solid #a7bbac;padding:12px 18px}.link-underline{font-size:13px;text-decoration:none;font-weight:750;border-bottom:1px solid #9ab5a3;padding-bottom:3px}.hero-note{color:#7b9286;font-size:11px;display:flex;gap:10px;max-width:480px}.hero-note>span:first-child{font-size:16px;color:#65967e}.hero-visual{height:515px;position:relative;display:grid;place-items:center;isolation:isolate}.orb{position:absolute;border-radius:50%;z-index:-2}.orb-one{width:490px;height:490px;background:#dcecd9}.orb-two{width:355px;height:355px;border:1px solid #c8dece;top:40px;right:24px}.illustration-phone{position:relative;width:242px;height:438px;background:#f6fbf5;border-radius:31px;border:8px solid #263e36;box-shadow:20px 27px 44px #24463535;transform:rotate(6deg);z-index:2;overflow:hidden}.phone-head{height:64px;background:#dcecdf;display:flex;gap:9px;align-items:center;padding:10px 13px}.avatar{background:#719b7c;color:#fff;border-radius:50%;height:32px;width:32px;display:grid;place-items:center;font-size:18px}.phone-head strong{font-size:10px;display:block;line-height:1.3}.phone-head small{font-size:8px;color:#748b78;display:block}.dots{margin-left:auto;letter-spacing:2px;font-size:13px;color:#688a78}.phone-messages{height:311px;padding:20px 13px;display:flex;gap:15px;flex-direction:column;background:repeating-linear-gradient(45deg,#f4f8f3,#f4f8f3 20px,#f1f7f2 20px,#f1f7f2 21px)}.bubble{font-size:11px;line-height:1.4;padding:10px 12px;max-width:88%;margin:0;box-shadow:0 2px 3px #223d3410;border-radius:13px}.bubble-in{background:#fff;align-self:flex-start;border-bottom-left-radius:3px}.bubble-out{background:#d2ebd2;align-self:flex-end;border-bottom-right-radius:3px}.phone-input{background:#fff;margin:3px 7px;padding:8px 12px;border-radius:20px;display:flex;justify-content:space-between;color:#9caea1;font-size:10px}.card-spark{position:absolute;padding:14px 17px;background:#fff4df;color:#947450;box-shadow:0 10px 23px #2d4f4520;border-radius:10px;font-size:12px;font-family:Georgia,serif;font-style:italic;z-index:3}.card-spark-top{top:74px;left:0;transform:rotate(-9deg)}.stat-sticker{position:absolute;right:7px;bottom:32px;background:var(--peach);width:132px;height:132px;border-radius:50%;z-index:4;display:flex;align-items:center;justify-content:center;flex-direction:column;transform:rotate(12deg)}.stat-sticker span{font-size:9px;letter-spacing:.14em;font-weight:850}.stat-sticker strong{font-family:Georgia,serif;font-size:30px}.stat-sticker small{font-size:11px}.star{position:absolute;color:#b98f68}.star-a{font-size:42px;top:25px;right:22px}.star-b{font-size:33px;bottom:92px;left:25px}.marquee{background:#f0e0d0;border-block:1px solid #ead3be}.marquee-inner{display:flex;justify-content:space-between;gap:15px;align-items:center;min-height:66px;font-family:Georgia,serif;font-size:17px;font-style:italic}.marquee-inner>span:nth-child(even){font-family:Arial,sans-serif;font-size:17px;color:#bb8062}.section-pad{padding-block:100px}.about{display:grid;grid-template-columns:1fr 1fr;gap:105px}.section-heading h2,.section-intro h2{font-size:clamp(42px,4.4vw,60px);margin:18px 0}.about-text{padding-top:34px}.about-text p{color:#60736a;font-size:15px;line-height:1.95}.about-pills{display:flex;gap:9px;flex-wrap:wrap;margin-top:26px}.about-pills span{border:1px solid #d4dfd7;background:#fffefa;padding:8px 11px;border-radius:40px;color:#487159;font-size:11px;font-weight:700}.game-section{background:#203e39;color:#f4f8f2;padding-block:95px;overflow:hidden}.game-layout{display:grid;grid-template-columns:.88fr 1.12fr;gap:65px;align-items:start}.game-aside .overline{color:#e1ac85}.game-aside h2{font-size:clamp(42px,4.3vw,60px);margin:20px 0 23px}.game-aside>p{color:#c6d9cc;font-size:15px;line-height:1.9}.game-trust{border:1px solid #52705f;background:#2b4b42;display:flex;gap:12px;align-items:flex-start;border-radius:12px;padding:18px;margin-top:30px;font-size:12px;color:#deeadb}.game-trust>span:first-child{font-size:24px;color:#b1d9a6}.game-note{font-size:11px;color:#a7c0ae;margin-top:23px;line-height:1.7}.game-card{border-radius:18px;background:#fffefa;color:var(--ink);box-shadow:0 25px 50px #0a251a35;padding:30px}.game-card-head{display:flex;justify-content:space-between;gap:20px;align-items:start}.game-card-tag,.form-title-row{font-size:10px;font-weight:900;letter-spacing:.13em;color:#a87d5f}.game-card h3{font-family:Georgia,serif;font-size:26px;font-weight:500;line-height:1.18;letter-spacing:-.035em;margin:8px 0 20px}.game-icon{border-radius:50%;background:#e1ecda;color:#64805b;font-size:22px;width:50px;height:50px;display:grid;place-items:center}.game-upload,.form-upload{border:1.5px dashed #a5c1ac;background:#f6faf4;border-radius:12px;padding:28px 12px;display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;cursor:pointer;position:relative}.game-upload:is(:hover,.drag-over,:focus-visible),.form-upload:focus-within{border-color:#4e856c;background:#eaf3e8;outline:2px solid transparent}.game-upload input,.form-upload input{opacity:0;position:absolute;inset:0;width:100%;height:100%;cursor:pointer}.upload-round{width:50px;height:50px;background:#dceade;color:#3f7658;font-size:27px;display:grid;place-items:center;border-radius:50%;margin-bottom:6px}.game-upload strong,.form-upload strong{font-size:14px}.upload-small,.form-upload small{font-size:11px;color:#799186}.game-actions{display:flex;align-items:center;justify-content:center;gap:15px;margin-top:18px}.text-btn{border:0;background:transparent;color:#537963;font-size:12px;font-weight:750}.inline-feedback{margin:12px 0;padding:12px;background:#fff0db;color:#865e37;border-radius:9px;font-size:12px}.game-results{margin-top:25px;border-top:1px solid var(--line);padding-top:25px}.result-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.result-summary>div{border:1px solid #e1e9e0;border-radius:10px;background:#f5faf4;padding:12px}.result-summary small{color:#76917c;font-size:9px;letter-spacing:.1em;font-weight:850;display:block}.result-summary strong{font-family:Georgia,serif;font-size:27px;display:block;margin-top:4px}.ranking{margin-top:24px}.ranking-title{display:flex;justify-content:space-between;align-items:center}.ranking-title h4{font-size:14px;margin:0 0 12px}.ranking-title span{color:#c68e6e}.rank-row{display:grid;grid-template-columns:minmax(85px,1fr) minmax(70px,2fr) auto;gap:10px;align-items:center;margin:10px 0;font-size:11px}.rank-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:750}.rank-track{height:12px;background:#edf3ec;border-radius:40px;overflow:hidden}.rank-fill{height:100%;background:#8fba91;border-radius:40px;min-width:3px}.rank-count{font-weight:800;font-variant-numeric:tabular-nums}.awards{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:25px}.award{padding:13px 12px;background:#f8f2e9;border:1px solid #eee2d3;border-radius:10px}.award-icon{display:block;font-size:25px}.award small{display:block;color:#8e795e;font-size:10px;margin:5px 0}.award strong{font-size:13px;line-height:1.4;overflow-wrap:anywhere}.results-footnote{color:#86988a;font-size:10px;margin:16px 0 0}.section-intro{max-width:680px}.section-intro>p{font-size:15px;color:#61776b;line-height:1.8}.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:36px 0 26px}.step{position:relative;background:#fffefa;border:1px solid #e0e6df;border-radius:12px;padding:25px;min-height:248px}.step-no{font-size:11px;font-weight:900;color:#a7b5a6}.step-emoji{display:block;font-size:30px;color:#ab7d5e;margin:11px 0}.step h3{font-size:17px;margin:0 0 8px}.step p{font-size:13px;color:#6d8072;line-height:1.8}.faq-detail{border-bottom:1px solid #e0e5de}.faq-detail summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:30px;cursor:pointer;padding:18px 4px;font-weight:750;font-size:14px}.faq-detail summary::-webkit-details-marker,.optional-consent summary::-webkit-details-marker{display:none}.faq-detail summary>span:last-child,.optional-consent summary>span:last-child{font-size:22px;color:#b58266}.faq-detail[open] summary>span:last-child,.optional-consent[open] summary>span:last-child{transform:rotate(45deg)}.faq-detail p{font-size:13px;color:#65796d;line-height:1.8;margin:0 0 20px}.export-detail{background:#f1f4ed;border-radius:12px;padding:0 22px;border:0}.export-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;border-top:1px solid #dce5d7;padding-top:17px}.export-grid h4{margin:0;font-size:13px}.participate{background:#e8eee4;padding-block:96px}.participate-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:55px;align-items:start}.participate-copy h2{font-size:clamp(41px,4.1vw,57px);margin:22px 0}.participate-copy>p{font-size:15px;line-height:1.9;color:#597265}.privacy-note{display:flex;gap:15px;padding:18px;border:1px solid #cbdccc;border-radius:12px;background:#dce9dc;margin-top:30px}.privacy-note>span{font-size:25px;color:#648e6a}.privacy-note strong{font-size:13px}.privacy-note p{font-size:12px;color:#597064;line-height:1.7;margin:6px 0 0}.form-card{background:#fffefa;border:1px solid #d7e0d7;box-shadow:var(--shadow);border-radius:15px;padding:30px}.form-title-row{display:flex;justify-content:space-between;border-bottom:1px solid #e4e9e2;padding-bottom:20px;gap:10px}.form-lock{letter-spacing:0;font-weight:700;color:#678a74}.notice{background:#fff0df;border:1px solid #ecd4b3;border-radius:9px;color:#7d5c37;padding:13px;margin:15px 0;font-size:11px}.form-step-heading{display:flex;align-items:center;gap:10px;margin:22px 0 13px}.form-step-heading>span{display:grid;place-items:center;width:25px;height:25px;background:#e5f0e6;color:#3e7758;font-size:11px;font-weight:850;border-radius:50%}.form-step-heading h3{font-size:16px;margin:0}.form-upload{padding:18px 10px}.file-chip{padding:9px 12px;background:#e8f2e8;border-radius:8px;font-size:11px;overflow-wrap:anywhere}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.form-grid label{display:flex;flex-direction:column;gap:5px;font-size:11px;font-weight:750;color:#607267}.form-grid select,.form-grid input{border:1px solid #d8e3d7;border-radius:7px;background:white;padding:11px 9px;font-size:12px;color:#203d39;width:100%;min-width:0}.check-row{display:flex;align-items:flex-start;gap:10px;padding:8px 0;font-size:12px;line-height:1.65;color:#53675a}.check-row input{flex:0 0 16px;margin:2px 0 0;width:16px;height:16px;accent-color:#426e54}.check-row a{font-weight:850;text-underline-offset:2px}.optional-consent{border:1px solid #cedecf;border-radius:10px;background:#f6faf5;margin-top:15px}.optional-consent summary{padding:14px;display:flex;justify-content:space-between;gap:10px;list-style:none;cursor:pointer}.optional-consent summary strong{display:block;font-size:12px;color:#365c46}.optional-consent summary small{display:block;font-size:11px;color:#6a8a74;margin-top:3px}.optional-body{padding:0 14px 14px}.optional-body>p{font-size:11px;color:#687e6e;line-height:1.75}.optional-small{font-style:italic}.captcha-slot{margin-top:12px;min-height:4px}.btn-submit{width:100%;margin-top:17px}.btn:disabled{cursor:not-allowed;opacity:.55;transform:none}.form-disclaimer{margin:12px 0 0;font-size:10px;color:#849588;line-height:1.75;text-align:center}.success-panel{text-align:center;padding:30px 5px}.success-symbol{width:55px;height:55px;border-radius:50%;display:grid;place-items:center;background:#ddefde;color:#416c49;font-size:26px;margin:0 auto}.success-panel h3{font-family:Georgia,serif;font-size:30px;font-weight:500;margin:20px 0 8px}.success-panel p{color:#627668;font-size:13px}.receipt{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#edf4e9;border-radius:8px;padding:12px;margin:15px 0;overflow-wrap:anywhere}.receipt code{font-size:11px}.receipt button{border:1px solid #c9d9c8;border-radius:6px;background:white;padding:7px 11px}.faq-stack{border-top:1px solid #dce2d9}.end-banner{background:#f0dac5;padding:80px 0;text-align:center}.end-banner h2{max-width:780px;margin:17px auto 29px;font-size:clamp(40px,4.5vw,61px)}.footer{background:#203c39;color:#edf4ec;padding:58px 0 22px}.footer-main{display:grid;grid-template-columns:1.5fr .8fr .85fr;gap:45px}.footer-brand{font-family:Georgia,serif;font-size:36px;font-weight:800;letter-spacing:-.07em}.footer-brand span{font-weight:400;font-style:italic}.footer-main p{font-size:12px;color:#bfd3c5;max-width:320px;line-height:1.8}.footer-links,.footer-extra{display:flex;flex-direction:column;gap:10px;padding-top:12px;font-size:12px}.footer-links a{text-decoration:none}.footer-extra{color:#b2c9b6}.footer-bottom{font-size:11px;color:#abc6b1;margin-top:38px;padding-top:18px;border-top:1px solid #48655b}.policy{max-width:860px;padding-block:80px 110px}.policy h1{font-size:clamp(40px,5.4vw,68px);margin:18px 0 30px}.policy h2{font-family:Georgia,serif;font-size:27px;letter-spacing:-.025em;font-weight:500}.policy section{padding-top:20px;border-bottom:1px solid #dbe3d9;padding-bottom:12px}.policy section p{color:#63796c;font-size:14px;line-height:1.95}.policy-warning{padding:22px;background:#fff0e0;border:1px solid #eecaaa;border-radius:12px;color:#855737}.policy-warning p{font-size:13px;margin:9px 0 0}.policy>.btn{margin-top:30px}[hidden]{display:none!important}
+@media(max-width:1060px){.nav{gap:12px}.nav a{font-size:11px}.hero{gap:20px}.game-layout{gap:35px}.participate-grid{gap:30px}.shell{width:min(100% - 40px,960px)}}
+@media(max-width:850px){.nav{display:none}.hero{grid-template-columns:1fr;gap:20px;padding:40px 0 65px}.hero-visual{max-width:570px;margin:0 auto;width:100%}.about,.game-layout,.participate-grid{grid-template-columns:1fr;gap:30px}.game-aside{max-width:650px}.about-text{padding-top:0}.footer-main{grid-template-columns:1fr 1fr}.marquee-inner span:nth-child(n+6){display:none}.section-pad{padding-block:65px}.participate{padding-block:65px}}
+@media(max-width:590px){.shell{width:calc(100% - 32px)}.header{min-height:77px}.brand{font-size:24px}.brand-symbol{width:32px;height:32px;font-size:22px}.header-actions{gap:7px}.lang-wrap{padding:7px}.lang-wrap select{max-width:88px;font-size:11px}.header-cta{display:none}.hero h1{font-size:52px}.hero-desc{font-size:14px}.hero-buttons{gap:16px;flex-wrap:wrap}.hero-visual{height:435px}.orb-one{width:350px;height:350px}.orb-two{width:285px;height:285px}.illustration-phone{transform:rotate(6deg) scale(.83)}.card-spark-top{left:0;top:43px}.stat-sticker{right:0;bottom:6px;transform:rotate(12deg) scale(.82)}.marquee-inner{font-size:13px}.marquee-inner span:nth-child(n+4){display:none}.section-heading h2,.section-intro h2,.game-aside h2,.participate-copy h2{font-size:42px}.game-card,.form-card{padding:21px}.steps-grid,.form-grid,.export-grid{grid-template-columns:1fr}.steps-grid{gap:12px}.step{min-height:0}.awards{grid-template-columns:1fr}.footer-main{grid-template-columns:1fr;gap:15px}.result-summary strong{font-size:22px}.game-actions{flex-wrap:wrap}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+@media(max-width:360px){.orb-one{width:295px;height:295px}.orb-two{width:255px;height:255px}.card-spark-top{left:2px}}
+
+</style>
+</head>
+<body>
+  <div class="announcement"><span class="pulse-dot"></span><span data-i18n="banner">Un proyecto de investigación lingüística · Participación voluntaria</span></div>
+  <header class="header shell">
+    <a href="#inicio" class="brand" aria-label="Our Story"><span class="brand-symbol"><span>o</span><span class="brand-asterisk">✳</span></span><span>our<span class="brand-light">story</span><i>.</i></span></a>
+    <nav class="nav" aria-label="Navegación">
+      <a href="#descubre" data-i18n="navDiscover">Descubre</a><a href="#juego" data-i18n="navGame">Tu chat en números</a><a href="#como" data-i18n="navHow">Cómo participar</a>
+    </nav>
+    <div class="header-actions"><label class="lang-wrap"><span class="sr-only" data-i18n="languageLabel">Idioma</span><span aria-hidden="true">◎</span><select id="lang" aria-label="Idioma / Language"><option value="es">Español</option><option value="en">English</option><option value="pt">Português</option><option value="fr">Français</option><option value="it">Italiano</option><option value="de">Deutsch</option></select></label><a class="header-cta" href="#participa" data-i18n="navJoin">Compartir un chat ↗</a></div>
+  </header>
+  <main id="inicio">
+    <section class="hero shell">
+      <div class="hero-copy"><p class="eyebrow"><span class="dash"></span><span data-i18n="heroEyebrow">PEQUEÑOS MENSAJES. GRANDES HISTORIAS.</span></p>
+        <h1><span data-i18n="heroH1a">Cada chat cuenta</span><br><em data-i18n="heroH1b">una historia.</em></h1>
+        <p class="hero-desc" data-i18n="heroDesc">Risas, emojis, bromas que solo vosotros entendéis. Descubre las curiosidades de tus conversaciones y ayuda a investigar cómo nos comunicamos de verdad.</p>
+        <div class="hero-buttons"><a class="btn btn-primary" href="#juego"><span data-i18n="heroPlay">Descubre tu chat</span><span aria-hidden="true">↗</span></a><a class="link-underline" href="#descubre"><span data-i18n="heroLearn">Conoce el proyecto</span><span aria-hidden="true">↓</span></a></div>
+        <p class="hero-note"><span aria-hidden="true">◈</span><span data-i18n="heroNote">El juego analiza tu archivo en tu dispositivo. No se envía nada al probarlo.</span></p>
+      </div>
+      <div class="hero-visual"><div class="orb orb-one"></div><div class="orb orb-two"></div><div class="card-spark card-spark-top">✹ <span data-i18n="artBadge">lo cotidiano es extraordinario</span></div><div class="illustration-phone"><div class="phone-head"><span class="avatar">✳</span><div><strong data-i18n="artTitle">Tu grupo favorito</strong><small data-i18n="artSubtitle">ejemplo inventado</small></div><span class="dots">•••</span></div><div class="phone-messages"><p class="bubble bubble-in" data-i18n="art1">¿Nos vemos esta tarde? 👀</p><p class="bubble bubble-out" data-i18n="art2">Yo llevo las ganas de vivir 😂</p><p class="bubble bubble-in" data-i18n="art3">Pues llega puntual, criatura 💛</p><p class="bubble bubble-out" data-i18n="art4">Jajajaja imposible 🤷‍♀️</p></div><div class="phone-input"><span data-i18n="artInput">Mensaje</span>➤</div></div><div class="stat-sticker"><span data-i18n="artStatLabel">EN ESTE CHAT</span><strong>2 458</strong><small data-i18n="artStatText">carcajadas</small></div><span class="star star-a">✦</span><span class="star star-b">✳</span></div>
+    </section>
+    <section class="marquee"><div class="shell marquee-inner"><span data-i18n="marquee1">Lo que decimos</span><span>✺</span><span data-i18n="marquee2">Cómo nos queremos</span><span>✺</span><span data-i18n="marquee3">Lo que nos hace reír</span><span>✺</span><span data-i18n="marquee4">Las historias detrás de los mensajes</span></div></section>
+    <section class="about shell section-pad" id="descubre"><div class="section-heading"><span class="overline" data-i18n="aboutKicker">01 / EL PROYECTO</span><h2 data-i18n="aboutTitle">Tu forma de hablar también importa.</h2></div><div class="about-text"><p data-i18n="aboutP1">En los mensajes cotidianos se esconde una forma de comunicarnos que rara vez aparece en los libros: humor, ironía, apodos, confianza y complicidad.</p><p data-i18n="aboutP2">Our Story reúne, de forma voluntaria, conversaciones exportadas de WhatsApp para una investigación lingüística sobre el lenguaje espontáneo y los vínculos entre las personas. La finalidad es exclusivamente investigadora, no comercial.</p><div class="about-pills"><span data-i18n="pill1">Investigación lingüística</span><span data-i18n="pill2">Participación voluntaria</span><span data-i18n="pill3">Sin acceso a tu cuenta</span></div></div></section>
+    <section class="game-section" id="juego"><div class="shell game-layout"><div class="game-aside"><span class="overline" data-i18n="gameKicker">02 / EL JUEGO</span><h2><span data-i18n="gameTitleA">¿Quién habla más</span><br><em data-i18n="gameTitleB">en vuestro chat?</em></h2><p data-i18n="gameDesc">Descubre quién manda más mensajes, quién vive entre emojis, quién hace más preguntas y quién inicia más días de conversación. Todo con un análisis local y privado.</p><div class="game-trust"><span>⌁</span><span data-i18n="gamePrivate">Solo tú ves los resultados. Esta herramienta no envía tu chat a ningún servidor.</span></div><div class="game-note" data-i18n="gameNote">Resultados lúdicos y aproximados; dependen del formato de exportación y no son evaluaciones personales.</div></div>
+      <div class="game-card"><div class="game-card-head"><div><span class="game-card-tag" data-i18n="gameMini">TU CHAT EN NÚMEROS</span><h3 data-i18n="gameHeading">Una pequeña radiografía de vuestra historia</h3></div><span class="game-icon">✺</span></div>
+        <div class="game-upload" id="game-drop" role="button" tabindex="0"><input type="file" id="game-file" accept=".txt,.zip,text/plain,application/zip"><span class="upload-round">↑</span><strong data-i18n="gameDrop">Arrastra aquí un archivo .txt o .zip</strong><span class="upload-small" data-i18n="gameDropSub">o haz clic para seleccionarlo · hasta 45 MB</span></div>
+        <div class="game-actions"><button type="button" id="demo-btn" class="btn btn-outline"><span data-i18n="demoButton">✦ Probar con un chat de ejemplo</span></button><button type="button" id="clear-btn" class="text-btn" hidden data-i18n="resetButton">↻ Elegir otro chat</button></div>
+        <p class="inline-feedback" role="status" id="game-feedback" hidden></p>
+        <div id="game-results" class="game-results" hidden>
+          <div class="result-summary"><div><small data-i18n="totalMessages">MENSAJES</small><strong id="stat-messages">—</strong></div><div><small data-i18n="totalPeople">PARTICIPANTES</small><strong id="stat-people">—</strong></div><div><small data-i18n="totalEmojis">EMOJIS</small><strong id="stat-emojis">—</strong></div></div>
+          <div class="ranking"><div class="ranking-title"><h4 data-i18n="rankingTitle">El podio de quienes más hablan</h4><span>✦</span></div><div id="ranking-bars"></div></div>
+          <div class="awards" id="award-list"></div><p class="results-footnote" data-i18n="resultsFootnote">Solo se muestran estadísticas. El texto de los mensajes no se publica ni se guarda.</p>
+        </div>
+      </div></div></section>
+    <section class="steps shell section-pad" id="como"><div class="section-intro"><span class="overline" data-i18n="howKicker">03 / CÓMO PARTICIPAR</span><h2 data-i18n="howTitle">Es más fácil de lo que crees.</h2><p data-i18n="howLead">Puedes jugar sin compartir nada. Si además quieres colaborar con la investigación, bastan tres pasos.</p></div><div class="steps-grid"><article class="step"><span class="step-no">01</span><span class="step-emoji">☰</span><h3 data-i18n="step1H">Exporta</h3><p data-i18n="step1P">Abre un chat en WhatsApp y elige «Exportar chat». Selecciona «Sin archivos multimedia».</p></article><article class="step"><span class="step-no">02</span><span class="step-emoji">✳</span><h3 data-i18n="step2H">Descubre</h3><p data-i18n="step2P">Carga el .txt o .zip en el juego y mira vuestras estadísticas, sin enviar los mensajes.</p></article><article class="step"><span class="step-no">03</span><span class="step-emoji">↗</span><h3 data-i18n="step3H">Colabora (opcional)</h3><p data-i18n="step3P">Si lo deseas, completa el formulario de investigación y comparte el archivo por un canal privado.</p></article></div>
+      <details class="faq-detail export-detail"><summary><span data-i18n="exportQuestion">¿Dónde encuentro «Exportar chat»?</span><span>+</span></summary><div class="export-grid"><div><h4>Android</h4><p data-i18n="androidHelp">Abre la conversación → menú de tres puntos → Más → Exportar chat → Sin archivos.</p></div><div><h4>iPhone</h4><p data-i18n="iphoneHelp">Abre la conversación → toca el nombre de la persona o del grupo → Exportar chat → Sin archivos.</p></div></div></details>
+    </section>
+    <section class="participate" id="participa"><div class="shell participate-grid"><div class="participate-copy"><span class="overline" data-i18n="joinKicker">04 / PARTICIPA EN LA INVESTIGACIÓN</span><h2 data-i18n="joinTitle">Una conversación puede ayudarnos a entender muchas cosas.</h2><p data-i18n="joinDesc">Las conversaciones se utilizarán exclusivamente para fines de investigación lingüística. La aportación es voluntaria y distinta del juego: probar las estadísticas no implica enviar el archivo.</p><div class="privacy-note"><span>♧</span><div><strong data-i18n="privacyNoteH">Tus mensajes no se publican aquí.</strong><p data-i18n="privacyNoteP">La web necesita un almacenamiento privado y una revisión de protección de datos antes de admitir archivos reales.</p></div></div></div>
+      <div class="form-card"><div class="form-title-row"><span data-i18n="formTag">FORMULARIO DE COLABORACIÓN</span><span class="form-lock">◈ <span data-i18n="formStatus">Recepción privada</span></span></div><p id="setup-warning" class="notice" role="status" data-i18n="setupWarning">Vista previa: la recepción está desactivada hasta configurar el almacenamiento privado y revisar la documentación de privacidad.</p>
+        <form id="donation-form" novalidate><div class="form-step-heading"><span>1</span><h3 data-i18n="formStep1">Selecciona la conversación</h3></div><label class="form-upload"><input id="chat-file" type="file" accept=".txt,.zip,text/plain,application/zip" aria-label="Archivo TXT o ZIP"><span class="upload-round">↑</span><strong id="file-label" data-i18n="formDrop">Elegir archivo .txt o .zip</strong><small data-i18n="formMax">Sin multimedia · máximo 45 MB</small></label><p id="selected-file" class="file-chip" hidden></p>
+        <div class="form-step-heading"><span>2</span><h3 data-i18n="formStep2">Sobre la conversación</h3></div>
+        <div class="form-grid"><label><span data-i18n="countryLabel">País</span><select name="country" required><option value="" data-i18n="pickOne">Selecciona una opción</option><option value="ES" data-i18n="countryES">España</option><option value="AR" data-i18n="countryAR">Argentina</option><option value="MX" data-i18n="countryMX">México</option><option value="CO" data-i18n="countryCO">Colombia</option><option value="CL" data-i18n="countryCL">Chile</option><option value="PE" data-i18n="countryPE">Perú</option><option value="PT" data-i18n="countryPT">Portugal</option><option value="BR" data-i18n="countryBR">Brasil</option><option value="OTHER" data-i18n="countryOther">Otro</option><option value="NA" data-i18n="unknown">Prefiero no indicarlo</option></select></label>
+          <label><span data-i18n="relationshipLabel">Relación</span><select name="relationship" required><option value="" data-i18n="pickOne">Selecciona una opción</option><option value="friends" data-i18n="relFriends">Amistad</option><option value="family" data-i18n="relFamily">Familia</option><option value="partner" data-i18n="relPartner">Pareja</option><option value="colleagues" data-i18n="relColleagues">Compañeros</option><option value="neighbors" data-i18n="relNeighbors">Vecindad</option><option value="other" data-i18n="relOther">Otra</option><option value="na" data-i18n="unknown">Prefiero no indicarlo</option></select></label>
+          <label><span data-i18n="ageLabel">Tu edad (opcional)</span><select name="age"><option value="" data-i18n="unknown">Prefiero no indicarlo</option><option value="18-29">18–29</option><option value="30-44">30–44</option><option value="45-59">45–59</option><option value="60+">60+</option></select></label>
+          <label><span data-i18n="sexLabel">Sexo (opcional)</span><select name="sex"><option value="" data-i18n="unknown">Prefiero no indicarlo</option><option value="woman" data-i18n="sexWoman">Mujer</option><option value="man" data-i18n="sexMan">Hombre</option><option value="other" data-i18n="sexOther">Otro</option></select></label>
+          <label><span data-i18n="participantsLabel">Participantes</span><select name="participants" required><option value="" data-i18n="pickOne">Selecciona una opción</option><option value="2">2</option><option value="3-5">3–5</option><option value="6-10">6–10</option><option value="11+">11+</option></select></label>
+          <label><span data-i18n="regionLabel">Región (opcional)</span><input type="text" name="region" maxlength="60" data-i18n-placeholder="regionHint" placeholder="Cádiz, Lisboa, Buenos Aires…"></label></div>
+          <div class="form-step-heading"><span>3</span><h3 data-i18n="formStep3">Privacidad y preferencias</h3></div>
+          <label class="check-row"><input type="checkbox" name="adult" required><span data-i18n="adultConsent">Confirmo que tengo 18 años o más.</span></label>
+          <label class="check-row"><input type="checkbox" name="readPrivacy" required><span><span data-i18n="privacyConsent">He leído la información de privacidad y solicito voluntariamente participar en la investigación.</span> <a href="privacidad.html" id="privacy-link" target="_blank" rel="noopener" data-i18n="privacyLink">Leer política ↗</a></span></label>
+          <details class="optional-consent"><summary><span><strong data-i18n="optionalTitle">Autorización opcional para publicar resultados anónimos</strong><small data-i18n="optionalIntro">Despliega para decidir. No es necesaria para participar.</small></span><span aria-hidden="true">+</span></summary><div class="optional-body"><p data-i18n="optionalP">La investigación puede mostrar estadísticas agregadas o resultados irreversiblemente anonimizados, sin nombres, números ni mensajes identificables. Esta opción registra tu preferencia, pero no sustituye la revisión legal y ética de los datos.</p><label class="check-row"><input type="checkbox" name="publishAnon"><span data-i18n="optionalCheckbox">Sí, autorizo opcionalmente la publicación de resultados anónimos derivados de mi aportación.</span></label><p class="optional-small" data-i18n="optionalNo">Si no marcas esta casilla, tu preferencia será NO autorizar esa publicación.</p></div></details>
+          <div id="captcha-slot" class="captcha-slot"></div><p id="form-feedback" class="inline-feedback" role="alert" hidden></p>
+          <button type="submit" id="submit-btn" class="btn btn-primary btn-submit" disabled><span data-i18n="sendButton">Enviar mi conversación</span><span aria-hidden="true">↗</span></button><p class="form-disclaimer" data-i18n="formDisclaimer">Enviar un chat puede implicar datos personales de otras personas. Evita información íntima, sensible o identificativa y revisa la política de privacidad.</p>
+        </form><div id="success-panel" class="success-panel" hidden><span class="success-symbol">✓</span><h3 data-i18n="successTitle">¡Aportación recibida!</h3><p data-i18n="successDesc">Guarda este código para solicitar la retirada de tu aportación.</p><div class="receipt"><code id="withdrawal-code"></code><button type="button" id="copy-receipt" data-i18n="copyButton">Copiar</button></div><button type="button" id="new-donation" class="btn btn-outline" data-i18n="newDonation">Enviar otra</button></div>
+      </div></div></section>
+    <section class="faq shell section-pad" id="preguntas"><div class="section-intro"><span class="overline" data-i18n="faqKicker">05 / PREGUNTAS FRECUENTES</span><h2 data-i18n="faqTitle">Antes de empezar...</h2></div><div class="faq-stack"><details class="faq-detail"><summary><span data-i18n="faq1Q">¿Tengo que enviar el chat para ver el juego?</span><span>+</span></summary><p data-i18n="faq1A">No. El análisis se realiza en tu propio navegador. Puedes cerrar la página y no se habrá enviado ninguna conversación.</p></details><details class="faq-detail"><summary><span data-i18n="faq2Q">¿Para qué se utilizan las conversaciones compartidas?</span><span>+</span></summary><p data-i18n="faq2A">Exclusivamente para investigación lingüística. No se venden, no sirven para publicidad y el envío no publica automáticamente ningún mensaje.</p></details><details class="faq-detail"><summary><span data-i18n="faq3Q">¿Es obligatorio autorizar la publicación de resultados anónimos?</span><span>+</span></summary><p data-i18n="faq3A">No. Es una preferencia opcional y está desmarcada por defecto. Tampoco equivale a autorizar la publicación de mensajes o de datos identificables.</p></details><details class="faq-detail"><summary><span data-i18n="faq4Q">¿Qué pasa si mi ZIP contiene fotos o vídeos?</span><span>+</span></summary><p data-i18n="faq4A">Para jugar se analiza solo el texto. Para contribuir recomendamos exportar sin multimedia y no enviar archivos adjuntos sensibles.</p></details></div></section>
+    <section class="end-banner"><div class="shell"><span class="overline" data-i18n="closingSmall">LAS HISTORIAS NOS CONECTAN</span><h2 data-i18n="closingTitle">No son solo mensajes. Son maneras de entendernos.</h2><a class="btn btn-primary" href="#juego"><span data-i18n="closingButton">Descubre tu historia</span>↗</a></div></section>
+  </main>
+  <footer class="footer"><div class="shell footer-main"><div><span class="footer-brand">our<span>story</span>.</span><p data-i18n="footerText">Un espacio para jugar con las estadísticas de tus chats y colaborar con la investigación lingüística.</p></div><div class="footer-links"><a href="#descubre" data-i18n="footerAbout">El proyecto</a><a href="#participa" data-i18n="footerJoin">Participar</a><a href="privacidad.html" id="footer-privacy" data-i18n="footerPrivacy">Privacidad</a></div><div class="footer-extra"><span data-i18n="footerIndep">Proyecto independiente de WhatsApp y Meta.</span><span data-i18n="footerDraft">Versión de prueba. No recibe conversaciones reales.</span></div></div><div class="shell footer-bottom">© Our Story · <span data-i18n="footerCopyright">Investigación lingüística, no comercial.</span></div></footer>
+  <script>
+// Solo valores públicos. No publiques claves secretas en GitHub.
+window.OUR_STORY_CONFIG = {
+  supabaseUrl: '',
+  publishableKey: '',
+  turnstileSiteKey: '',
+  bucket: 'our-story-chats',
+  privacyApproved: false
+};
+
+window.OUR_STORY_I18N = {
+  "es": {
+    "banner": "Un proyecto de investigación lingüística · Participación voluntaria",
+    "navDiscover": "Descubre",
+    "navGame": "Tu chat en números",
+    "navHow": "Cómo participar",
+    "languageLabel": "Idioma",
+    "navJoin": "Compartir un chat ↗",
+    "heroEyebrow": "PEQUEÑOS MENSAJES. GRANDES HISTORIAS.",
+    "heroH1a": "Cada chat cuenta",
+    "heroH1b": "una historia.",
+    "heroDesc": "Risas, emojis, bromas que solo vosotros entendéis. Descubre las curiosidades de tus conversaciones y ayuda a investigar cómo nos comunicamos de verdad.",
+    "heroPlay": "Descubre tu chat",
+    "heroLearn": "Conoce el proyecto",
+    "heroNote": "El juego analiza tu archivo en tu dispositivo. No se envía nada al probarlo.",
+    "artBadge": "lo cotidiano es extraordinario",
+    "artTitle": "Tu grupo favorito",
+    "artSubtitle": "ejemplo inventado",
+    "art1": "¿Nos vemos esta tarde? 👀",
+    "art2": "Yo llevo las ganas de vivir 😂",
+    "art3": "Pues llega puntual, criatura 💛",
+    "art4": "Jajajaja imposible 🤷‍♀️",
+    "artInput": "Mensaje",
+    "artStatLabel": "EN ESTE CHAT",
+    "artStatText": "carcajadas",
+    "marquee1": "Lo que decimos",
+    "marquee2": "Cómo nos queremos",
+    "marquee3": "Lo que nos hace reír",
+    "marquee4": "Las historias detrás de los mensajes",
+    "aboutKicker": "01 / EL PROYECTO",
+    "aboutTitle": "Tu forma de hablar también importa.",
+    "aboutP1": "En los mensajes cotidianos se esconde una forma de comunicarnos que rara vez aparece en los libros: humor, ironía, apodos, confianza y complicidad.",
+    "aboutP2": "Our Story reúne, de forma voluntaria, conversaciones exportadas de WhatsApp para una investigación lingüística sobre el lenguaje espontáneo y los vínculos entre las personas. La finalidad es exclusivamente investigadora, no comercial.",
+    "pill1": "Investigación lingüística",
+    "pill2": "Participación voluntaria",
+    "pill3": "Sin acceso a tu cuenta",
+    "gameKicker": "02 / EL JUEGO",
+    "gameTitleA": "¿Quién habla más",
+    "gameTitleB": "en vuestro chat?",
+    "gameDesc": "Descubre quién manda más mensajes, quién vive entre emojis, quién hace más preguntas y quién inicia más días de conversación. Todo con un análisis local y privado.",
+    "gamePrivate": "Solo tú ves los resultados. Esta herramienta no envía tu chat a ningún servidor.",
+    "gameNote": "Resultados lúdicos y aproximados; dependen del formato de exportación y no son evaluaciones personales.",
+    "gameMini": "TU CHAT EN NÚMEROS",
+    "gameHeading": "Una pequeña radiografía de vuestra historia",
+    "gameDrop": "Arrastra aquí un archivo .txt o .zip",
+    "gameDropSub": "o haz clic para seleccionarlo · hasta 45 MB",
+    "demoButton": "✦ Probar con un chat de ejemplo",
+    "resetButton": "↻ Elegir otro chat",
+    "totalMessages": "MENSAJES",
+    "totalPeople": "PARTICIPANTES",
+    "totalEmojis": "EMOJIS",
+    "rankingTitle": "El podio de quienes más hablan",
+    "resultsFootnote": "Solo se muestran estadísticas. El texto de los mensajes no se publica ni se guarda.",
+    "howKicker": "03 / CÓMO PARTICIPAR",
+    "howTitle": "Es más fácil de lo que crees.",
+    "howLead": "Puedes jugar sin compartir nada. Si además quieres colaborar con la investigación, bastan tres pasos.",
+    "step1H": "Exporta",
+    "step1P": "Abre un chat en WhatsApp y elige «Exportar chat». Selecciona «Sin archivos multimedia».",
+    "step2H": "Descubre",
+    "step2P": "Carga el .txt o .zip en el juego y mira vuestras estadísticas, sin enviar los mensajes.",
+    "step3H": "Colabora (opcional)",
+    "step3P": "Si lo deseas, completa el formulario de investigación y comparte el archivo por un canal privado.",
+    "exportQuestion": "¿Dónde encuentro «Exportar chat»?",
+    "androidHelp": "Abre la conversación → menú de tres puntos → Más → Exportar chat → Sin archivos.",
+    "iphoneHelp": "Abre la conversación → toca el nombre de la persona o del grupo → Exportar chat → Sin archivos.",
+    "joinKicker": "04 / PARTICIPA EN LA INVESTIGACIÓN",
+    "joinTitle": "Una conversación puede ayudarnos a entender muchas cosas.",
+    "joinDesc": "Las conversaciones se utilizarán exclusivamente para fines de investigación lingüística. La aportación es voluntaria y distinta del juego: probar las estadísticas no implica enviar el archivo.",
+    "privacyNoteH": "Tus mensajes no se publican aquí.",
+    "privacyNoteP": "La web necesita un almacenamiento privado y una revisión de protección de datos antes de admitir archivos reales.",
+    "formTag": "FORMULARIO DE COLABORACIÓN",
+    "formStatus": "Recepción privada",
+    "setupWarning": "Vista previa: la recepción está desactivada hasta configurar el almacenamiento privado y revisar la documentación de privacidad.",
+    "formStep1": "Selecciona la conversación",
+    "formDrop": "Elegir archivo .txt o .zip",
+    "formMax": "Sin multimedia · máximo 45 MB",
+    "formStep2": "Sobre la conversación",
+    "countryLabel": "País",
+    "pickOne": "Selecciona una opción",
+    "countryES": "España",
+    "countryAR": "Argentina",
+    "countryMX": "México",
+    "countryCO": "Colombia",
+    "countryCL": "Chile",
+    "countryPE": "Perú",
+    "countryPT": "Portugal",
+    "countryBR": "Brasil",
+    "countryOther": "Otro",
+    "unknown": "Prefiero no indicarlo",
+    "relationshipLabel": "Relación",
+    "relFriends": "Amistad",
+    "relFamily": "Familia",
+    "relPartner": "Pareja",
+    "relColleagues": "Compañeros",
+    "relNeighbors": "Vecindad",
+    "relOther": "Otra",
+    "ageLabel": "Tu edad (opcional)",
+    "sexLabel": "Sexo (opcional)",
+    "sexWoman": "Mujer",
+    "sexMan": "Hombre",
+    "sexOther": "Otro",
+    "participantsLabel": "Participantes",
+    "regionLabel": "Región (opcional)",
+    "formStep3": "Privacidad y preferencias",
+    "adultConsent": "Confirmo que tengo 18 años o más.",
+    "privacyConsent": "He leído la información de privacidad y solicito voluntariamente participar en la investigación.",
+    "privacyLink": "Leer política ↗",
+    "optionalTitle": "Autorización opcional para publicar resultados anónimos",
+    "optionalIntro": "Despliega para decidir. No es necesaria para participar.",
+    "optionalP": "La investigación puede mostrar estadísticas agregadas o resultados irreversiblemente anonimizados, sin nombres, números ni mensajes identificables. Esta opción registra tu preferencia, pero no sustituye la revisión legal y ética de los datos.",
+    "optionalCheckbox": "Sí, autorizo opcionalmente la publicación de resultados anónimos derivados de mi aportación.",
+    "optionalNo": "Si no marcas esta casilla, tu preferencia será NO autorizar esa publicación.",
+    "sendButton": "Enviar mi conversación",
+    "formDisclaimer": "Enviar un chat puede implicar datos personales de otras personas. Evita información íntima, sensible o identificativa y revisa la política de privacidad.",
+    "successTitle": "¡Aportación recibida!",
+    "successDesc": "Guarda este código para solicitar la retirada de tu aportación.",
+    "copyButton": "Copiar",
+    "newDonation": "Enviar otra",
+    "faqKicker": "05 / PREGUNTAS FRECUENTES",
+    "faqTitle": "Antes de empezar...",
+    "faq1Q": "¿Tengo que enviar el chat para ver el juego?",
+    "faq1A": "No. El análisis se realiza en tu propio navegador. Puedes cerrar la página y no se habrá enviado ninguna conversación.",
+    "faq2Q": "¿Para qué se utilizan las conversaciones compartidas?",
+    "faq2A": "Exclusivamente para investigación lingüística. No se venden, no sirven para publicidad y el envío no publica automáticamente ningún mensaje.",
+    "faq3Q": "¿Es obligatorio autorizar la publicación de resultados anónimos?",
+    "faq3A": "No. Es una preferencia opcional y está desmarcada por defecto. Tampoco equivale a autorizar la publicación de mensajes o de datos identificables.",
+    "faq4Q": "¿Qué pasa si mi ZIP contiene fotos o vídeos?",
+    "faq4A": "Para jugar se analiza solo el texto. Para contribuir recomendamos exportar sin multimedia y no enviar archivos adjuntos sensibles.",
+    "closingSmall": "LAS HISTORIAS NOS CONECTAN",
+    "closingTitle": "No son solo mensajes. Son maneras de entendernos.",
+    "closingButton": "Descubre tu historia",
+    "footerText": "Un espacio para jugar con las estadísticas de tus chats y colaborar con la investigación lingüística.",
+    "footerAbout": "El proyecto",
+    "footerJoin": "Participar",
+    "footerPrivacy": "Privacidad",
+    "footerIndep": "Proyecto independiente de WhatsApp y Meta.",
+    "footerDraft": "Versión de prueba. No recibe conversaciones reales.",
+    "footerCopyright": "Investigación lingüística, no comercial.",
+    "backToSite": "Volver a la web ↗",
+    "privacyPageKicker": "INFORMACIÓN SOBRE PROTECCIÓN DE DATOS",
+    "privacyPageTitle": "Tu privacidad, nuestra prioridad.",
+    "privacyDraftH": "BORRADOR: NO APTO PARA RECOGER DATOS REALES.",
+    "privacyDraftP": "Antes de activar los envíos, deben completarse los datos del responsable, la base jurídica y los plazos de conservación y revisar la documentación desde el punto de vista jurídico y ético.",
+    "pol1h": "1. Responsable y contacto",
+    "pol1p": "Responsable del tratamiento: [NOMBRE O ENTIDAD RESPONSABLE]. Contacto de privacidad: [CORREO ELECTRÓNICO]. Delegado de protección de datos (si procede): [CONTACTO]. Estos campos deben completarse antes de recibir archivos.",
+    "pol2h": "2. Finalidad exclusivamente investigadora",
+    "pol2p": "Las conversaciones compartidas se recibirán, conservarán temporalmente, examinarán y, cuando sea viable, se anonimizarán para realizar investigación lingüística sobre el lenguaje espontáneo, el humor, la confianza y las relaciones interpersonales. No se utilizarán con fines comerciales, publicitarios ni de elaboración de perfiles de los participantes.",
+    "pol3h": "3. Qué información puede contener un archivo",
+    "pol3p": "Una exportación de WhatsApp puede incluir mensajes de terceras personas, nombres, teléfonos, fechas y otros datos personales, incluso información sensible. El formulario recoge solo algunos metadatos generales y una preferencia opcional sobre publicación de resultados anónimos. No se solicita acceso a la cuenta de WhatsApp ni a la agenda.",
+    "pol4h": "4. Base jurídica y datos de terceros",
+    "pol4p": "El envío es voluntario y está limitado a personas adultas. [INDICAR LA BASE JURÍDICA APLICABLE SEGÚN LOS ARTÍCULOS 6 Y, CUANDO CORRESPONDA, 9 DEL RGPD, ASÍ COMO LAS GARANTÍAS DE INVESTIGACIÓN]. La participación de quien envía el archivo no implica por sí sola que el tratamiento de mensajes de otras personas sea lícito. Se deben minimizar los datos y establecer garantías adecuadas para terceros antes de recibir conversaciones reales.",
+    "pol5h": "5. Juego local y envío voluntario",
+    "pol5p": "El juego estadístico funciona dentro del navegador. Al cargar un archivo para jugar, sus mensajes no se transmiten al servidor de Our Story. Solo al seleccionar expresamente «Enviar mi conversación», y una vez activado el sistema, se iniciaría una transferencia separada al almacenamiento privado. La web pública de GitHub no contendrá los chats.",
+    "pol6h": "6. Publicación opcional de resultados anónimos",
+    "pol6p": "Una casilla desplegable, desmarcada por defecto, permite expresar una preferencia favorable a publicar estadísticas agregadas o resultados efectivamente anonimizados derivados de la aportación. No autoriza publicar transcripciones literales, nombres ni otros elementos identificables. La anonimización debe comprobarse antes de cualquier difusión. Esta preferencia no sustituye una base jurídica válida ni los derechos de terceras personas.",
+    "pol7h": "7. Conservación, seguridad y destinatarios",
+    "pol7p": "[DEFINIR PLAZOS DE CONSERVACIÓN, UBICACIÓN DEL ALMACENAMIENTO, ENCARGADOS DEL TRATAMIENTO, TRANSFERENCIAS INTERNACIONALES Y MEDIDAS DE SEGURIDAD]. Se prevé un almacenamiento privado con acceso restringido. Los archivos no se consideran anonimizados simplemente por ser recibidos.",
+    "pol8h": "8. Derechos y retirada",
+    "pol8p": "Se facilitará un código de retirada tras cada envío. Para ejercer los derechos de acceso, rectificación, supresión, oposición, limitación u otros que procedan, se podrá contactar con [CORREO]. También cabe reclamar ante la autoridad de protección de datos competente. Una anonimización irreversible puede impedir identificar posteriormente una aportación concreta.",
+    "pol9h": "9. Independencia",
+    "pol9p": "Our Story no está afiliado a WhatsApp ni a Meta. Este texto es un borrador de transparencia pendiente de completar y validar antes de la recogida efectiva de archivos.",
+    "regionHint": "Cádiz, Lisboa, Buenos Aires…",
+    "errorSelect": "Selecciona un archivo .txt o .zip.",
+    "errorType": "Solo se admiten exportaciones de WhatsApp .txt o .zip.",
+    "errorSize": "El archivo debe tener contenido y no superar 45 MB.",
+    "errorZip": "Este ZIP no contiene un chat de texto legible.",
+    "errorZipSupport": "Tu navegador no puede abrir este ZIP localmente. Prueba a exportar un .txt.",
+    "errorParse": "No hemos podido reconocer suficientes mensajes de WhatsApp. Revisa el formato de exportación.",
+    "analyzing": "Analizando tu chat en el navegador…",
+    "errorCaptcha": "Completa la verificación antirrobots o recarga la página.",
+    "errorConnection": "La conexión de recepción privada no está disponible.",
+    "errorDisabled": "Los envíos no están activos en esta vista previa.",
+    "errorUpload": "No se ha completado la subida. Vuelve a intentarlo.",
+    "sending": "Enviando…",
+    "copied": "Copiado",
+    "awardTalk": "Más mensajes",
+    "awardEmoji": "Rey o reina de los emojis",
+    "awardQuestions": "Quien más pregunta",
+    "awardNight": "Búho nocturno (0–5 h)",
+    "awardStarts": "Quien inicia más días de charla"
+  },
+  "en": {
+    "banner": "A linguistic research project · Voluntary participation",
+    "navDiscover": "Discover",
+    "navGame": "Your chat in numbers",
+    "navHow": "How it works",
+    "languageLabel": "Language",
+    "navJoin": "Share a chat ↗",
+    "heroEyebrow": "SMALL MESSAGES. BIG STORIES.",
+    "heroH1a": "Every chat tells",
+    "heroH1b": "a story.",
+    "heroDesc": "Laughter, emojis and jokes that only you understand. Discover fun facts about your conversations and help us study how people really communicate.",
+    "heroPlay": "Explore your chat",
+    "heroLearn": "About the project",
+    "heroNote": "The game analyses your file on your device. Nothing is sent when you try it.",
+    "artBadge": "ordinary is extraordinary",
+    "artTitle": "Your favourite group",
+    "artSubtitle": "fictional example",
+    "art1": "Are we meeting later? 👀",
+    "art2": "I'll bring the good vibes 😂",
+    "art3": "Just be on time, you menace 💛",
+    "art4": "Hahaha, no chance 🤷‍♀️",
+    "artInput": "Message",
+    "artStatLabel": "IN THIS CHAT",
+    "artStatText": "laughs",
+    "marquee1": "What we say",
+    "marquee2": "How we care",
+    "marquee3": "What makes us laugh",
+    "marquee4": "The stories behind messages",
+    "aboutKicker": "01 / THE PROJECT",
+    "aboutTitle": "The way you talk matters too.",
+    "aboutP1": "Everyday messages reveal a kind of language rarely found in textbooks: humour, irony, nicknames, trust and closeness.",
+    "aboutP2": "Our Story voluntarily collects exported WhatsApp conversations for linguistic research into spontaneous language and relationships. The purpose is exclusively research, not commercial.",
+    "pill1": "Linguistic research",
+    "pill2": "Voluntary participation",
+    "pill3": "No access to your account",
+    "gameKicker": "02 / THE GAME",
+    "gameTitleA": "Who talks the most",
+    "gameTitleB": "in your chat?",
+    "gameDesc": "Find out who sends the most messages, who uses the most emojis, who asks the most questions and who starts conversations on the most days. All through local, private analysis.",
+    "gamePrivate": "Only you see the results. This tool does not send your chat to any server.",
+    "gameNote": "These are playful, approximate statistics; they depend on the export format and are not personal assessments.",
+    "gameMini": "YOUR CHAT IN NUMBERS",
+    "gameHeading": "A snapshot of your story",
+    "gameDrop": "Drop a .txt or .zip file here",
+    "gameDropSub": "or click to choose · up to 45 MB",
+    "demoButton": "✦ Try a sample chat",
+    "resetButton": "↻ Choose another chat",
+    "totalMessages": "MESSAGES",
+    "totalPeople": "PARTICIPANTS",
+    "totalEmojis": "EMOJIS",
+    "rankingTitle": "The top talkers",
+    "resultsFootnote": "Only statistics are displayed. Message text is neither published nor stored.",
+    "howKicker": "03 / HOW IT WORKS",
+    "howTitle": "Easier than you think.",
+    "howLead": "You can play without sharing anything. If you'd also like to support the research, it takes just three steps.",
+    "step1H": "Export",
+    "step1P": "Open a WhatsApp chat and choose “Export chat”. Select “Without media”.",
+    "step2H": "Discover",
+    "step2P": "Load the .txt or .zip into the game and see your statistics without sending any messages.",
+    "step3H": "Contribute (optional)",
+    "step3P": "If you'd like, complete the research form and share the file through a private channel.",
+    "exportQuestion": "Where is “Export chat” in WhatsApp?",
+    "androidHelp": "Open the chat → three-dot menu → More → Export chat → Without media.",
+    "iphoneHelp": "Open the chat → tap the contact or group name → Export chat → Without media.",
+    "joinKicker": "04 / CONTRIBUTE TO RESEARCH",
+    "joinTitle": "One conversation can help us understand so much.",
+    "joinDesc": "Shared conversations will be used exclusively for linguistic research. Contributing is voluntary and separate from the game: checking your statistics does not upload your file.",
+    "privacyNoteH": "Your messages aren't published here.",
+    "privacyNoteP": "The site needs private storage and a data-protection review before accepting real files.",
+    "formTag": "CONTRIBUTION FORM",
+    "formStatus": "Private upload",
+    "setupWarning": "Preview only: submissions are disabled until private storage is configured and the privacy documents are reviewed.",
+    "formStep1": "Choose your conversation",
+    "formDrop": "Choose a .txt or .zip file",
+    "formMax": "Without media · up to 45 MB",
+    "formStep2": "About the conversation",
+    "countryLabel": "Country",
+    "pickOne": "Choose an option",
+    "countryES": "Spain",
+    "countryAR": "Argentina",
+    "countryMX": "Mexico",
+    "countryCO": "Colombia",
+    "countryCL": "Chile",
+    "countryPE": "Peru",
+    "countryPT": "Portugal",
+    "countryBR": "Brazil",
+    "countryOther": "Other",
+    "unknown": "Prefer not to say",
+    "relationshipLabel": "Relationship",
+    "relFriends": "Friends",
+    "relFamily": "Family",
+    "relPartner": "Romantic partner",
+    "relColleagues": "Colleagues or classmates",
+    "relNeighbors": "Neighbours",
+    "relOther": "Other",
+    "ageLabel": "Your age (optional)",
+    "sexLabel": "Sex (optional)",
+    "sexWoman": "Woman",
+    "sexMan": "Man",
+    "sexOther": "Other",
+    "participantsLabel": "Participants",
+    "regionLabel": "Region (optional)",
+    "formStep3": "Privacy and preferences",
+    "adultConsent": "I confirm that I am 18 or older.",
+    "privacyConsent": "I have read the privacy information and voluntarily request to take part in the research.",
+    "privacyLink": "Read privacy notice ↗",
+    "optionalTitle": "Optional permission to publish anonymous results",
+    "optionalIntro": "Expand to decide. Not required to participate.",
+    "optionalP": "The research may publish aggregated statistics or genuinely anonymised results, without names, phone numbers or identifiable messages. This records your preference but does not replace legal and ethical review.",
+    "optionalCheckbox": "Yes, I optionally authorise publication of anonymous results derived from my contribution.",
+    "optionalNo": "If you leave this box unticked, your preference will be NOT to authorise that publication.",
+    "sendButton": "Send my conversation",
+    "formDisclaimer": "Sharing a chat can involve other people's personal data. Avoid intimate, sensitive or identifying information and check the privacy notice.",
+    "successTitle": "Contribution received!",
+    "successDesc": "Keep this code to request withdrawal of your contribution.",
+    "copyButton": "Copy",
+    "newDonation": "Send another",
+    "faqKicker": "05 / FREQUENTLY ASKED QUESTIONS",
+    "faqTitle": "Before you start...",
+    "faq1Q": "Do I have to send my chat to play the game?",
+    "faq1A": "No. Analysis takes place in your browser. You can close the page without any conversation being sent.",
+    "faq2Q": "What are shared conversations used for?",
+    "faq2A": "For linguistic research only. They are not sold or used for advertising, and uploading does not automatically publish messages.",
+    "faq3Q": "Must I permit anonymous results to be published?",
+    "faq3A": "No. This preference is optional and unticked by default. It does not give permission to publish identifiable messages or information.",
+    "faq4Q": "What if my ZIP contains photos or videos?",
+    "faq4A": "The game only reads the text. For research contributions, we recommend exporting without media and avoiding sensitive attachments.",
+    "closingSmall": "STORIES CONNECT US",
+    "closingTitle": "They're not just messages. They're how we understand one another.",
+    "closingButton": "Explore your story",
+    "footerText": "A place to enjoy chat statistics and contribute to linguistic research.",
+    "footerAbout": "The project",
+    "footerJoin": "Contribute",
+    "footerPrivacy": "Privacy",
+    "footerIndep": "Independent of WhatsApp and Meta.",
+    "footerDraft": "Preview version. Not accepting real conversations.",
+    "footerCopyright": "Non-commercial linguistic research.",
+    "backToSite": "Back to the website ↗",
+    "privacyPageKicker": "DATA PROTECTION INFORMATION",
+    "privacyPageTitle": "Your privacy comes first.",
+    "privacyDraftH": "DRAFT — NOT SUITABLE FOR COLLECTING REAL DATA.",
+    "privacyDraftP": "Before enabling uploads, the controller's details, legal basis and retention periods must be completed, and the information reviewed for legal and ethical compliance.",
+    "pol1h": "1. Controller and contact",
+    "pol1p": "Data controller: [NAME OR RESPONSIBLE ORGANISATION]. Privacy contact: [EMAIL ADDRESS]. Data protection officer, if applicable: [CONTACT]. These details must be completed before collecting files.",
+    "pol2h": "2. Research purposes only",
+    "pol2p": "Shared conversations will be received, temporarily stored, examined and, where feasible, anonymised for linguistic research on spontaneous language, humour, trust and interpersonal relationships. They will not be used for commercial purposes, advertising or profiling individuals.",
+    "pol3h": "3. What a file may contain",
+    "pol3p": "A WhatsApp export may contain third-party messages, names, phone numbers, dates and other personal data, potentially including sensitive information. The form collects only general metadata and an optional preference on publishing anonymous findings. We do not request access to your WhatsApp account or contacts.",
+    "pol4h": "4. Legal basis and third-party data",
+    "pol4p": "Submission is voluntary and restricted to adults. [SPECIFY THE RELEVANT LEGAL BASIS UNDER ARTICLES 6 AND, WHERE APPLICABLE, 9 GDPR, AS WELL AS RESEARCH SAFEGUARDS]. A contributor's participation does not itself make processing other people's messages lawful. Data minimisation and appropriate safeguards for third parties must be established before collecting real conversations.",
+    "pol5h": "5. Local game and voluntary submission",
+    "pol5p": "The statistics game runs inside your browser. Loading a file to play does not send its messages to an Our Story server. Only when you explicitly select “Send my conversation”, after the system is activated, would a separate transfer to private storage begin. Public GitHub pages will not contain chat files.",
+    "pol6h": "6. Optional publication of anonymous results",
+    "pol6p": "A collapsed, unticked optional checkbox lets you express a preference for publication of aggregate statistics or truly anonymised results derived from your contribution. It does not authorise verbatim transcripts, names or identifying details. Effective anonymisation must be verified before publication. This preference does not replace a valid legal basis or third parties' rights.",
+    "pol7h": "7. Retention, security and recipients",
+    "pol7p": "[DEFINE RETENTION PERIODS, STORAGE LOCATION, PROCESSORS, INTERNATIONAL TRANSFERS AND SECURITY MEASURES]. Private, access-restricted storage is planned. Files do not become anonymous merely because they have been received.",
+    "pol8h": "8. Rights and withdrawal",
+    "pol8p": "A withdrawal code will be issued after each submission. To exercise applicable rights of access, rectification, erasure, objection, restriction or others, contact [EMAIL]. You may also complain to the relevant data protection authority. Irreversible anonymisation may make it impossible to identify a specific contribution later.",
+    "pol9h": "9. Independence",
+    "pol9p": "Our Story is not affiliated with WhatsApp or Meta. This transparency notice is a draft that must be completed and approved before real file collection.",
+    "regionHint": "Cádiz, Lisbon, Buenos Aires…",
+    "errorSelect": "Choose a .txt or .zip file.",
+    "errorType": "Only WhatsApp .txt or .zip exports are supported.",
+    "errorSize": "The file must contain data and be no larger than 45 MB.",
+    "errorZip": "This ZIP does not contain a readable text chat.",
+    "errorZipSupport": "Your browser cannot open this ZIP locally. Try exporting a plain .txt file.",
+    "errorParse": "We couldn't detect enough WhatsApp messages. Check the export format.",
+    "analyzing": "Analysing your chat locally…",
+    "errorCaptcha": "Complete the anti-bot check or refresh the page.",
+    "errorConnection": "The private upload service is not available.",
+    "errorDisabled": "Uploads are not enabled in this preview.",
+    "errorUpload": "The upload failed. Please try again.",
+    "sending": "Sending…",
+    "copied": "Copied",
+    "awardTalk": "Most messages",
+    "awardEmoji": "Emoji champion",
+    "awardQuestions": "Question master",
+    "awardNight": "Night owl (midnight–5 am)",
+    "awardStarts": "Starts the most chat days"
+  },
+  "pt": {
+    "banner": "Um projeto de investigação linguística · Participação voluntária",
+    "navDiscover": "Descobrir",
+    "navGame": "O teu chat em números",
+    "navHow": "Como participar",
+    "languageLabel": "Idioma",
+    "navJoin": "Partilhar um chat ↗",
+    "heroEyebrow": "PEQUENAS MENSAGENS. GRANDES HISTÓRIAS.",
+    "heroH1a": "Cada chat conta",
+    "heroH1b": "uma história.",
+    "heroDesc": "Risos, emojis e piadas que só vocês entendem. Descobre curiosidades sobre as tuas conversas e ajuda-nos a investigar como comunicamos realmente.",
+    "heroPlay": "Descobre o teu chat",
+    "heroLearn": "Conhece o projeto",
+    "heroNote": "O jogo analisa o ficheiro no teu dispositivo. Nada é enviado ao experimentá-lo.",
+    "artBadge": "o quotidiano é extraordinário",
+    "artTitle": "O teu grupo favorito",
+    "artSubtitle": "exemplo fictício",
+    "art1": "Encontramo-nos logo? 👀",
+    "art2": "Eu levo a boa disposição 😂",
+    "art3": "Mas chega a horas, criatura 💛",
+    "art4": "Ahahah, impossível 🤷‍♀️",
+    "artInput": "Mensagem",
+    "artStatLabel": "NESTE CHAT",
+    "artStatText": "gargalhadas",
+    "marquee1": "O que dizemos",
+    "marquee2": "Como nos queremos",
+    "marquee3": "O que nos faz rir",
+    "marquee4": "As histórias por trás das mensagens",
+    "aboutKicker": "01 / O PROJETO",
+    "aboutTitle": "A tua forma de falar também importa.",
+    "aboutP1": "Nas mensagens do dia a dia esconde-se uma linguagem que raramente aparece nos livros: humor, ironia, alcunhas, confiança e cumplicidade.",
+    "aboutP2": "O Our Story recolhe voluntariamente conversas exportadas do WhatsApp para investigação linguística sobre a linguagem espontânea e as relações entre pessoas. A finalidade é exclusivamente científica e não comercial.",
+    "pill1": "Investigação linguística",
+    "pill2": "Participação voluntária",
+    "pill3": "Sem acesso à tua conta",
+    "gameKicker": "02 / O JOGO",
+    "gameTitleA": "Quem fala mais",
+    "gameTitleB": "no vosso chat?",
+    "gameDesc": "Descobre quem envia mais mensagens, quem usa mais emojis, quem faz mais perguntas e quem inicia mais dias de conversa. Tudo através de uma análise local e privada.",
+    "gamePrivate": "Só tu vês os resultados. Esta ferramenta não envia o chat para nenhum servidor.",
+    "gameNote": "Estatísticas lúdicas e aproximadas: dependem do formato da exportação e não avaliam pessoas.",
+    "gameMini": "O TEU CHAT EM NÚMEROS",
+    "gameHeading": "Um retrato da vossa história",
+    "gameDrop": "Arrasta um ficheiro .txt ou .zip",
+    "gameDropSub": "ou clica para selecionar · até 45 MB",
+    "demoButton": "✦ Experimentar um chat de exemplo",
+    "resetButton": "↻ Escolher outro chat",
+    "totalMessages": "MENSAGENS",
+    "totalPeople": "PARTICIPANTES",
+    "totalEmojis": "EMOJIS",
+    "rankingTitle": "Quem mais fala",
+    "resultsFootnote": "Só são apresentadas estatísticas. O texto das mensagens não é publicado nem guardado.",
+    "howKicker": "03 / COMO PARTICIPAR",
+    "howTitle": "Mais fácil do que imaginas.",
+    "howLead": "Podes jogar sem partilhar nada. Se também quiseres ajudar a investigação, bastam três passos.",
+    "step1H": "Exporta",
+    "step1P": "Abre um chat no WhatsApp e escolhe «Exportar conversa». Seleciona «Sem ficheiros multimédia».",
+    "step2H": "Descobre",
+    "step2P": "Carrega o .txt ou .zip no jogo e vê as estatísticas sem enviar mensagens.",
+    "step3H": "Colabora (opcional)",
+    "step3P": "Se quiseres, preenche o formulário de investigação e partilha o ficheiro por um canal privado.",
+    "exportQuestion": "Onde encontro «Exportar conversa»?",
+    "androidHelp": "Abre o chat → menu dos três pontos → Mais → Exportar conversa → Sem ficheiros.",
+    "iphoneHelp": "Abre o chat → toca no nome do contacto ou grupo → Exportar conversa → Sem ficheiros.",
+    "joinKicker": "04 / PARTICIPA NA INVESTIGAÇÃO",
+    "joinTitle": "Uma conversa pode ajudar-nos a compreender muita coisa.",
+    "joinDesc": "As conversas partilhadas serão usadas exclusivamente para investigação linguística. A contribuição é voluntária e separada do jogo: ver as estatísticas não envia o ficheiro.",
+    "privacyNoteH": "As tuas mensagens não são publicadas aqui.",
+    "privacyNoteP": "O site precisa de armazenamento privado e de revisão de proteção de dados antes de receber ficheiros reais.",
+    "formTag": "FORMULÁRIO DE COLABORAÇÃO",
+    "formStatus": "Envio privado",
+    "setupWarning": "Pré-visualização: os envios estão desativados até configurar o armazenamento privado e rever os documentos de privacidade.",
+    "formStep1": "Seleciona a conversa",
+    "formDrop": "Escolher ficheiro .txt ou .zip",
+    "formMax": "Sem multimédia · máximo 45 MB",
+    "formStep2": "Sobre a conversa",
+    "countryLabel": "País",
+    "pickOne": "Seleciona uma opção",
+    "countryES": "Espanha",
+    "countryAR": "Argentina",
+    "countryMX": "México",
+    "countryCO": "Colômbia",
+    "countryCL": "Chile",
+    "countryPE": "Peru",
+    "countryPT": "Portugal",
+    "countryBR": "Brasil",
+    "countryOther": "Outro",
+    "unknown": "Prefiro não indicar",
+    "relationshipLabel": "Relação",
+    "relFriends": "Amizade",
+    "relFamily": "Família",
+    "relPartner": "Casal",
+    "relColleagues": "Colegas",
+    "relNeighbors": "Vizinhança",
+    "relOther": "Outra",
+    "ageLabel": "A tua idade (opcional)",
+    "sexLabel": "Sexo (opcional)",
+    "sexWoman": "Mulher",
+    "sexMan": "Homem",
+    "sexOther": "Outro",
+    "participantsLabel": "Participantes",
+    "regionLabel": "Região (opcional)",
+    "formStep3": "Privacidade e preferências",
+    "adultConsent": "Confirmo que tenho 18 anos ou mais.",
+    "privacyConsent": "Li a informação de privacidade e solicito voluntariamente participar na investigação.",
+    "privacyLink": "Ler política ↗",
+    "optionalTitle": "Autorização opcional para publicar resultados anónimos",
+    "optionalIntro": "Expande para decidir. Não é obrigatória para participar.",
+    "optionalP": "A investigação pode divulgar estatísticas agregadas ou resultados efetivamente anonimizados, sem nomes, números nem mensagens identificáveis. Esta opção regista a tua preferência, mas não substitui a revisão jurídica e ética.",
+    "optionalCheckbox": "Sim, autorizo opcionalmente a publicação de resultados anónimos derivados da minha contribuição.",
+    "optionalNo": "Se não assinalares a caixa, a tua preferência será NÃO autorizar essa publicação.",
+    "sendButton": "Enviar a minha conversa",
+    "formDisclaimer": "Partilhar um chat pode envolver dados pessoais de terceiros. Evita informação íntima, sensível ou identificável e consulta a política de privacidade.",
+    "successTitle": "Contribuição recebida!",
+    "successDesc": "Guarda este código para solicitar a retirada da tua contribuição.",
+    "copyButton": "Copiar",
+    "newDonation": "Enviar outra",
+    "faqKicker": "05 / PERGUNTAS FREQUENTES",
+    "faqTitle": "Antes de começar…",
+    "faq1Q": "Tenho de enviar o chat para jogar?",
+    "faq1A": "Não. A análise é feita no teu navegador. Podes fechar a página sem enviar nenhuma conversa.",
+    "faq2Q": "Para que são usadas as conversas partilhadas?",
+    "faq2A": "Exclusivamente para investigação linguística. Não são vendidas nem usadas para publicidade, e o envio não publica automaticamente mensagens.",
+    "faq3Q": "É obrigatório autorizar a publicação de resultados anónimos?",
+    "faq3A": "Não. Esta preferência é opcional e fica desmarcada por defeito. Não autoriza a publicação de mensagens ou dados identificáveis.",
+    "faq4Q": "E se o ZIP tiver fotografias ou vídeos?",
+    "faq4A": "O jogo lê apenas o texto. Para contribuir, recomendamos exportar sem multimédia e evitar anexos sensíveis.",
+    "closingSmall": "AS HISTÓRIAS LIGAM-NOS",
+    "closingTitle": "Não são apenas mensagens. São formas de nos entendermos.",
+    "closingButton": "Descobre a tua história",
+    "footerText": "Um espaço para conhecer estatísticas dos chats e colaborar na investigação linguística.",
+    "footerAbout": "O projeto",
+    "footerJoin": "Participar",
+    "footerPrivacy": "Privacidade",
+    "footerIndep": "Projeto independente do WhatsApp e da Meta.",
+    "footerDraft": "Versão de teste. Não recebe conversas reais.",
+    "footerCopyright": "Investigação linguística não comercial.",
+    "backToSite": "Voltar ao site ↗",
+    "privacyPageKicker": "INFORMAÇÃO SOBRE PROTEÇÃO DE DADOS",
+    "privacyPageTitle": "A tua privacidade vem primeiro.",
+    "privacyDraftH": "RASCUNHO — NÃO APTO PARA RECOLHER DADOS REAIS.",
+    "privacyDraftP": "Antes de ativar os envios, é necessário completar os dados do responsável, a base jurídica e os prazos de conservação e rever a documentação jurídica e eticamente.",
+    "pol1h": "1. Responsável e contacto",
+    "pol1p": "Responsável pelo tratamento: [NOME OU ENTIDADE RESPONSÁVEL]. Contacto de privacidade: [EMAIL]. Encarregado de proteção de dados, quando aplicável: [CONTACTO]. Estes campos devem ser preenchidos antes de recolher ficheiros.",
+    "pol2h": "2. Finalidade exclusivamente científica",
+    "pol2p": "As conversas partilhadas serão recebidas, guardadas temporariamente, examinadas e, quando possível, anonimizadas para investigação linguística sobre linguagem espontânea, humor, confiança e relações interpessoais. Não serão usadas para fins comerciais, publicidade ou definição de perfis pessoais.",
+    "pol3h": "3. Que dados pode conter um ficheiro",
+    "pol3p": "Uma exportação do WhatsApp pode conter mensagens de terceiros, nomes, números de telefone, datas e outros dados pessoais, incluindo informação sensível. O formulário recolhe apenas metadados gerais e uma preferência opcional sobre divulgação de resultados anónimos. Não pedimos acesso à conta ou aos contactos do WhatsApp.",
+    "pol4h": "4. Base jurídica e dados de terceiros",
+    "pol4p": "O envio é voluntário e limitado a adultos. [INDICAR A BASE JURÍDICA APLICÁVEL SEGUNDO OS ARTIGOS 6 E, QUANDO APLICÁVEL, 9 DO RGPD E AS GARANTIAS DE INVESTIGAÇÃO]. A participação de quem envia não torna automaticamente lícito o tratamento de mensagens de terceiros. Antes de recolher conversas reais, é necessário minimizar dados e estabelecer garantias adequadas para essas pessoas.",
+    "pol5h": "5. Jogo local e envio voluntário",
+    "pol5p": "O jogo de estatísticas funciona no navegador. Carregar um ficheiro para jogar não envia as mensagens para um servidor do Our Story. Só ao selecionar expressamente «Enviar a minha conversa», depois de ativado o sistema, seria iniciada uma transferência separada para armazenamento privado. O GitHub público não conterá chats.",
+    "pol6h": "6. Publicação opcional de resultados anónimos",
+    "pol6p": "Uma caixa opcional, inicialmente fechada e desmarcada, permite indicar uma preferência pela publicação de estatísticas agregadas ou resultados verdadeiramente anonimizados derivados da contribuição. Não autoriza transcrições literais, nomes ou elementos identificáveis. A anonimização deve ser verificada antes da divulgação. Esta preferência não substitui uma base jurídica válida nem os direitos de terceiros.",
+    "pol7h": "7. Conservação, segurança e destinatários",
+    "pol7p": "[DEFINIR PRAZOS DE CONSERVAÇÃO, LOCAL DO ARMAZENAMENTO, SUBCONTRATANTES, TRANSFERÊNCIAS INTERNACIONAIS E MEDIDAS DE SEGURANÇA]. Prevê-se armazenamento privado com acesso restrito. Os ficheiros não ficam anónimos apenas por serem recebidos.",
+    "pol8h": "8. Direitos e retirada",
+    "pol8p": "Será fornecido um código de retirada após cada envio. Para exercer os direitos aplicáveis de acesso, retificação, apagamento, oposição, limitação ou outros, contactar [EMAIL]. É possível apresentar reclamação à autoridade de proteção de dados competente. A anonimização irreversível pode impedir a identificação posterior de uma contribuição concreta.",
+    "pol9h": "9. Independência",
+    "pol9p": "O Our Story não está associado ao WhatsApp nem à Meta. Este aviso é um rascunho que deve ser completado e validado antes de recolher ficheiros reais.",
+    "regionHint": "Cádiz, Lisboa, Buenos Aires…",
+    "errorSelect": "Escolhe um ficheiro .txt ou .zip.",
+    "errorType": "Só são aceites exportações de WhatsApp .txt ou .zip.",
+    "errorSize": "O ficheiro deve conter dados e ter no máximo 45 MB.",
+    "errorZip": "Este ZIP não contém uma conversa de texto legível.",
+    "errorZipSupport": "O navegador não consegue abrir este ZIP localmente. Exporta um .txt simples.",
+    "errorParse": "Não encontrámos mensagens suficientes. Confere o formato da exportação.",
+    "analyzing": "A analisar o teu chat localmente…",
+    "errorCaptcha": "Completa a verificação antirrobôs ou atualiza a página.",
+    "errorConnection": "O serviço de envio privado não está disponível.",
+    "errorDisabled": "Os envios não estão ativos nesta pré-visualização.",
+    "errorUpload": "O envio falhou. Tenta novamente.",
+    "sending": "A enviar…",
+    "copied": "Copiado",
+    "awardTalk": "Mais mensagens",
+    "awardEmoji": "Campeão de emojis",
+    "awardQuestions": "Mestre das perguntas",
+    "awardNight": "Coruja da noite (0–5h)",
+    "awardStarts": "Inicia mais dias de conversa"
+  },
+  "fr": {
+    "banner": "Un projet de recherche linguistique · Participation volontaire",
+    "navDiscover": "Découvrir",
+    "navGame": "Votre chat en chiffres",
+    "navHow": "Comment participer",
+    "languageLabel": "Langue",
+    "navJoin": "Partager un chat ↗",
+    "heroEyebrow": "PETITS MESSAGES. GRANDES HISTOIRES.",
+    "heroH1a": "Chaque conversation raconte",
+    "heroH1b": "une histoire.",
+    "heroDesc": "Des rires, des emojis et des blagues que vous seuls comprenez. Découvrez les curiosités de vos échanges et aidez-nous à étudier notre manière de communiquer.",
+    "heroPlay": "Explorer votre chat",
+    "heroLearn": "Découvrir le projet",
+    "heroNote": "Le jeu analyse le fichier sur votre appareil. Aucun envoi n'a lieu pendant l'essai.",
+    "artBadge": "l'ordinaire est extraordinaire",
+    "artTitle": "Votre groupe préféré",
+    "artSubtitle": "exemple fictif",
+    "art1": "On se voit cet après-midi ? 👀",
+    "art2": "J'apporte la bonne humeur 😂",
+    "art3": "Mais sois à l'heure, toi ! 💛",
+    "art4": "Ahahaha, impossible 🤷‍♀️",
+    "artInput": "Message",
+    "artStatLabel": "DANS CE CHAT",
+    "artStatText": "éclats de rire",
+    "marquee1": "Ce que l'on dit",
+    "marquee2": "Comment on s'aime",
+    "marquee3": "Ce qui nous fait rire",
+    "marquee4": "Les histoires derrière les messages",
+    "aboutKicker": "01 / LE PROJET",
+    "aboutTitle": "Votre façon de parler compte aussi.",
+    "aboutP1": "Les messages du quotidien révèlent un langage rarement présent dans les livres : humour, ironie, surnoms, confiance et complicité.",
+    "aboutP2": "Our Story recueille volontairement des conversations WhatsApp exportées pour une recherche linguistique sur le langage spontané et les relations humaines. La finalité est uniquement scientifique et non commerciale.",
+    "pill1": "Recherche linguistique",
+    "pill2": "Participation volontaire",
+    "pill3": "Aucun accès à votre compte",
+    "gameKicker": "02 / LE JEU",
+    "gameTitleA": "Qui parle le plus",
+    "gameTitleB": "dans votre chat ?",
+    "gameDesc": "Découvrez qui envoie le plus de messages, utilise le plus d'emojis, pose le plus de questions et lance la conversation le plus souvent. Tout se fait localement et en privé.",
+    "gamePrivate": "Vous seul voyez les résultats. Cet outil n'envoie votre chat à aucun serveur.",
+    "gameNote": "Ces statistiques ludiques sont approximatives, dépendent du format exporté et ne constituent pas une évaluation des personnes.",
+    "gameMini": "VOTRE CHAT EN CHIFFRES",
+    "gameHeading": "Un aperçu de votre histoire",
+    "gameDrop": "Déposez un fichier .txt ou .zip ici",
+    "gameDropSub": "ou cliquez pour le choisir · jusqu'à 45 Mo",
+    "demoButton": "✦ Essayer un chat fictif",
+    "resetButton": "↻ Choisir un autre chat",
+    "totalMessages": "MESSAGES",
+    "totalPeople": "PARTICIPANTS",
+    "totalEmojis": "EMOJIS",
+    "rankingTitle": "Le classement des bavards",
+    "resultsFootnote": "Seules les statistiques s'affichent. Le texte des messages n'est ni publié ni enregistré.",
+    "howKicker": "03 / COMMENT PARTICIPER",
+    "howTitle": "Plus simple qu'il n'y paraît.",
+    "howLead": "Vous pouvez jouer sans rien partager. Si vous souhaitez aussi aider la recherche, trois étapes suffisent.",
+    "step1H": "Exporter",
+    "step1P": "Ouvrez un chat WhatsApp et choisissez « Exporter la discussion », puis « Sans médias ».",
+    "step2H": "Découvrir",
+    "step2P": "Chargez le .txt ou le .zip dans le jeu et voyez vos statistiques sans envoyer de messages.",
+    "step3H": "Contribuer (facultatif)",
+    "step3P": "Si vous le souhaitez, remplissez le formulaire de recherche et partagez le fichier via un canal privé.",
+    "exportQuestion": "Où trouver « Exporter la discussion » ?",
+    "androidHelp": "Ouvrez le chat → menu à trois points → Plus → Exporter la discussion → Sans médias.",
+    "iphoneHelp": "Ouvrez le chat → touchez le nom du contact ou du groupe → Exporter la discussion → Sans médias.",
+    "joinKicker": "04 / PARTICIPER À LA RECHERCHE",
+    "joinTitle": "Une conversation peut nous apprendre beaucoup.",
+    "joinDesc": "Les conversations partagées serviront exclusivement à la recherche linguistique. La contribution est volontaire et distincte du jeu : consulter les statistiques n'envoie pas le fichier.",
+    "privacyNoteH": "Vos messages ne sont pas publiés ici.",
+    "privacyNoteP": "Le site doit disposer d'un stockage privé et faire l'objet d'une vérification des règles de protection des données avant de recevoir de vrais fichiers.",
+    "formTag": "FORMULAIRE DE PARTICIPATION",
+    "formStatus": "Envoi privé",
+    "setupWarning": "Aperçu : les envois sont désactivés en attendant la configuration du stockage privé et la révision des documents de confidentialité.",
+    "formStep1": "Choisissez une conversation",
+    "formDrop": "Choisir un fichier .txt ou .zip",
+    "formMax": "Sans médias · maximum 45 Mo",
+    "formStep2": "À propos de la conversation",
+    "countryLabel": "Pays",
+    "pickOne": "Choisir une option",
+    "countryES": "Espagne",
+    "countryAR": "Argentine",
+    "countryMX": "Mexique",
+    "countryCO": "Colombie",
+    "countryCL": "Chili",
+    "countryPE": "Pérou",
+    "countryPT": "Portugal",
+    "countryBR": "Brésil",
+    "countryOther": "Autre",
+    "unknown": "Je préfère ne pas répondre",
+    "relationshipLabel": "Relation",
+    "relFriends": "Amis",
+    "relFamily": "Famille",
+    "relPartner": "Couple",
+    "relColleagues": "Collègues",
+    "relNeighbors": "Voisinage",
+    "relOther": "Autre",
+    "ageLabel": "Votre âge (facultatif)",
+    "sexLabel": "Sexe (facultatif)",
+    "sexWoman": "Femme",
+    "sexMan": "Homme",
+    "sexOther": "Autre",
+    "participantsLabel": "Participants",
+    "regionLabel": "Région (facultatif)",
+    "formStep3": "Confidentialité et préférences",
+    "adultConsent": "Je confirme avoir au moins 18 ans.",
+    "privacyConsent": "J'ai lu les informations de confidentialité et demande volontairement à participer à cette recherche.",
+    "privacyLink": "Lire la politique ↗",
+    "optionalTitle": "Autorisation facultative de publier des résultats anonymes",
+    "optionalIntro": "Ouvrez pour choisir. Ce n'est pas obligatoire.",
+    "optionalP": "La recherche peut publier des statistiques agrégées ou des résultats réellement anonymisés, sans noms, numéros ou messages identifiables. Cela enregistre votre préférence, mais ne remplace pas les vérifications juridiques et éthiques.",
+    "optionalCheckbox": "Oui, j'autorise facultativement la publication de résultats anonymes issus de ma contribution.",
+    "optionalNo": "Si vous ne cochez pas cette case, votre choix sera de NE PAS autoriser cette publication.",
+    "sendButton": "Envoyer ma conversation",
+    "formDisclaimer": "Partager un chat peut impliquer des données personnelles de tiers. Évitez les informations intimes, sensibles ou identifiantes et consultez la politique de confidentialité.",
+    "successTitle": "Contribution reçue !",
+    "successDesc": "Conservez ce code pour demander le retrait de votre contribution.",
+    "copyButton": "Copier",
+    "newDonation": "Envoyer une autre",
+    "faqKicker": "05 / QUESTIONS FRÉQUENTES",
+    "faqTitle": "Avant de commencer…",
+    "faq1Q": "Dois-je envoyer mon chat pour jouer ?",
+    "faq1A": "Non. L'analyse s'effectue dans votre navigateur. Vous pouvez fermer la page sans envoyer aucune conversation.",
+    "faq2Q": "À quoi servent les conversations partagées ?",
+    "faq2A": "Uniquement à la recherche linguistique. Elles ne sont ni vendues ni utilisées pour la publicité et l'envoi ne publie pas automatiquement les messages.",
+    "faq3Q": "L'autorisation de publier des résultats anonymes est-elle obligatoire ?",
+    "faq3A": "Non. Ce choix est facultatif et décoché par défaut. Il n'autorise pas la publication de messages ou de données identifiables.",
+    "faq4Q": "Et si mon ZIP contient des photos ou des vidéos ?",
+    "faq4A": "Le jeu ne lit que le texte. Pour contribuer, nous conseillons d'exporter sans médias et d'éviter les pièces jointes sensibles.",
+    "closingSmall": "LES HISTOIRES NOUS RELIENT",
+    "closingTitle": "Ce ne sont pas que des messages. C'est notre façon de nous comprendre.",
+    "closingButton": "Découvrir votre histoire",
+    "footerText": "Un espace pour explorer les statistiques de vos chats et contribuer à la recherche linguistique.",
+    "footerAbout": "Le projet",
+    "footerJoin": "Participer",
+    "footerPrivacy": "Confidentialité",
+    "footerIndep": "Projet indépendant de WhatsApp et de Meta.",
+    "footerDraft": "Version de démonstration. Aucun vrai chat n'est reçu.",
+    "footerCopyright": "Recherche linguistique non commerciale.",
+    "backToSite": "Retour au site ↗",
+    "privacyPageKicker": "INFORMATIONS SUR LA PROTECTION DES DONNÉES",
+    "privacyPageTitle": "Votre vie privée avant tout.",
+    "privacyDraftH": "BROUILLON — NE CONVIENT PAS À LA COLLECTE DE DONNÉES RÉELLES.",
+    "privacyDraftP": "Avant d'activer les envois, il faut préciser l'identité du responsable, la base juridique et les durées de conservation, puis faire vérifier le document sur les plans juridique et éthique.",
+    "pol1h": "1. Responsable et contact",
+    "pol1p": "Responsable du traitement : [NOM OU ORGANISME RESPONSABLE]. Contact confidentialité : [ADRESSE ÉLECTRONIQUE]. Délégué à la protection des données, le cas échéant : [CONTACT]. Ces informations doivent être complétées avant toute collecte.",
+    "pol2h": "2. Finalité exclusivement scientifique",
+    "pol2p": "Les conversations partagées seront reçues, temporairement conservées, examinées et, lorsque possible, anonymisées pour la recherche linguistique sur le langage spontané, l'humour, la confiance et les relations interpersonnelles. Elles ne serviront ni à des fins commerciales, ni à la publicité, ni au profilage.",
+    "pol3h": "3. Contenu possible d'un fichier",
+    "pol3p": "Une exportation WhatsApp peut contenir des messages de tiers, des noms, des numéros de téléphone, des dates et d'autres données personnelles, parfois sensibles. Le formulaire ne recueille que des métadonnées générales et une préférence facultative concernant des résultats anonymes. Il ne demande pas d'accès au compte WhatsApp ni aux contacts.",
+    "pol4h": "4. Base juridique et données de tiers",
+    "pol4p": "La participation est volontaire et réservée aux adultes. [INDIQUER LA BASE JURIDIQUE APPLICABLE SELON LES ARTICLES 6 ET, LE CAS ÉCHÉANT, 9 DU RGPD, AINSI QUE LES GARANTIES DE RECHERCHE]. La contribution d'une personne ne rend pas à elle seule licite le traitement des messages d'autrui. La minimisation des données et des garanties appropriées pour les tiers doivent être définies avant toute collecte réelle.",
+    "pol5h": "5. Jeu local et envoi volontaire",
+    "pol5p": "Le jeu de statistiques fonctionne dans le navigateur. Le chargement d'un fichier pour jouer ne transmet pas les messages à un serveur Our Story. Une transmission séparée vers un stockage privé ne commencera qu'après activation du système et sélection explicite de « Envoyer ma conversation ». Les pages GitHub publiques ne contiendront aucun chat.",
+    "pol6h": "6. Publication facultative de résultats anonymes",
+    "pol6p": "Une case facultative, repliée et décochée par défaut, permet d'indiquer une préférence pour la publication de statistiques agrégées ou de résultats véritablement anonymisés issus de la contribution. Elle n'autorise pas les transcriptions, noms ou détails identifiants. L'anonymisation doit être vérifiée avant diffusion. Cette préférence ne remplace pas une base juridique valide ni les droits des tiers.",
+    "pol7h": "7. Conservation, sécurité et destinataires",
+    "pol7p": "[PRÉCISER LES DURÉES DE CONSERVATION, LE LIEU DE STOCKAGE, LES SOUS-TRAITANTS, LES TRANSFERTS INTERNATIONAUX ET LES MESURES DE SÉCURITÉ]. Un stockage privé à accès restreint est prévu. La simple réception ne rend pas les fichiers anonymes.",
+    "pol8h": "8. Droits et retrait",
+    "pol8p": "Un code de retrait sera fourni après chaque envoi. Pour exercer les droits applicables d'accès, rectification, effacement, opposition, limitation ou autres, contacter [ADRESSE ÉLECTRONIQUE]. Il est aussi possible de saisir l'autorité compétente. Une anonymisation irréversible peut empêcher d'identifier ensuite une contribution précise.",
+    "pol9h": "9. Indépendance",
+    "pol9p": "Our Story n'est affilié ni à WhatsApp ni à Meta. Cet avis est un brouillon à compléter et à valider avant toute collecte réelle.",
+    "regionHint": "Cadix, Lisbonne, Buenos Aires…",
+    "errorSelect": "Choisissez un fichier .txt ou .zip.",
+    "errorType": "Seules les exportations WhatsApp .txt ou .zip sont prises en charge.",
+    "errorSize": "Le fichier doit contenir des données et ne pas dépasser 45 Mo.",
+    "errorZip": "Ce ZIP ne contient aucune conversation textuelle lisible.",
+    "errorZipSupport": "Votre navigateur ne peut pas ouvrir ce ZIP localement. Exportez un fichier .txt.",
+    "errorParse": "Nous n'avons pas trouvé assez de messages WhatsApp. Vérifiez le format d'exportation.",
+    "analyzing": "Analyse locale de votre chat…",
+    "errorCaptcha": "Effectuez la vérification anti-robot ou rechargez la page.",
+    "errorConnection": "Le service d'envoi privé est indisponible.",
+    "errorDisabled": "Les envois sont désactivés dans cette démonstration.",
+    "errorUpload": "Échec de l'envoi. Réessayez.",
+    "sending": "Envoi en cours…",
+    "copied": "Copié",
+    "awardTalk": "Le plus de messages",
+    "awardEmoji": "Champion des emojis",
+    "awardQuestions": "Champion des questions",
+    "awardNight": "Oiseau de nuit (0 h–5 h)",
+    "awardStarts": "Lance le plus de journées de chat"
+  },
+  "it": {
+    "banner": "Un progetto di ricerca linguistica · Partecipazione volontaria",
+    "navDiscover": "Scopri",
+    "navGame": "La tua chat in numeri",
+    "navHow": "Come partecipare",
+    "languageLabel": "Lingua",
+    "navJoin": "Condividi una chat ↗",
+    "heroEyebrow": "PICCOLI MESSAGGI. GRANDI STORIE.",
+    "heroH1a": "Ogni chat racconta",
+    "heroH1b": "una storia.",
+    "heroDesc": "Risate, emoji e battute che solo voi capite. Scopri le curiosità delle tue conversazioni e aiutaci a studiare come comunichiamo davvero.",
+    "heroPlay": "Scopri la tua chat",
+    "heroLearn": "Scopri il progetto",
+    "heroNote": "Il gioco analizza il file sul tuo dispositivo. Durante la prova non viene inviato nulla.",
+    "artBadge": "il quotidiano è straordinario",
+    "artTitle": "Il tuo gruppo preferito",
+    "artSubtitle": "esempio inventato",
+    "art1": "Ci vediamo più tardi? 👀",
+    "art2": "Io porto il buonumore 😂",
+    "art3": "Basta che arrivi puntuale, eh! 💛",
+    "art4": "Ahahah, impossibile 🤷‍♀️",
+    "artInput": "Messaggio",
+    "artStatLabel": "IN QUESTA CHAT",
+    "artStatText": "risate",
+    "marquee1": "Quello che diciamo",
+    "marquee2": "Come ci vogliamo bene",
+    "marquee3": "Quello che ci fa ridere",
+    "marquee4": "Le storie dietro i messaggi",
+    "aboutKicker": "01 / IL PROGETTO",
+    "aboutTitle": "Anche il tuo modo di parlare conta.",
+    "aboutP1": "Nei messaggi quotidiani si nasconde un linguaggio che raramente compare nei libri: umorismo, ironia, soprannomi, fiducia e complicità.",
+    "aboutP2": "Our Story raccoglie volontariamente conversazioni esportate da WhatsApp per una ricerca linguistica sul linguaggio spontaneo e sulle relazioni tra persone. Lo scopo è esclusivamente scientifico, non commerciale.",
+    "pill1": "Ricerca linguistica",
+    "pill2": "Partecipazione volontaria",
+    "pill3": "Nessun accesso al tuo account",
+    "gameKicker": "02 / IL GIOCO",
+    "gameTitleA": "Chi parla di più",
+    "gameTitleB": "nella vostra chat?",
+    "gameDesc": "Scopri chi invia più messaggi, usa più emoji, fa più domande e inizia più giornate di conversazione. Tutto con un'analisi locale e privata.",
+    "gamePrivate": "Solo tu vedi i risultati. Questo strumento non invia la chat ad alcun server.",
+    "gameNote": "Statistiche ludiche e approssimative, che dipendono dal formato esportato e non valutano le persone.",
+    "gameMini": "LA TUA CHAT IN NUMERI",
+    "gameHeading": "Una fotografia della vostra storia",
+    "gameDrop": "Trascina qui un file .txt o .zip",
+    "gameDropSub": "oppure fai clic per sceglierlo · fino a 45 MB",
+    "demoButton": "✦ Prova una chat di esempio",
+    "resetButton": "↻ Scegli un'altra chat",
+    "totalMessages": "MESSAGGI",
+    "totalPeople": "PARTECIPANTI",
+    "totalEmojis": "EMOJI",
+    "rankingTitle": "La classifica dei più chiacchieroni",
+    "resultsFootnote": "Vengono mostrate solo statistiche. Il testo dei messaggi non viene pubblicato né conservato.",
+    "howKicker": "03 / COME PARTECIPARE",
+    "howTitle": "È più facile di quanto pensi.",
+    "howLead": "Puoi giocare senza condividere nulla. Se vuoi anche sostenere la ricerca, bastano tre passaggi.",
+    "step1H": "Esporta",
+    "step1P": "Apri una chat WhatsApp e scegli «Esporta chat», quindi «Senza media».",
+    "step2H": "Scopri",
+    "step2P": "Carica il .txt o .zip nel gioco e guarda le statistiche senza inviare i messaggi.",
+    "step3H": "Contribuisci (facoltativo)",
+    "step3P": "Se vuoi, compila il modulo di ricerca e condividi il file tramite un canale privato.",
+    "exportQuestion": "Dove si trova «Esporta chat»?",
+    "androidHelp": "Apri la chat → menu con tre puntini → Altro → Esporta chat → Senza media.",
+    "iphoneHelp": "Apri la chat → tocca il nome del contatto o del gruppo → Esporta chat → Senza media.",
+    "joinKicker": "04 / PARTECIPA ALLA RICERCA",
+    "joinTitle": "Una conversazione può aiutarci a capire tante cose.",
+    "joinDesc": "Le conversazioni condivise saranno utilizzate esclusivamente per ricerca linguistica. La partecipazione è volontaria e separata dal gioco: guardare le statistiche non invia il file.",
+    "privacyNoteH": "I tuoi messaggi non vengono pubblicati qui.",
+    "privacyNoteP": "Il sito necessita di uno spazio privato e di una verifica sulla protezione dei dati prima di accettare file reali.",
+    "formTag": "MODULO DI PARTECIPAZIONE",
+    "formStatus": "Invio privato",
+    "setupWarning": "Anteprima: gli invii sono disattivati fino alla configurazione dello spazio privato e alla verifica dei documenti sulla privacy.",
+    "formStep1": "Scegli la conversazione",
+    "formDrop": "Scegli un file .txt o .zip",
+    "formMax": "Senza media · massimo 45 MB",
+    "formStep2": "Informazioni sulla conversazione",
+    "countryLabel": "Paese",
+    "pickOne": "Scegli un'opzione",
+    "countryES": "Spagna",
+    "countryAR": "Argentina",
+    "countryMX": "Messico",
+    "countryCO": "Colombia",
+    "countryCL": "Cile",
+    "countryPE": "Perù",
+    "countryPT": "Portogallo",
+    "countryBR": "Brasile",
+    "countryOther": "Altro",
+    "unknown": "Preferisco non indicarlo",
+    "relationshipLabel": "Relazione",
+    "relFriends": "Amicizia",
+    "relFamily": "Famiglia",
+    "relPartner": "Coppia",
+    "relColleagues": "Colleghi",
+    "relNeighbors": "Vicinato",
+    "relOther": "Altra",
+    "ageLabel": "La tua età (facoltativo)",
+    "sexLabel": "Sesso (facoltativo)",
+    "sexWoman": "Donna",
+    "sexMan": "Uomo",
+    "sexOther": "Altro",
+    "participantsLabel": "Partecipanti",
+    "regionLabel": "Regione (facoltativo)",
+    "formStep3": "Privacy e preferenze",
+    "adultConsent": "Confermo di avere almeno 18 anni.",
+    "privacyConsent": "Ho letto le informazioni sulla privacy e chiedo volontariamente di partecipare alla ricerca.",
+    "privacyLink": "Leggi l'informativa ↗",
+    "optionalTitle": "Autorizzazione facoltativa a pubblicare risultati anonimi",
+    "optionalIntro": "Apri per decidere. Non è obbligatoria.",
+    "optionalP": "La ricerca può pubblicare statistiche aggregate o risultati realmente anonimizzati, senza nomi, numeri o messaggi identificabili. Questa scelta registra la tua preferenza ma non sostituisce le verifiche legali ed etiche.",
+    "optionalCheckbox": "Sì, autorizzo facoltativamente la pubblicazione di risultati anonimi derivati dal mio contributo.",
+    "optionalNo": "Se non spunti la casella, la tua preferenza sarà di NON autorizzare tale pubblicazione.",
+    "sendButton": "Invia la mia conversazione",
+    "formDisclaimer": "Condividere una chat può coinvolgere dati personali di terzi. Evita informazioni intime, sensibili o identificabili e consulta l'informativa sulla privacy.",
+    "successTitle": "Contributo ricevuto!",
+    "successDesc": "Conserva questo codice per chiedere la rimozione del tuo contributo.",
+    "copyButton": "Copia",
+    "newDonation": "Invia un'altra",
+    "faqKicker": "05 / DOMANDE FREQUENTI",
+    "faqTitle": "Prima di iniziare…",
+    "faq1Q": "Devo inviare la chat per giocare?",
+    "faq1A": "No. L'analisi avviene nel browser. Puoi chiudere la pagina senza inviare alcuna conversazione.",
+    "faq2Q": "Come vengono usate le conversazioni condivise?",
+    "faq2A": "Solo per ricerca linguistica. Non vengono vendute né usate per pubblicità e l'invio non pubblica automaticamente i messaggi.",
+    "faq3Q": "È obbligatorio autorizzare la pubblicazione di risultati anonimi?",
+    "faq3A": "No. La scelta è facoltativa e la casella è deselezionata in partenza. Non autorizza messaggi o dati identificabili.",
+    "faq4Q": "E se il mio ZIP contiene foto o video?",
+    "faq4A": "Il gioco legge solo il testo. Per contribuire consigliamo di esportare senza media ed evitare allegati sensibili.",
+    "closingSmall": "LE STORIE CI UNISCONO",
+    "closingTitle": "Non sono soltanto messaggi. Sono modi di capirci.",
+    "closingButton": "Scopri la tua storia",
+    "footerText": "Uno spazio per scoprire le statistiche delle chat e contribuire alla ricerca linguistica.",
+    "footerAbout": "Il progetto",
+    "footerJoin": "Partecipa",
+    "footerPrivacy": "Privacy",
+    "footerIndep": "Progetto indipendente da WhatsApp e Meta.",
+    "footerDraft": "Versione di prova. Non riceve conversazioni reali.",
+    "footerCopyright": "Ricerca linguistica non commerciale.",
+    "backToSite": "Torna al sito ↗",
+    "privacyPageKicker": "INFORMAZIONI SULLA PROTEZIONE DEI DATI",
+    "privacyPageTitle": "La tua privacy prima di tutto.",
+    "privacyDraftH": "BOZZA — NON ADATTA ALLA RACCOLTA DI DATI REALI.",
+    "privacyDraftP": "Prima di attivare gli invii, occorre completare i dati del titolare, la base giuridica e i tempi di conservazione e far verificare il documento dal punto di vista legale ed etico.",
+    "pol1h": "1. Titolare e contatti",
+    "pol1p": "Titolare del trattamento: [NOME O ENTE RESPONSABILE]. Contatto privacy: [EMAIL]. Responsabile della protezione dei dati, se applicabile: [CONTATTO]. Questi elementi vanno completati prima di raccogliere file.",
+    "pol2h": "2. Finalità esclusivamente scientifiche",
+    "pol2p": "Le conversazioni condivise saranno ricevute, conservate temporaneamente, esaminate e, quando possibile, anonimizzate per ricerche linguistiche sul linguaggio spontaneo, l'umorismo, la fiducia e le relazioni interpersonali. Non saranno usate per fini commerciali, pubblicitari né per creare profili personali.",
+    "pol3h": "3. Quali dati può contenere un file",
+    "pol3p": "Un'esportazione WhatsApp può contenere messaggi di terzi, nomi, numeri di telefono, date e altri dati personali, anche sensibili. Il modulo raccoglie solo metadati generali e una preferenza facoltativa sulla pubblicazione di risultati anonimi. Non chiediamo accesso all'account WhatsApp né ai contatti.",
+    "pol4h": "4. Base giuridica e dati di terzi",
+    "pol4p": "L'invio è volontario e riservato agli adulti. [INDICARE LA BASE GIURIDICA PERTINENTE AI SENSI DEGLI ARTICOLI 6 E, SE APPLICABILE, 9 DEL GDPR, E LE GARANZIE PER LA RICERCA]. La partecipazione di chi invia il file non rende automaticamente lecito trattare messaggi di altre persone. Prima di raccogliere conversazioni reali bisogna minimizzare i dati e prevedere tutele adeguate per i terzi.",
+    "pol5h": "5. Gioco locale e invio volontario",
+    "pol5p": "Il gioco statistico funziona nel browser. Caricare un file per giocare non trasmette i messaggi a un server Our Story. Solo dopo l'attivazione del sistema e la selezione esplicita di «Invia la mia conversazione» si avvierebbe un trasferimento separato verso uno spazio privato. Le pagine GitHub pubbliche non conterranno chat.",
+    "pol6h": "6. Pubblicazione facoltativa di risultati anonimi",
+    "pol6p": "Una casella facoltativa, inizialmente chiusa e deselezionata, permette di indicare una preferenza favorevole a pubblicare statistiche aggregate o risultati realmente anonimizzati derivati dal contributo. Non autorizza trascrizioni letterali, nomi o dettagli identificativi. L'anonimizzazione va verificata prima della diffusione. La scelta non sostituisce una base giuridica valida né i diritti dei terzi.",
+    "pol7h": "7. Conservazione, sicurezza e destinatari",
+    "pol7p": "[DEFINIRE I PERIODI DI CONSERVAZIONE, IL LUOGO DI ARCHIVIAZIONE, I RESPONSABILI ESTERNI, I TRASFERIMENTI INTERNAZIONALI E LE MISURE DI SICUREZZA]. È previsto uno spazio privato ad accesso limitato. I file non diventano anonimi semplicemente perché ricevuti.",
+    "pol8h": "8. Diritti e ritiro",
+    "pol8p": "Dopo ogni invio sarà fornito un codice di ritiro. Per esercitare i diritti applicabili di accesso, rettifica, cancellazione, opposizione, limitazione o altri, scrivere a [EMAIL]. È possibile presentare reclamo all'autorità competente. Un'anonimizzazione irreversibile può impedire di individuare in seguito un singolo contributo.",
+    "pol9h": "9. Indipendenza",
+    "pol9p": "Our Story non è affiliato a WhatsApp né a Meta. Questa informativa è una bozza da completare e convalidare prima di raccogliere file reali.",
+    "regionHint": "Cadice, Lisbona, Buenos Aires…",
+    "errorSelect": "Scegli un file .txt o .zip.",
+    "errorType": "Sono accettate solo esportazioni WhatsApp .txt o .zip.",
+    "errorSize": "Il file deve contenere dati e non superare 45 MB.",
+    "errorZip": "Questo ZIP non contiene una chat testuale leggibile.",
+    "errorZipSupport": "Il browser non può aprire localmente questo ZIP. Esporta un file .txt.",
+    "errorParse": "Non abbiamo trovato abbastanza messaggi WhatsApp. Controlla il formato dell'esportazione.",
+    "analyzing": "Analisi locale della tua chat…",
+    "errorCaptcha": "Completa la verifica antispam o ricarica la pagina.",
+    "errorConnection": "Il servizio di invio privato non è disponibile.",
+    "errorDisabled": "Gli invii non sono attivi in questa anteprima.",
+    "errorUpload": "Invio non riuscito. Riprova.",
+    "sending": "Invio in corso…",
+    "copied": "Copiato",
+    "awardTalk": "Più messaggi",
+    "awardEmoji": "Campione di emoji",
+    "awardQuestions": "Re delle domande",
+    "awardNight": "Gufo notturno (0–5)",
+    "awardStarts": "Avvia più giornate di chat"
+  },
+  "de": {
+    "banner": "Ein sprachwissenschaftliches Forschungsprojekt · Freiwillige Teilnahme",
+    "navDiscover": "Entdecken",
+    "navGame": "Dein Chat in Zahlen",
+    "navHow": "So funktioniert's",
+    "languageLabel": "Sprache",
+    "navJoin": "Chat teilen ↗",
+    "heroEyebrow": "KLEINE NACHRICHTEN. GROSSE GESCHICHTEN.",
+    "heroH1a": "Jeder Chat erzählt",
+    "heroH1b": "eine Geschichte.",
+    "heroDesc": "Lachen, Emojis und Witze, die nur ihr versteht. Entdecke spannende Fakten über eure Unterhaltungen und hilf uns zu erforschen, wie Menschen wirklich kommunizieren.",
+    "heroPlay": "Chat entdecken",
+    "heroLearn": "Mehr über das Projekt",
+    "heroNote": "Das Spiel analysiert deine Datei auf deinem Gerät. Beim Ausprobieren wird nichts übertragen.",    "artBadge": "der Alltag ist außergewöhnlich",
+    "artTitle": "Deine Lieblingsgruppe",
+    "artSubtitle": "frei erfundenes Beispiel",
+    "art1": "Sehen wir uns heute noch? 👀",
+    "art2": "Ich bring gute Laune mit 😂",
+    "art3": "Aber komm pünktlich, du! 💛",
+    "art4": "Hahaha, keine Chance 🤷‍♀️",
+    "artInput": "Nachricht",
+    "artStatLabel": "IN DIESEM CHAT",
+    "artStatText": "Lacher",
+    "marquee1": "Was wir sagen",
+    "marquee2": "Wie wir Zuneigung zeigen",
+    "marquee3": "Worüber wir lachen",
+    "marquee4": "Die Geschichten hinter Nachrichten",
+    "aboutKicker": "01 / DAS PROJEKT",
+    "aboutTitle": "Auch deine Sprache zählt.",
+    "aboutP1": "In alltäglichen Nachrichten steckt eine Sprache, die selten in Lehrbüchern vorkommt: Humor, Ironie, Spitznamen, Vertrauen und Vertrautheit.",
+    "aboutP2": "Our Story sammelt freiwillig exportierte WhatsApp-Unterhaltungen für sprachwissenschaftliche Forschung über spontane Sprache und zwischenmenschliche Beziehungen. Die Nutzung dient ausschließlich der Forschung und ist nicht kommerziell.",
+    "pill1": "Sprachforschung",
+    "pill2": "Freiwillige Teilnahme",
+    "pill3": "Kein Zugriff auf dein Konto",
+    "gameKicker": "02 / DAS SPIEL",
+    "gameTitleA": "Wer schreibt am meisten",
+    "gameTitleB": "in eurem Chat?",
+    "gameDesc": "Finde heraus, wer die meisten Nachrichten und Emojis sendet, die meisten Fragen stellt und an den meisten Tagen den Chat beginnt. Alles wird lokal und privat ausgewertet.",
+    "gamePrivate": "Nur du siehst die Ergebnisse. Das Tool überträgt deinen Chat an keinen Server.",
+    "gameNote": "Spielerische Näherungswerte, die vom Exportformat abhängen und keine persönliche Bewertung darstellen.",
+    "gameMini": "DEIN CHAT IN ZAHLEN",
+    "gameHeading": "Ein kleiner Einblick in eure Geschichte",
+    "gameDrop": "Ziehe eine .txt- oder .zip-Datei hierher",
+    "gameDropSub": "oder klicke zum Auswählen · bis 45 MB",
+    "demoButton": "✦ Beispielchat ausprobieren",
+    "resetButton": "↻ Anderen Chat wählen",
+    "totalMessages": "NACHRICHTEN",
+    "totalPeople": "TEILNEHMENDE",
+    "totalEmojis": "EMOJIS",
+    "rankingTitle": "Wer schreibt am meisten?",
+    "resultsFootnote": "Es werden nur Statistiken angezeigt. Nachrichtentexte werden weder veröffentlicht noch gespeichert.",
+    "howKicker": "03 / SO GEHT'S",
+    "howTitle": "Einfacher als du denkst.",
+    "howLead": "Du kannst spielen, ohne etwas zu teilen. Wenn du zusätzlich die Forschung unterstützen möchtest, sind es nur drei Schritte.",
+    "step1H": "Exportieren",
+    "step1P": "Öffne einen WhatsApp-Chat und wähle „Chat exportieren“ und „Ohne Medien“.",
+    "step2H": "Entdecken",
+    "step2P": "Lade die .txt- oder .zip-Datei ins Spiel und sieh dir die Statistiken an, ohne Nachrichten zu senden.",
+    "step3H": "Mitmachen (freiwillig)",
+    "step3P": "Wenn du möchtest, fülle das Forschungsformular aus und übermittle die Datei über einen privaten Kanal.",
+    "exportQuestion": "Wo finde ich „Chat exportieren“?",
+    "androidHelp": "Chat öffnen → Drei-Punkte-Menü → Mehr → Chat exportieren → Ohne Medien.",
+    "iphoneHelp": "Chat öffnen → Namen des Kontakts oder der Gruppe antippen → Chat exportieren → Ohne Medien.",
+    "joinKicker": "04 / AN DER FORSCHUNG TEILNEHMEN",
+    "joinTitle": "Eine Unterhaltung kann uns viel zeigen.",
+    "joinDesc": "Geteilte Unterhaltungen werden ausschließlich für sprachwissenschaftliche Forschung genutzt. Die Teilnahme ist freiwillig und unabhängig vom Spiel: Die Statistikansicht lädt keine Datei hoch.",
+    "privacyNoteH": "Deine Nachrichten werden hier nicht veröffentlicht.",
+    "privacyNoteP": "Bevor echte Dateien angenommen werden, braucht die Website einen privaten Speicher und eine Datenschutzprüfung.",
+    "formTag": "TEILNAHMEFORMULAR",
+    "formStatus": "Privater Upload",
+    "setupWarning": "Vorschau: Uploads sind deaktiviert, bis der private Speicher eingerichtet und die Datenschutzhinweise geprüft wurden.",
+    "formStep1": "Unterhaltung auswählen",
+    "formDrop": ".txt- oder .zip-Datei auswählen",
+    "formMax": "Ohne Medien · maximal 45 MB",
+    "formStep2": "Über die Unterhaltung",
+    "countryLabel": "Land",
+    "pickOne": "Bitte auswählen",
+    "countryES": "Spanien",
+    "countryAR": "Argentinien",
+    "countryMX": "Mexiko",
+    "countryCO": "Kolumbien",
+    "countryCL": "Chile",
+    "countryPE": "Peru",
+    "countryPT": "Portugal",
+    "countryBR": "Brasilien",
+    "countryOther": "Sonstiges",
+    "unknown": "Keine Angabe",
+    "relationshipLabel": "Beziehung",
+    "relFriends": "Freundschaft",
+    "relFamily": "Familie",
+    "relPartner": "Partnerschaft",
+    "relColleagues": "Kolleginnen/Kollegen",
+    "relNeighbors": "Nachbarschaft",
+    "relOther": "Sonstige",
+    "ageLabel": "Dein Alter (freiwillig)",
+    "sexLabel": "Geschlecht (freiwillig)",
+    "sexWoman": "Frau",
+    "sexMan": "Mann",
+    "sexOther": "Andere Angabe",
+    "participantsLabel": "Teilnehmende",
+    "regionLabel": "Region (freiwillig)",
+    "formStep3": "Datenschutz und Einstellungen",
+    "adultConsent": "Ich bestätige, dass ich mindestens 18 Jahre alt bin.",
+    "privacyConsent": "Ich habe die Datenschutzhinweise gelesen und möchte freiwillig an der Forschung teilnehmen.",
+    "privacyLink": "Datenschutzhinweise lesen ↗",
+    "optionalTitle": "Freiwillige Erlaubnis zur Veröffentlichung anonymer Ergebnisse",
+    "optionalIntro": "Zum Entscheiden öffnen. Für die Teilnahme nicht nötig.",
+    "optionalP": "Die Forschung kann zusammengefasste Statistiken oder tatsächlich anonymisierte Ergebnisse ohne Namen, Telefonnummern oder identifizierbare Nachrichten veröffentlichen. Die Auswahl erfasst deinen Wunsch, ersetzt aber keine rechtliche und ethische Prüfung.",
+    "optionalCheckbox": "Ja, ich erlaube freiwillig die Veröffentlichung anonymer Ergebnisse aus meinem Beitrag.",
+    "optionalNo": "Wenn du das Kästchen nicht aktivierst, gilt dein Wunsch als KEINE Erlaubnis für diese Veröffentlichung.",
+    "sendButton": "Unterhaltung senden",
+    "formDisclaimer": "Das Teilen eines Chats kann personenbezogene Daten Dritter betreffen. Vermeide intime, sensible oder identifizierende Informationen und lies die Datenschutzhinweise.",
+    "successTitle": "Beitrag eingegangen!",
+    "successDesc": "Bewahre diesen Code auf, um die Löschung deines Beitrags beantragen zu können.",
+    "copyButton": "Kopieren",
+    "newDonation": "Weiteren senden",
+    "faqKicker": "05 / HÄUFIGE FRAGEN",
+    "faqTitle": "Bevor du beginnst ...",
+    "faq1Q": "Muss ich den Chat senden, um zu spielen?",
+    "faq1A": "Nein. Die Analyse findet im Browser statt. Du kannst die Seite schließen, ohne eine Unterhaltung zu senden.",
+    "faq2Q": "Wofür werden geteilte Unterhaltungen verwendet?",
+    "faq2A": "Ausschließlich für Sprachforschung. Sie werden weder verkauft noch für Werbung verwendet und durch das Hochladen nicht automatisch veröffentlicht.",
+    "faq3Q": "Muss ich die Veröffentlichung anonymer Ergebnisse erlauben?",
+    "faq3A": "Nein. Diese Auswahl ist freiwillig und zunächst deaktiviert. Sie erlaubt keine Veröffentlichung identifizierbarer Nachrichten oder Daten.",
+    "faq4Q": "Was passiert, wenn meine ZIP-Datei Fotos oder Videos enthält?",
+    "faq4A": "Das Spiel liest nur Text. Für Forschungsbeiträge empfehlen wir den Export ohne Medien und ohne sensible Anhänge.",
+    "closingSmall": "GESCHICHTEN VERBINDEN UNS",
+    "closingTitle": "Es sind nicht nur Nachrichten. Es ist die Art, wie wir einander verstehen.",
+    "closingButton": "Deine Geschichte entdecken",
+    "footerText": "Ein Ort, um Chat-Statistiken zu entdecken und Sprachforschung zu unterstützen.",
+    "footerAbout": "Das Projekt",
+    "footerJoin": "Teilnehmen",
+    "footerPrivacy": "Datenschutz",
+    "footerIndep": "Unabhängiges Projekt, nicht mit WhatsApp oder Meta verbunden.",
+    "footerDraft": "Testversion. Keine Annahme echter Chats.",
+    "footerCopyright": "Nichtkommerzielle Sprachforschung.",
+    "backToSite": "Zurück zur Website ↗",
+    "privacyPageKicker": "INFORMATIONEN ZUM DATENSCHUTZ",
+    "privacyPageTitle": "Deine Privatsphäre steht an erster Stelle.",
+    "privacyDraftH": "ENTWURF – NICHT ZUR ERHEBUNG ECHTER DATEN GEEIGNET.",
+    "privacyDraftP": "Vor der Freischaltung müssen Verantwortliche, Rechtsgrundlage und Aufbewahrungsfristen eingetragen und die Unterlagen rechtlich und ethisch geprüft werden.",
+    "pol1h": "1. Verantwortliche und Kontakt",
+    "pol1p": "Verantwortlich: [NAME ODER ORGANISATION]. Datenschutzkontakt: [E-MAIL]. Datenschutzbeauftragte, falls zutreffend: [KONTAKT]. Diese Angaben müssen vor der Erhebung von Dateien ergänzt werden.",
+    "pol2h": "2. Ausschließlich Forschungszwecke",
+    "pol2p": "Geteilte Chats werden entgegengenommen, vorübergehend aufbewahrt, untersucht und nach Möglichkeit anonymisiert, um spontane Sprache, Humor, Vertrauen und zwischenmenschliche Beziehungen sprachwissenschaftlich zu erforschen. Keine kommerzielle Nutzung, Werbung oder Profilbildung.",
+    "pol3h": "3. Welche Daten eine Datei enthalten kann",
+    "pol3p": "Ein WhatsApp-Export kann Nachrichten Dritter, Namen, Telefonnummern, Datumsangaben und andere personenbezogene, möglicherweise sensible Daten enthalten. Das Formular erfasst nur allgemeine Metadaten und einen freiwilligen Wunsch zur Veröffentlichung anonymer Ergebnisse. Es wird kein Zugang zum WhatsApp-Konto oder den Kontakten verlangt.",
+    "pol4h": "4. Rechtsgrundlage und Daten Dritter",
+    "pol4p": "Die Einsendung ist freiwillig und Erwachsenen vorbehalten. [RECHTSGRUNDLAGE NACH ARTIKEL 6 UND GGF. 9 DSGVO SOWIE FORSCHUNGSSCHUTZMASSNAHMEN ERGÄNZEN]. Die Teilnahme einer Person macht die Verarbeitung von Nachrichten anderer nicht automatisch rechtmäßig. Vor einer echten Datenerhebung müssen Daten minimiert und geeignete Garantien für Dritte festgelegt werden.",
+    "pol5h": "5. Lokales Spiel und freiwillige Übermittlung",
+    "pol5p": "Das Statistikspiel läuft im Browser. Beim Laden einer Datei zum Spielen werden Nachrichten nicht an einen Our-Story-Server übertragen. Erst nach Aktivierung des Systems und der ausdrücklichen Auswahl „Unterhaltung senden“ würde eine gesonderte Übertragung in einen privaten Speicher beginnen. Öffentliche GitHub-Seiten enthalten keine Chats.",
+    "pol6h": "6. Freiwillige Veröffentlichung anonymer Ergebnisse",
+    "pol6p": "Ein freiwilliges, standardmäßig geschlossenes und deaktiviertes Kästchen ermöglicht eine Präferenz für die Veröffentlichung aggregierter Statistiken oder tatsächlich anonymisierter Ergebnisse aus dem Beitrag. Es erlaubt keine wörtlichen Transkripte, Namen oder identifizierenden Angaben. Vor Veröffentlichung muss die Anonymisierung geprüft werden. Die Präferenz ersetzt weder eine gültige Rechtsgrundlage noch die Rechte Dritter.",
+    "pol7h": "7. Aufbewahrung, Sicherheit und Empfänger",
+    "pol7p": "[AUFBEWAHRUNGSFRISTEN, SPEICHERORT, AUFTRAGSVERARBEITER, INTERNATIONALE ÜBERMITTLUNGEN UND SICHERHEITSMASSNAHMEN FESTLEGEN]. Geplant ist ein privater Speicher mit eingeschränktem Zugriff. Dateien werden durch den Empfang nicht anonym.",
+    "pol8h": "8. Rechte und Widerruf",
+    "pol8p": "Nach jeder Einsendung wird ein Rückzugscode ausgegeben. Zur Ausübung anwendbarer Rechte auf Auskunft, Berichtigung, Löschung, Widerspruch, Einschränkung oder weiterer Rechte bitte [E-MAIL] kontaktieren. Beschwerden bei der zuständigen Datenschutzbehörde sind möglich. Irreversible Anonymisierung kann eine spätere Zuordnung eines Beitrags verhindern.",
+    "pol9h": "9. Unabhängigkeit",
+    "pol9p": "Our Story gehört weder zu WhatsApp noch zu Meta. Dieser Entwurf muss vor der Erhebung echter Dateien vervollständigt und geprüft werden.",
+    "regionHint": "Cádiz, Lissabon, Buenos Aires…",
+    "errorSelect": "Bitte wähle eine .txt- oder .zip-Datei.",
+    "errorType": "Nur WhatsApp-Exporte als .txt oder .zip werden unterstützt.",
+    "errorSize": "Die Datei muss Daten enthalten und darf höchstens 45 MB groß sein.",
+    "errorZip": "Diese ZIP-Datei enthält keinen lesbaren Textchat.",
+    "errorZipSupport": "Dein Browser kann diese ZIP-Datei nicht lokal öffnen. Exportiere bitte eine .txt-Datei.",
+    "errorParse": "Wir konnten nicht genügend WhatsApp-Nachrichten erkennen. Prüfe das Exportformat.",
+    "analyzing": "Chat wird lokal analysiert …",
+    "errorCaptcha": "Bitte führe die Sicherheitsprüfung durch oder lade neu.",
+    "errorConnection": "Der private Upload-Dienst ist nicht verfügbar.",
+    "errorDisabled": "Uploads sind in dieser Vorschau deaktiviert.",
+    "errorUpload": "Upload fehlgeschlagen. Versuche es erneut.",
+    "sending": "Wird gesendet …",
+    "copied": "Kopiert",
+    "awardTalk": "Meiste Nachrichten",
+    "awardEmoji": "Emoji-Meister",
+    "awardQuestions": "Fragenkönig",
+    "awardNight": "Nachteule (0–5 Uhr)",
+    "awardStarts": "Beginnt die meisten Chat-Tage"
+  }
+};
+
+</script><script type="module">
+const config = window.OUR_STORY_CONFIG || {};
+const dictionary = window.OUR_STORY_I18N || {};
+const $ = (id) => document.getElementById(id);
+const fileLimit = 45 * 1024 * 1024;
+let lang = 'es';
+let currentResults = null;
+const t = (key) => dictionary[lang]?.[key] ?? dictionary.es?.[key] ?? key;
+
+function changeLanguage(next){
+  lang = dictionary[next] ? next : 'es';
+  document.documentElement.lang = lang;
+  if ($('lang')) $('lang').value = lang;
+  for (const el of document.querySelectorAll('[data-i18n]')) el.textContent = t(el.dataset.i18n);
+  for (const el of document.querySelectorAll('[data-i18n-placeholder]')) el.placeholder = t(el.dataset.i18nPlaceholder);
+  const privacyLink = $('privacy-link'); if (privacyLink) privacyLink.href = `privacidad.html?lang=${lang}`;
+  const footerLink = $('footer-privacy'); if (footerLink) footerLink.href = `privacidad.html?lang=${lang}`;
+  try {localStorage.setItem('ourstory-language',lang);}catch{}
+  if(currentResults) renderResults(currentResults);
+}
+const urlLanguage = new URLSearchParams(location.search).get('lang');
+let savedLanguage = 'es';try{savedLanguage=localStorage.getItem('ourstory-language') || 'es';}catch{}
+changeLanguage(urlLanguage || savedLanguage);
+$('lang')?.addEventListener('change', (e)=>changeLanguage(e.target.value));
+
+function fmt(n){return new Intl.NumberFormat(lang).format(n)}
+function extension(file){return (file.name.split('.').pop()||'').toLowerCase()}
+function humanSize(n){return `${(n / 1024 / 1024).toFixed(1)} MB`}
+function validate(file){if(!file)return t('errorSelect');if(!['txt','zip'].includes(extension(file)))return t('errorType');if(file.size<1||file.size>fileLimit)return t('errorSize');return null;}
+function showFeedback(el,msg){el.hidden=false;el.textContent=msg}
+function clearFeedback(el){el.hidden=true;el.textContent=''}
+
+// Analiza únicamente en memoria; nunca utiliza fetch, almacenamiento local ni servicios externos.
+function parseWhatsApp(text){
+  const rows = text.replace(/^\uFEFF/,'').split(/\r?\n/);
+  const byAuthor = new Map(); let total=0, totalEmojis=0, matchCount=0, previousDate=null, currentEntry=null;
+  const dateFirst = /^\s*[\u200e\u200f]*\[?(\d{1,4}[/.\-]\d{1,2}[/.\-]\d{1,4})[,\s]+(\d{1,2}:\d{2}(?::\d{2})?(?:\s*[ap]\.?(?:\s*)m\.?)?)\]?\s*(?:[-–—]\s*)?(.+?):\s([\s\S]*)$/i;
+  const systemSkip = /^(?:messages and calls are end-to-end encrypted|los mensajes y las llamadas están cifrados de extremo a extremo|les messages et les appels sont chiffrés|as mensagens e chamadas são protegidas|i messaggi e le chiamate sono protetti|nachrichten und anrufe sind ende-zu-ende-verschlüsselt)/i;
+  const personMax=150;
+  for (const row of rows){
+    const m = row.match(dateFirst);
+    if(!m){
+      // Las exportaciones pueden partir un mensaje en varias líneas.
+      if(currentEntry){
+        const more=(row.match(/\p{Extended_Pictographic}/gu)||[]).length;
+        currentEntry.emojis+=more;totalEmojis+=more;
+        if(/[?¿]/.test(row))currentEntry.questions++;
+      }
+      continue;
+    }
+    const author=m[3].replace(/[\u200e\u200f]/g,'').trim();
+    if(!author||author.length>personMax||systemSkip.test(author)||!m[4])continue;
+    const body=m[4]; if(!byAuthor.has(author))byAuthor.set(author,{name:author,messages:0,emojis:0,questions:0,late:0,starts:0});
+    const entry=byAuthor.get(author);currentEntry=entry;
+    entry.messages++;total++;matchCount++;
+    const emojis=(body.match(/\p{Extended_Pictographic}/gu)||[]).length;
+    entry.emojis+=emojis;totalEmojis+=emojis;
+    if(/[?¿]/.test(body))entry.questions++;
+    const hour=parseInt(m[2].slice(0,2),10);
+    const pm=/p\.?\s*m\.?$/i.test(m[2]),am=/a\.?\s*m\.?$/i.test(m[2]);
+    let h=hour;if(pm&&hour<12)h+=12;if(am&&hour===12)h=0;
+    if(h>=0&&h<5)entry.late++;
+    // Cada cambio de fecha en el archivo cuenta como inicio de jornada.
+    const date=m[1];
+    if(date!==previousDate){entry.starts++;previousDate=date;}
+  }
+  if(matchCount<2||byAuthor.size===0)return null;
+  return {total,totalEmojis,participants:[...byAuthor.values()].sort((a,b)=>b.messages-a.messages)};
+}
+
+// Extrae solo un .txt del ZIP en memoria. Límite para el texto descomprimido y sin extraer rutas.
+async function textFromZip(file){
+  const buffer=await file.arrayBuffer(), bytes=new Uint8Array(buffer), v=new DataView(buffer);
+  let eocd=-1;
+  for(let i=bytes.length-22;i>=Math.max(0,bytes.length-65557);i--){if(v.getUint32(i,true)===0x06054b50){eocd=i;break;}}
+  if(eocd<0)throw Error(t('errorZip'));
+  const entryCount=v.getUint16(eocd+10,true), offset=v.getUint32(eocd+16,true);
+  if(entryCount>1000||offset>=bytes.length)throw Error(t('errorZip'));
+  const decoder=new TextDecoder('utf-8',{fatal:false});
+  let pos=offset,candidates=[];
+  for(let i=0;i<entryCount;i++){
+    if(pos+46>bytes.length||v.getUint32(pos,true)!==0x02014b50)break;
+    const method=v.getUint16(pos+10,true),compressed=v.getUint32(pos+20,true),rawSize=v.getUint32(pos+24,true),nameLen=v.getUint16(pos+28,true),extraLen=v.getUint16(pos+30,true),commentLen=v.getUint16(pos+32,true),localOffset=v.getUint32(pos+42,true);
+    const name=decoder.decode(bytes.slice(pos+46,pos+46+nameLen));
+    if(name.toLowerCase().endsWith('.txt') && !name.includes('__MACOSX') && rawSize>0 && rawSize<=65*1024*1024 && (method===0||method===8))candidates.push({name,method,compressed,rawSize,localOffset});
+    pos+=46+nameLen+extraLen+commentLen;
+  }
+  candidates.sort((a,b)=>(Number(/(?:^|\/)\_chat\.txt$/i.test(b.name))-Number(/(?:^|\/)\_chat\.txt$/i.test(a.name)))||b.rawSize-a.rawSize);
+  const c=candidates[0];if(!c||c.localOffset+30>bytes.length||v.getUint32(c.localOffset,true)!==0x04034b50)throw Error(t('errorZip'));
+  const dataStart=c.localOffset+30+v.getUint16(c.localOffset+26,true)+v.getUint16(c.localOffset+28,true);
+  if(dataStart+c.compressed>bytes.length)throw Error(t('errorZip'));
+  let data=bytes.slice(dataStart,dataStart+c.compressed);
+  if(c.method===8){
+    if(!('DecompressionStream' in window))throw Error(t('errorZipSupport'));
+    const stream=new Blob([data]).stream().pipeThrough(new DecompressionStream('deflate-raw'));
+    const reader=stream.getReader(),chunks=[];let length=0;
+    while(true){
+      const {value,done}=await reader.read();if(done)break;
+      length+=value.byteLength;
+      if(length>65*1024*1024){await reader.cancel();throw Error(t('errorSize'));}
+      chunks.push(value);
+    }
+    const expanded=new Uint8Array(length);let at=0;
+    for(const chunk of chunks){expanded.set(chunk,at);at+=chunk.byteLength;}
+    data=expanded;
+  }
+  if(data.length>65*1024*1024)throw Error(t('errorSize'));
+  return decoder.decode(data);
+}
+async function readChat(file){
+  if(extension(file)==='zip')return textFromZip(file);
+  const bytes=await file.arrayBuffer();
+  const utf8=new TextDecoder('utf-8',{fatal:false}).decode(bytes);
+  // Las exportaciones antiguas pueden usar UTF-16 LE.
+  return utf8.includes('\u0000') ? new TextDecoder('utf-16le').decode(bytes) : utf8;
+}
+function renderResults(r){
+  if(!$('game-results'))return;
+  $('game-results').hidden=false;
+  $('stat-messages').textContent=fmt(r.total);
+  $('stat-people').textContent=fmt(r.participants.length);
+  $('stat-emojis').textContent=fmt(r.totalEmojis);
+  const ranking=$('ranking-bars');ranking.replaceChildren();
+  for(const p of r.participants.slice(0,5)){
+    const row=document.createElement('div');row.className='rank-row';
+    const name=document.createElement('span');name.className='rank-name';name.textContent=p.name;
+    const bar=document.createElement('div');bar.className='rank-track';
+    const fill=document.createElement('div');fill.className='rank-fill';fill.style.width=`${Math.round(p.messages/r.participants[0].messages*100)}%`;bar.appendChild(fill);
+    const count=document.createElement('span');count.className='rank-count';count.textContent=fmt(p.messages);
+    row.append(name,bar,count);ranking.appendChild(row);
+  }
+  const awardTypes=[['messages','💬','awardTalk'],['emojis','😂','awardEmoji'],['questions','❓','awardQuestions'],['late','🌙','awardNight'],['starts','☀️','awardStarts']];
+  const target=$('award-list');target.replaceChildren();
+  for(const [prop,symbol,key] of awardTypes){
+    const winner=[...r.participants].sort((a,b)=>b[prop]-a[prop])[0];
+    if(!winner||winner[prop]===0)continue;
+    const card=document.createElement('div');card.className='award';
+    const icon=document.createElement('span');icon.className='award-icon';icon.textContent=symbol;
+    const label=document.createElement('small');label.textContent=t(key);
+    const value=document.createElement('strong');value.textContent=`${winner.name} · ${fmt(winner[prop])}`;
+    card.append(icon,label,value);target.appendChild(card);
+  }
+}
+
+const gameFile=$('game-file'), gameFeedback=$('game-feedback');
+async function playFile(file){
+  if(!gameFeedback)return;
+  const error=validate(file);if(error)return showFeedback(gameFeedback,error);
+  showFeedback(gameFeedback,t('analyzing'));
+  try{
+    const text=await readChat(file);const results=parseWhatsApp(text);
+    if(!results)throw Error(t('errorParse'));
+    currentResults=results;renderResults(results);clearFeedback(gameFeedback);
+    $('clear-btn').hidden=false;$('game-results').scrollIntoView({behavior:'smooth',block:'nearest'});
+  }catch(e){showFeedback(gameFeedback,e.message||t('errorParse'));}
+}
+if(gameFile){
+  gameFile.addEventListener('change',()=>playFile(gameFile.files?.[0]));
+  const drop=$('game-drop');
+  drop.addEventListener('keydown',(e)=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();gameFile.click();}});
+  for(const ev of ['dragover','dragenter'])drop.addEventListener(ev,(e)=>{e.preventDefault();drop.classList.add('drag-over');});
+  for(const ev of ['dragleave','drop'])drop.addEventListener(ev,(e)=>{e.preventDefault();drop.classList.remove('drag-over');});
+  drop.addEventListener('drop',(e)=>{const f=e.dataTransfer.files?.[0];if(f)playFile(f);});
+  $('clear-btn').addEventListener('click',()=>{currentResults=null;gameFile.value='';$('game-results').hidden=true;$('clear-btn').hidden=true;clearFeedback(gameFeedback);});
+  $('demo-btn').addEventListener('click',()=>{
+    const names=['Lucía','Andrés','Marta','Nico'];let data=[];
+    for(let day=1;day<=9;day++)for(let i=0;i<35;i++){
+      const person=names[(i*7+day+(i%5===0?2:0))%4];
+      const message=(i%7===0?'JAJAJA 😂😂😂':i%5===0?'¿Qué hacemos? 👀':i%3===0?'¡Me encanta! 💛':'Vale, hablamos luego 😊');
+      data.push(`${String(day).padStart(2,'0')}/10/2026, ${String(8+(i%16)).padStart(2,'0')}:${String((i*7)%60).padStart(2,'0')} - ${person}: ${message}`);
+    }
+    const results=parseWhatsApp(data.join('\n'));currentResults=results;renderResults(results);clearFeedback(gameFeedback);$('clear-btn').hidden=false;
+    $('game-results').scrollIntoView({behavior:'smooth',block:'nearest'});
+  });
+}
+
+// Envío de archivos: se habilita solo al configurar el receptor y aprobar la información legal.
+const form=$('donation-form'), submit=$('submit-btn');
+let selectedFile=null, supabase=null, turnstileId=null, turnstileReady=false;
+const configured=/^https:\/\/[a-z0-9-]+\.supabase\.co$/i.test(config.supabaseUrl||'')
+  && Boolean(config.publishableKey) && Boolean(config.turnstileSiteKey) && config.privacyApproved===true;
+if(form){
+  const input=$('chat-file'), status=$('form-feedback');
+  input.addEventListener('change',()=>{
+    selectedFile=input.files?.[0]||null;
+    if(!selectedFile){$('selected-file').hidden=true;return;}
+    const e=validate(selectedFile);if(e){showFeedback(status,e);selectedFile=null;input.value='';return;}
+    clearFeedback(status);$('selected-file').hidden=false;$('selected-file').textContent=`${selectedFile.name} · ${humanSize(selectedFile.size)}`;
+  });
+  if(configured){
+    try{
+      const {createClient}=await import('https://esm.sh/@supabase/supabase-js@2.95.0');
+      supabase=createClient(config.supabaseUrl,config.publishableKey,{auth:{persistSession:false,autoRefreshToken:false}});
+      const s=document.createElement('script');s.src='https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';s.async=true;
+      s.onload=()=>{try{turnstileId=window.turnstile.render('#captcha-slot',{sitekey:config.turnstileSiteKey,theme:'light'});turnstileReady=true;}catch{showFeedback(status,t('errorCaptcha'));}};
+      s.onerror=()=>showFeedback(status,t('errorCaptcha'));document.head.append(s);
+      $('setup-warning').hidden=true;submit.disabled=false;
+    }catch{showFeedback(status,t('errorConnection'));}
+  }
+  form.addEventListener('submit',async(e)=>{
+    e.preventDefault();clearFeedback(status);
+    if(!configured||!supabase)return showFeedback(status,t('errorDisabled'));
+    if(!selectedFile)return showFeedback(status,t('errorSelect'));
+    if(!form.reportValidity())return;
+    if(!turnstileReady||!window.turnstile.getResponse(turnstileId))return showFeedback(status,t('errorCaptcha'));
+    if(extension(selectedFile)==='zip'){
+      const head=new Uint8Array(await selectedFile.slice(0,4).arrayBuffer());
+      if(head[0]!==80||head[1]!==75)return showFeedback(status,t('errorZip'));
+    }
+    const data=new FormData(form),payload={
+      extension:extension(selectedFile),sizeBytes:selectedFile.size,
+      country:String(data.get('country')||''),relationship:String(data.get('relationship')||''),
+      age:String(data.get('age')||''),sex:String(data.get('sex')||''),participants:String(data.get('participants')||''),
+      region:String(data.get('region')||''),adult:data.has('adult'),readPrivacy:data.has('readPrivacy'),
+      publishAnon:data.has('publishAnon'),captchaToken:window.turnstile.getResponse(turnstileId)
+    };
+    submit.disabled=true;submit.textContent=t('sending');
+    try{
+      const {data:signed,error:initError}=await supabase.functions.invoke('register-donation',{body:payload});
+      if(initError||!signed?.path||!signed?.token||!signed?.withdrawalCode)throw Error(t('errorConnection'));
+      const mime=payload.extension==='txt'?'text/plain':'application/zip';
+      const {error:uploadError}=await supabase.storage.from(config.bucket).uploadToSignedUrl(signed.path,signed.token,selectedFile,{contentType:mime});
+      if(uploadError)throw Error(t('errorUpload'));
+      $('withdrawal-code').textContent=signed.withdrawalCode;form.hidden=true;$('success-panel').hidden=false;
+      $('success-panel').scrollIntoView({behavior:'smooth',block:'center'});
+    }catch(err){showFeedback(status,err.message||t('errorConnection'))}
+    finally{submit.disabled=false;submit.replaceChildren(document.createTextNode(t('sendButton')+' ↗'));if(turnstileReady)window.turnstile.reset(turnstileId);}
+  });
+  $('copy-receipt').addEventListener('click',async()=>{try{await navigator.clipboard.writeText($('withdrawal-code').textContent);$('copy-receipt').textContent=t('copied');}catch{$('copy-receipt').textContent=t('copyButton')}});
+  $('new-donation').addEventListener('click',()=>{form.reset();input.value='';selectedFile=null;$('selected-file').hidden=true;form.hidden=false;$('success-panel').hidden=true;clearFeedback(status);});
+}
+
+</script>
+</body>
+</html>
