@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Our Story · Prueba de subida privada</title>
+<style>
+:root{color-scheme:light;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#203d39;background:#fbf8f0;line-height:1.6}
+*{box-sizing:border-box}body{margin:0}.wrap{width:min(760px,calc(100% - 32px));margin:3em auto;background:white;border:1px solid #dce6de;border-radius:24px;padding:clamp(20px,5vw,42px);box-shadow:0 15px 40px #203d3912}
+h1{font-family:Georgia,serif;letter-spacing:-.04em;font-weight:500;line-height:1.1;font-size:clamp(2.1rem,5vw,3.2rem)}p{color:#48635b}
+label{display:block;font-weight:600;margin:18px 0 7px}input{width:100%;border:1px solid #a9bcb1;border-radius:10px;padding:11px 13px;font:inherit;min-width:0}
+button{font:inherit;border:0;border-radius:12px;padding:12px 18px;background:#24483f;color:white;cursor:pointer;font-weight:650}
+button.secondary{background:#dce9de;color:#24483f}button:disabled{opacity:.5;cursor:not-allowed}
+.controls{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 16px}
+.notice{border:1px solid #d8e6d8;background:#f3f8f1;border-radius:12px;padding:14px 16px;margin:18px 0}
+pre{white-space:pre-wrap;word-break:break-word;font-size:.9rem;background:#f4f7f4;padding:15px;border-radius:12px}
+a{color:#24483f}small{color:#4d6c60}#captcha{margin:15px 0}
+</style></head><body><main class="wrap">
+<a href="./index.html">← Volver a Our Story</a>
+<h1>Prueba privada de envío</h1>
+<p>Esta pantalla envía únicamente un chat inventado que la propia web genera. No permite elegir conversaciones reales.</p>
+<div class="notice"><strong>Recepción pública cerrada.</strong> Para esta prueba, las funciones de Supabase deben estar actualizadas con el modo privado y tener <code>RECEPTION_ENABLED=false</code>, <code>TEST_MODE_ENABLED=true</code> y el secreto <code>OUR_STORY_TEST_TOKEN</code>.</div>
+<label for="secret">Código secreto de la prueba (64 caracteres)</label>
+<input id="secret" type="password" autocomplete="off" spellcheck="false" placeholder="Introduce tu código secreto" maxlength="64" aria-describedby="secret-note">
+<div class="controls"><button class="secondary" id="generate" type="button">Generar código aleatorio</button><button class="secondary" id="copy" type="button">Copiar código</button></div>
+<small id="secret-note">El código solo permanece en esta pestaña; no se guarda ni se incluye en GitHub. Copia exactamente el mismo código en Supabase → Secrets → OUR_STORY_TEST_TOKEN.</small>
+<p>Resuelve la comprobación antirrobots:</p>
+<div id="captcha" aria-label="Verificación de Cloudflare Turnstile"></div>
+<div class="controls"><button id="send" type="button" disabled>Enviar chat ficticio y verificar</button></div>
+<p id="notice" role="status" aria-live="polite">Preparando comprobación…</p>
+<pre id="details" hidden></pre>
+<p><small>Si el test funciona, comprueba el archivo en Storage → our-story-chats → tests y los metadatos en la tabla donations. Después desactiva TEST_MODE_ENABLED y elimina el secreto OUR_STORY_TEST_TOKEN.</small></p>
+</main>
+<script type="module">
+const $=id=>document.getElementById(id);
+const BASE='https://wklvosizkmoslaetxhqc.supabase.co';
+const PUB='sb_publishable_RlaWROXaaV08Hmm_-9kc0A_aTl0Htku';
+const SITE='0x4AAAAAAF4_R2q3zVpHa0aN';
+let widget=null;
+let client=null;
+function update(text,detail=''){ $('notice').textContent=text; $('details').hidden=!detail; $('details').textContent=detail; }
+$('generate').addEventListener('click',()=>{
+ const a=new Uint8Array(32);crypto.getRandomValues(a);
+ $('secret').value=Array.from(a,v=>v.toString(16).padStart(2,'0')).join('');
+ update('Código generado. Pégalo en Supabase → Edge Functions → Secrets como OUR_STORY_TEST_TOKEN. No cierres esta pestaña.');
+});
+$('copy').addEventListener('click',async()=>{
+ const value=$('secret').value;
+ if(!/^[0-9a-f]{64}$/i.test(value)){update('Genera primero un código válido.');return;}
+ try{await navigator.clipboard.writeText(value);update('Código copiado. Guárdalo solo en Supabase.');}catch{update('No se pudo copiar automáticamente; selecciona el código y cópialo manualmente.');}
+});
+const synthetic=[
+ '08/11/26, 10:00 - Ana Ficticia: OUR-STORY-TEST-SYNTHETIC Hola 😄',
+ '08/11/26, 10:01 - Luis Inventado: ¡Qué alegría! 🎉',
+ '08/11/26, 10:02 - Ana Ficticia: Solo es una prueba técnica de Our Story.'
+].join('\n')+'\n';
+async function start(){
+ try{
+  const {createClient}=await import('https://esm.sh/@supabase/supabase-js@2.95.0');
+  client=createClient(BASE,PUB,{auth:{persistSession:false,autoRefreshToken:false}});
+  const script=document.createElement('script');
+  script.src='https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+  script.async=true;
+  script.onload=()=>{
+   try{
+    widget=window.turnstile.render('#captcha',{sitekey:SITE,theme:'light'});
+    $('send').disabled=false;
+    update('Listo. Tras guardar el código en Supabase, pulsa el botón para ejecutar la prueba.');
+   }catch(e){update('No se pudo mostrar Turnstile: '+e.message);}
+  };
+  script.onerror=()=>update('No se pudo cargar Cloudflare Turnstile.');
+  document.head.append(script);
+ }catch(e){update('No se pudo cargar el cliente Supabase: '+e.message);}
+}
+async function invoke(route,body,key){
+ const url=BASE+'/functions/v1/'+route;
+ const controller=new AbortController();
+ const timeout=setTimeout(()=>controller.abort(),25000);
+ try{
+  const response=await fetch(url,{method:'POST',mode:'cors',cache:'no-store',signal:controller.signal,headers:{
+   'Content-Type':'application/json',apikey:PUB,'x-our-story-test-token':key
+  },body:JSON.stringify(body)});
+  const raw=await response.text();
+  let parsed;try{parsed=JSON.parse(raw)}catch{parsed={error:raw.slice(0,240)}}
+  if(!response.ok)throw Error(route+' · HTTP '+response.status+' · '+(parsed?.error||'Sin detalles'));
+  return parsed;
+ }finally{clearTimeout(timeout)}
+}
+$('send').addEventListener('click',async()=>{
+ const key=$('secret').value.trim();
+ if(!/^[0-9a-f]{64}$/i.test(key)){update('Introduce el código de prueba de 64 caracteres que guardaste en Supabase.');return;}
+ if(widget===null||!window.turnstile){update('Cloudflare no está disponible.');return;}
+ const captchaToken=window.turnstile.getResponse(widget);
+ if(!captchaToken){update('Completa la verificación de Cloudflare antes de enviar.');return;}
+ $('send').disabled=true;
+ const file=new File([synthetic],'chat.txt',{type:'text/plain;charset=utf-8'});
+ let code='';
+ try{
+  update('1/3 · Autorizando una subida sintética…');
+  const signed=await invoke('swift-endpoint',{
+   extension:'txt',sizeBytes:file.size,country:'NA',region:'synthetic-test',
+   relationship:'na',age:'',sex:'',participants:'2',adult:true,
+   readPrivacy:true,publishAnon:false,testOnly:true,captchaToken
+  },key);
+  if(!signed?.id||!signed?.path||!signed?.token||!signed?.withdrawalCode)throw Error('Respuesta de registro incompleta.');
+  code=signed.withdrawalCode;
+  if(!signed.path.startsWith('tests/')||!signed.path.endsWith('/chat.txt'))throw Error('Ruta de prueba incorrecta. No se subirá el archivo.');
+  update('2/3 · Subiendo únicamente el chat sintético…');
+  const {error:err}=await client.storage.from('our-story-chats').uploadToSignedUrl(
+    signed.path,signed.token,file,{contentType:'text/plain',upsert:false}
+  );
+  if(err)throw Error('Error en la subida privada: '+err.message);
+  update('3/3 · Verificando el archivo almacenado…');
+  const receipt=await invoke('confirm-donation',{id:signed.id,withdrawalCode:code},key);
+  if(receipt?.ok!==true||receipt?.status!=='received')throw Error('La confirmación no devolvió received.');
+  update('✅ PRUEBA SUPERADA: el archivo sintético se ha subido y el servidor confirmó su recepción.',
+   'Estado: received\nRuta: '+signed.path+'\nCódigo de retirada: '+code+
+   '\nEste archivo contiene solo mensajes inventados. Desactiva el modo de pruebas al terminar.');
+ }catch(e){
+  update('❌ La prueba no se ha completado: '+(e?.message||String(e)),
+   code ? 'Se generó un registro. Conserva este código para revisar la prueba: '+code : '');
+ }finally{
+  try{window.turnstile.reset(widget)}catch{}
+  $('send').disabled=false;
+ }
+});
+start();
+</script></body></html>
