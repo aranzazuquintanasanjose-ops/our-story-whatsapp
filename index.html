@@ -1383,7 +1383,7 @@ if(form){
     };
     submit.disabled=true;submit.textContent=t('sending');
     try{
-      const {data:signed,error:initError}=await supabase.functions.invoke('register-donation',{body:payload});
+      const {data:signed,error:initError}=await supabase.functions.invoke('swift-endpoint',{body:payload});
       if(initError||!signed?.path||!signed?.token||!signed?.withdrawalCode)throw Error(t('errorConnection'));
       const mime=payload.extension==='txt'?'text/plain':'application/zip';
       const {error:uploadError}=await supabase.storage.from(config.bucket).uploadToSignedUrl(signed.path,signed.token,selectedFile,{contentType:mime});
