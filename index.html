@@ -45,7 +45,7 @@
         <div id="game-results" class="game-results" hidden>
           <div class="result-summary"><div><small data-i18n="totalMessages">MENSAJES</small><strong id="stat-messages">—</strong></div><div><small data-i18n="totalPeople">PARTICIPANTES</small><strong id="stat-people">—</strong></div><div><small data-i18n="totalEmojis">EMOJIS</small><strong id="stat-emojis">—</strong></div></div>
           <div class="ranking"><div class="ranking-title"><h4 data-i18n="rankingTitle">El podio de quienes más hablan</h4><span>✦</span></div><div id="ranking-bars"></div></div>
-          <div class="awards" id="award-list"></div><p class="results-footnote" data-i18n="resultsFootnote">Solo se muestran estadísticas. El texto de los mensajes no se publica ni se guarda.</p>
+          <div class="awards" id="award-list"></div><div id="game-donate-cta" hidden style="margin-top:20px;padding:18px;border-radius:12px;background:#e9f3e7;border:1px solid #cddfc9;text-align:center"><button type="button" id="game-donate-btn" class="btn btn-primary" data-i18n="gameDonate">Donar este chat a la investigación ↗</button><p style="margin:12px 0 0;font-size:12px;color:#4b6a55" data-i18n="gameDonateHint">El juego es privado. Tu chat solo se enviará si completas el formulario y confirmas la aportación.</p></div><p class="results-footnote" data-i18n="resultsFootnote">Solo se muestran estadísticas. El texto de los mensajes no se publica ni se guarda.</p>
         </div>
       </div></div></section>
     <section class="steps shell section-pad" id="como"><div class="section-intro"><span class="overline" data-i18n="howKicker">03 / CÓMO PARTICIPAR</span><h2 data-i18n="howTitle">Es más fácil de lo que crees.</h2><p data-i18n="howLead">Puedes jugar sin compartir nada. Si además quieres colaborar con la investigación, bastan tres pasos.</p></div><div class="steps-grid"><article class="step"><span class="step-no">01</span><span class="step-emoji">☰</span><h3 data-i18n="step1H">Exporta</h3><p data-i18n="step1P">Abre un chat en WhatsApp y elige «Exportar chat». Selecciona «Sin archivos multimedia».</p></article><article class="step"><span class="step-no">02</span><span class="step-emoji">✳</span><h3 data-i18n="step2H">Descubre</h3><p data-i18n="step2P">Carga el .txt o .zip en el juego y mira vuestras estadísticas, sin enviar los mensajes.</p></article><article class="step"><span class="step-no">03</span><span class="step-emoji">↗</span><h3 data-i18n="step3H">Colabora (opcional)</h3><p data-i18n="step3P">Si lo deseas, completa el formulario de investigación y comparte el archivo por un canal privado.</p></article></div>
@@ -67,7 +67,7 @@
           <details class="optional-consent"><summary><span><strong data-i18n="optionalTitle">Autorización opcional para publicar resultados anónimos</strong><small data-i18n="optionalIntro">Despliega para decidir. No es necesaria para participar.</small></span><span aria-hidden="true">+</span></summary><div class="optional-body"><p data-i18n="optionalP">La investigación puede mostrar estadísticas agregadas o resultados irreversiblemente anonimizados, sin nombres, números ni mensajes identificables. Esta opción registra tu preferencia, pero no sustituye la revisión legal y ética de los datos.</p><label class="check-row"><input type="checkbox" name="publishAnon"><span data-i18n="optionalCheckbox">Sí, autorizo opcionalmente la publicación de resultados anónimos derivados de mi aportación.</span></label><p class="optional-small" data-i18n="optionalNo">Si no marcas esta casilla, tu preferencia será NO autorizar esa publicación.</p></div></details>
           <div id="captcha-slot" class="captcha-slot"></div><p id="form-feedback" class="inline-feedback" role="alert" hidden></p>
           <button type="submit" id="submit-btn" class="btn btn-primary btn-submit" disabled><span data-i18n="sendButton">Enviar mi conversación</span><span aria-hidden="true">↗</span></button><p class="form-disclaimer" data-i18n="formDisclaimer">Enviar un chat puede implicar datos personales de otras personas. Evita información íntima, sensible o identificativa y revisa la política de privacidad.</p>
-        </form><div id="success-panel" class="success-panel" hidden><span class="success-symbol">✓</span><h3 data-i18n="successTitle">¡Aportación recibida!</h3><p data-i18n="successDesc">Guarda este código para solicitar la retirada de tu aportación.</p><div class="receipt"><code id="withdrawal-code"></code><button type="button" id="copy-receipt" data-i18n="copyButton">Copiar</button></div><button type="button" id="new-donation" class="btn btn-outline" data-i18n="newDonation">Enviar otra</button></div>
+        </form><div id="success-panel" class="success-panel" hidden><span class="success-symbol">✓</span><h3 data-i18n="successTitle">¡Aportación recibida!</h3><p data-i18n="successDesc">Guarda este código para solicitar la retirada de tu aportación.</p><div class="receipt"><code id="withdrawal-code"></code><button type="button" id="copy-receipt" data-i18n="copyButton">Copiar</button></div><p><a id="receipt-withdraw-link" href="retirar.html" data-i18n="footerWithdraw">Retirar un chat</a></p><button type="button" id="new-donation" class="btn btn-outline" data-i18n="newDonation">Enviar otra</button></div>
       </div></div></section>
     <section class="faq shell section-pad" id="preguntas"><div class="section-intro"><span class="overline" data-i18n="faqKicker">05 / PREGUNTAS FRECUENTES</span><h2 data-i18n="faqTitle">Antes de empezar...</h2></div><div class="faq-stack"><details class="faq-detail"><summary><span data-i18n="faq1Q">¿Tengo que enviar el chat para ver el juego?</span><span>+</span></summary><p data-i18n="faq1A">No. El análisis se realiza en tu propio navegador. Puedes cerrar la página y no se habrá enviado ninguna conversación.</p></details><details class="faq-detail"><summary><span data-i18n="faq2Q">¿Para qué se utilizan las conversaciones compartidas?</span><span>+</span></summary><p data-i18n="faq2A">Exclusivamente para investigación lingüística. No se venden, no sirven para publicidad y el envío no publica automáticamente ningún mensaje.</p></details><details class="faq-detail"><summary><span data-i18n="faq3Q">¿Es obligatorio autorizar la publicación de resultados anónimos?</span><span>+</span></summary><p data-i18n="faq3A">No. Es una preferencia opcional y está desmarcada por defecto. Tampoco equivale a autorizar la publicación de mensajes o de datos identificables.</p></details><details class="faq-detail"><summary><span data-i18n="faq4Q">¿Qué pasa si mi ZIP contiene fotos o vídeos?</span><span>+</span></summary><p data-i18n="faq4A">Para jugar se analiza solo el texto. Para contribuir recomendamos exportar sin multimedia y no enviar archivos adjuntos sensibles.</p></details></div></section>
     <section class="end-banner"><div class="shell"><span class="overline" data-i18n="closingSmall">LAS HISTORIAS NOS CONECTAN</span><h2 data-i18n="closingTitle">No son solo mensajes. Son maneras de entendernos.</h2><a class="btn btn-primary" href="#juego"><span data-i18n="closingButton">Descubre tu historia</span>↗</a></div></section>
@@ -128,6 +128,8 @@ window.OUR_STORY_I18N = {
     "gameMini": "TU CHAT EN NÚMEROS",
     "gameHeading": "Una pequeña radiografía de vuestra historia",
     "gameDrop": "Arrastra aquí un archivo .txt o .zip",
+    "gameDonate": "Donar este chat a la investigación ↗",
+    "gameDonateHint": "El juego es privado. Tu chat solo se enviará si completas el formulario y confirmas la aportación.",
     "gameDropSub": "o haz clic para seleccionarlo · hasta 45 MB",
     "demoButton": "✦ Probar con un chat de ejemplo",
     "resetButton": "↻ Elegir otro chat",
@@ -309,6 +311,8 @@ window.OUR_STORY_I18N = {
     "gameMini": "YOUR CHAT IN NUMBERS",
     "gameHeading": "A snapshot of your story",
     "gameDrop": "Drop a .txt or .zip file here",
+    "gameDonate": "Donate this chat to research ↗",
+    "gameDonateHint": "Playing is private. Your chat is uploaded only if you complete the donation form and explicitly submit it.",
     "gameDropSub": "or click to choose · up to 45 MB",
     "demoButton": "✦ Try a sample chat",
     "resetButton": "↻ Choose another chat",
@@ -490,6 +494,8 @@ window.OUR_STORY_I18N = {
     "gameMini": "O TEU CHAT EM NÚMEROS",
     "gameHeading": "Um retrato da vossa história",
     "gameDrop": "Arrasta um ficheiro .txt ou .zip",
+    "gameDonate": "Doar esta conversa à investigação ↗",
+    "gameDonateHint": "O jogo é privado. A conversa só será enviada se preencheres o formulário e confirmares a contribuição.",
     "gameDropSub": "ou clica para selecionar · até 45 MB",
     "demoButton": "✦ Experimentar um chat de exemplo",
     "resetButton": "↻ Escolher outro chat",
@@ -671,6 +677,8 @@ window.OUR_STORY_I18N = {
     "gameMini": "VOTRE CHAT EN CHIFFRES",
     "gameHeading": "Un aperçu de votre histoire",
     "gameDrop": "Déposez un fichier .txt ou .zip ici",
+    "gameDonate": "Faire don de cette conversation à la recherche ↗",
+    "gameDonateHint": "Le jeu reste privé. Votre fichier ne sera envoyé que si vous remplissez le formulaire et confirmez votre contribution.",
     "gameDropSub": "ou cliquez pour le choisir · jusqu'à 45 Mo",
     "demoButton": "✦ Essayer un chat fictif",
     "resetButton": "↻ Choisir un autre chat",
@@ -852,6 +860,8 @@ window.OUR_STORY_I18N = {
     "gameMini": "LA TUA CHAT IN NUMERI",
     "gameHeading": "Una fotografia della vostra storia",
     "gameDrop": "Trascina qui un file .txt o .zip",
+    "gameDonate": "Donare questa chat alla ricerca ↗",
+    "gameDonateHint": "Il gioco è privato. La chat viene inviata solo dopo aver compilato il modulo e confermato il contributo.",
     "gameDropSub": "oppure fai clic per sceglierlo · fino a 45 MB",
     "demoButton": "✦ Prova una chat di esempio",
     "resetButton": "↻ Scegli un'altra chat",
@@ -1032,6 +1042,8 @@ window.OUR_STORY_I18N = {
     "gameMini": "DEIN CHAT IN ZAHLEN",
     "gameHeading": "Ein kleiner Einblick in eure Geschichte",
     "gameDrop": "Ziehe eine .txt- oder .zip-Datei hierher",
+    "gameDonate": "Diesen Chat für die Forschung spenden ↗",
+    "gameDonateHint": "Das Spiel bleibt privat. Dein Chat wird erst übertragen, wenn du das Formular ausfüllst und die Spende ausdrücklich bestätigst.",
     "gameDropSub": "oder klicke zum Auswählen · bis 45 MB",
     "demoButton": "✦ Beispielchat ausprobieren",
     "resetButton": "↻ Anderen Chat wählen",
@@ -1189,6 +1201,7 @@ function changeLanguage(next){
   const privacyLink = $('privacy-link'); if (privacyLink) privacyLink.href = `privacidad.html?lang=${lang}`;
   const footerLink = $('footer-privacy'); if (footerLink) footerLink.href = `privacidad.html?lang=${lang}`;
   const withdrawalLink = $('footer-withdraw'); if (withdrawalLink) withdrawalLink.href = `retirar.html?lang=${lang}`;
+  const receiptWithdrawalLink = $('receipt-withdraw-link'); if(receiptWithdrawalLink)receiptWithdrawalLink.href = `retirar.html?lang=${lang}`;
   try {localStorage.setItem('ourstory-language',lang);}catch{}
   if(currentResults) renderResults(currentResults);
 }
@@ -1317,14 +1330,30 @@ function renderResults(r){
 }
 
 const gameFile=$('game-file'), gameFeedback=$('game-feedback');
+let gameDonationFile=null;
+const gameDonateBox=$('game-donate-cta');
+function clearGameDonation(){gameDonationFile=null;if(gameDonateBox)gameDonateBox.hidden=true;}
+$('game-donate-btn')?.addEventListener('click',()=>{
+  if(!gameDonationFile)return;
+  const formFile=$('chat-file');
+  if(formFile)formFile.value='';
+  selectedFile=gameDonationFile;
+  $('selected-file').textContent=`${selectedFile.name} · ${humanSize(selectedFile.size)}`;
+  $('selected-file').hidden=false;
+  $('donation-form').hidden=false;
+  $('success-panel').hidden=true;
+  $('participa').scrollIntoView({behavior:'smooth',block:'start'});
+});
 async function playFile(file){
   if(!gameFeedback)return;
+  clearGameDonation();
   const error=validate(file);if(error)return showFeedback(gameFeedback,error);
   showFeedback(gameFeedback,t('analyzing'));
   try{
     const text=await readChat(file);const results=parseWhatsApp(text);
     if(!results)throw Error(t('errorParse'));
     currentResults=results;renderResults(results);clearFeedback(gameFeedback);
+    gameDonationFile=file;if(gameDonateBox)gameDonateBox.hidden=false;
     $('clear-btn').hidden=false;$('game-results').scrollIntoView({behavior:'smooth',block:'nearest'});
   }catch(e){showFeedback(gameFeedback,e.message||t('errorParse'));}
 }
@@ -1335,8 +1364,9 @@ if(gameFile){
   for(const ev of ['dragover','dragenter'])drop.addEventListener(ev,(e)=>{e.preventDefault();drop.classList.add('drag-over');});
   for(const ev of ['dragleave','drop'])drop.addEventListener(ev,(e)=>{e.preventDefault();drop.classList.remove('drag-over');});
   drop.addEventListener('drop',(e)=>{const f=e.dataTransfer.files?.[0];if(f)playFile(f);});
-  $('clear-btn').addEventListener('click',()=>{currentResults=null;gameFile.value='';$('game-results').hidden=true;$('clear-btn').hidden=true;clearFeedback(gameFeedback);});
+  $('clear-btn').addEventListener('click',()=>{clearGameDonation();currentResults=null;gameFile.value='';$('game-results').hidden=true;$('clear-btn').hidden=true;clearFeedback(gameFeedback);});
   $('demo-btn').addEventListener('click',()=>{
+    clearGameDonation();
     const names=['Lucía','Andrés','Marta','Nico'];let data=[];
     for(let day=1;day<=9;day++)for(let i=0;i<35;i++){
       const person=names[(i*7+day+(i%5===0?2:0))%4];
