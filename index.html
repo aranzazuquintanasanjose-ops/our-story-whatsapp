@@ -52,7 +52,7 @@
       <details class="faq-detail export-detail"><summary><span data-i18n="exportQuestion">¿Dónde encuentro «Exportar chat»?</span><span>+</span></summary><div class="export-grid"><div><h4>Android</h4><p data-i18n="androidHelp">Abre la conversación → menú de tres puntos → Más → Exportar chat → Sin archivos.</p></div><div><h4>iPhone</h4><p data-i18n="iphoneHelp">Abre la conversación → toca el nombre de la persona o del grupo → Exportar chat → Sin archivos.</p></div></div></details>
     </section>
     <section class="participate" id="participa"><div class="shell participate-grid"><div class="participate-copy"><span class="overline" data-i18n="joinKicker">04 / PARTICIPA EN LA INVESTIGACIÓN</span><h2 data-i18n="joinTitle">Una conversación puede ayudarnos a entender muchas cosas.</h2><p data-i18n="joinDesc">Las conversaciones se utilizarán exclusivamente para fines de investigación lingüística. La aportación es voluntaria y distinta del juego: probar las estadísticas no implica enviar el archivo.</p><div class="privacy-note"><span>♧</span><div><strong data-i18n="privacyNoteH">Tus mensajes no se publican aquí.</strong><p data-i18n="privacyNoteP">La web necesita un almacenamiento privado y una revisión de protección de datos antes de admitir archivos reales.</p></div></div></div>
-      <div class="form-card"><div class="form-title-row"><span data-i18n="formTag">FORMULARIO DE COLABORACIÓN</span><span class="form-lock">◈ <span data-i18n="formStatus">Recepción privada</span></span></div><p id="setup-warning" class="notice" role="status" data-i18n="setupWarning">Vista previa: la recepción está desactivada hasta configurar el almacenamiento privado y revisar la documentación de privacidad.</p>
+      <div class="form-card"><div class="form-title-row"><span data-i18n="formTag">FORMULARIO DE COLABORACIÓN</span><span class="form-lock">◈ <span data-i18n="formStatus">Recepción privada</span></span></div><p id="setup-warning" class="notice" role="status" data-i18n="setupWarning">Recepción de muestras abierta. Solo se envían archivos tras completar el formulario, aceptar la información de privacidad y superar la verificación.</p>
         <form id="donation-form" novalidate><div class="form-step-heading"><span>1</span><h3 data-i18n="formStep1">Selecciona la conversación</h3></div><label class="form-upload"><input id="chat-file" type="file" accept=".txt,.zip,text/plain,application/zip" aria-label="Archivo TXT o ZIP"><span class="upload-round">↑</span><strong id="file-label" data-i18n="formDrop">Elegir archivo .txt o .zip</strong><small data-i18n="formMax">Sin multimedia · máximo 45 MB</small></label><p id="selected-file" class="file-chip" hidden></p>
         <div class="form-step-heading"><span>2</span><h3 data-i18n="formStep2">Sobre la conversación</h3></div>
         <div class="form-grid"><label><span data-i18n="countryLabel">País</span><select name="country" required><option value="" data-i18n="pickOne">Selecciona una opción</option><option value="ES" data-i18n="countryES">España</option><option value="AR" data-i18n="countryAR">Argentina</option><option value="MX" data-i18n="countryMX">México</option><option value="CO" data-i18n="countryCO">Colombia</option><option value="CL" data-i18n="countryCL">Chile</option><option value="PE" data-i18n="countryPE">Perú</option><option value="PT" data-i18n="countryPT">Portugal</option><option value="BR" data-i18n="countryBR">Brasil</option><option value="OTHER" data-i18n="countryOther">Otro</option><option value="NA" data-i18n="unknown">Prefiero no indicarlo</option></select></label>
@@ -66,13 +66,13 @@
           <label class="check-row"><input type="checkbox" name="readPrivacy" required><span><span data-i18n="privacyConsent">He leído la información de privacidad y solicito voluntariamente participar en la investigación.</span> <a href="privacidad.html" id="privacy-link" target="_blank" rel="noopener" data-i18n="privacyLink">Leer política ↗</a></span></label>
           <details class="optional-consent"><summary><span><strong data-i18n="optionalTitle">Autorización opcional para publicar resultados anónimos</strong><small data-i18n="optionalIntro">Despliega para decidir. No es necesaria para participar.</small></span><span aria-hidden="true">+</span></summary><div class="optional-body"><p data-i18n="optionalP">La investigación puede mostrar estadísticas agregadas o resultados irreversiblemente anonimizados, sin nombres, números ni mensajes identificables. Esta opción registra tu preferencia, pero no sustituye la revisión legal y ética de los datos.</p><label class="check-row"><input type="checkbox" name="publishAnon"><span data-i18n="optionalCheckbox">Sí, autorizo opcionalmente la publicación de resultados anónimos derivados de mi aportación.</span></label><p class="optional-small" data-i18n="optionalNo">Si no marcas esta casilla, tu preferencia será NO autorizar esa publicación.</p></div></details>
           <div id="captcha-slot" class="captcha-slot"></div><p id="form-feedback" class="inline-feedback" role="alert" hidden></p>
-          <button type="submit" id="submit-btn" class="btn btn-primary btn-submit" disabled><span data-i18n="sendButton">Enviar mi conversación</span><span aria-hidden="true">↗</span></button><p class="form-disclaimer" data-i18n="formDisclaimer">Enviar un chat puede implicar datos personales de otras personas. Evita información íntima, sensible o identificativa y revisa la política de privacidad.</p>
+          <button type="submit" id="submit-btn" class="btn btn-primary btn-submit" disabled><span data-i18n="sendButton">Enviar mi conversación</span><span aria-hidden="true">↗</span></button><p class="form-disclaimer" data-i18n="formDisclaimer">Antes de compartir un chat, revisa y elimina nombres, números de teléfono, información íntima o sensible y cualquier dato de menores. Si no puedes hacerlo, no lo envíes. El juego funciona sin donación.</p>
         </form><div id="success-panel" class="success-panel" hidden><span class="success-symbol">✓</span><h3 data-i18n="successTitle">¡Aportación recibida!</h3><p data-i18n="successDesc">Guarda este código para solicitar la retirada de tu aportación.</p><div class="receipt"><code id="withdrawal-code"></code><button type="button" id="copy-receipt" data-i18n="copyButton">Copiar</button></div><p><a id="receipt-withdraw-link" href="retirar.html" data-i18n="footerWithdraw">Retirar un chat</a></p><button type="button" id="new-donation" class="btn btn-outline" data-i18n="newDonation">Enviar otra</button></div>
       </div></div></section>
     <section class="faq shell section-pad" id="preguntas"><div class="section-intro"><span class="overline" data-i18n="faqKicker">05 / PREGUNTAS FRECUENTES</span><h2 data-i18n="faqTitle">Antes de empezar...</h2></div><div class="faq-stack"><details class="faq-detail"><summary><span data-i18n="faq1Q">¿Tengo que enviar el chat para ver el juego?</span><span>+</span></summary><p data-i18n="faq1A">No. El análisis se realiza en tu propio navegador. Puedes cerrar la página y no se habrá enviado ninguna conversación.</p></details><details class="faq-detail"><summary><span data-i18n="faq2Q">¿Para qué se utilizan las conversaciones compartidas?</span><span>+</span></summary><p data-i18n="faq2A">Exclusivamente para investigación lingüística. No se venden, no sirven para publicidad y el envío no publica automáticamente ningún mensaje.</p></details><details class="faq-detail"><summary><span data-i18n="faq3Q">¿Es obligatorio autorizar la publicación de resultados anónimos?</span><span>+</span></summary><p data-i18n="faq3A">No. Es una preferencia opcional y está desmarcada por defecto. Tampoco equivale a autorizar la publicación de mensajes o de datos identificables.</p></details><details class="faq-detail"><summary><span data-i18n="faq4Q">¿Qué pasa si mi ZIP contiene fotos o vídeos?</span><span>+</span></summary><p data-i18n="faq4A">Para jugar se analiza solo el texto. Para contribuir recomendamos exportar sin multimedia y no enviar archivos adjuntos sensibles.</p></details></div></section>
     <section class="end-banner"><div class="shell"><span class="overline" data-i18n="closingSmall">LAS HISTORIAS NOS CONECTAN</span><h2 data-i18n="closingTitle">No son solo mensajes. Son maneras de entendernos.</h2><a class="btn btn-primary" href="#juego"><span data-i18n="closingButton">Descubre tu historia</span>↗</a></div></section>
   </main>
-  <footer class="footer"><div class="shell footer-main"><div><span class="footer-brand">our<span>story</span>.</span><p data-i18n="footerText">Un espacio para jugar con las estadísticas de tus chats y colaborar con la investigación lingüística.</p></div><div class="footer-links"><a href="#descubre" data-i18n="footerAbout">El proyecto</a><a href="#participa" data-i18n="footerJoin">Participar</a><a href="privacidad.html" id="footer-privacy" data-i18n="footerPrivacy">Privacidad</a><a href="retirar.html" id="footer-withdraw" data-i18n="footerWithdraw">Retirar un chat</a></div><div class="footer-extra"><span data-i18n="footerIndep">Proyecto independiente de WhatsApp y Meta.</span><span data-i18n="footerDraft">Versión de prueba. No recibe conversaciones reales.</span></div></div><div class="shell footer-bottom">© Our Story · <span data-i18n="footerCopyright">Investigación lingüística, no comercial.</span></div></footer>
+  <footer class="footer"><div class="shell footer-main"><div><span class="footer-brand">our<span>story</span>.</span><p data-i18n="footerText">Un espacio para jugar con las estadísticas de tus chats y colaborar con la investigación lingüística.</p></div><div class="footer-links"><a href="#descubre" data-i18n="footerAbout">El proyecto</a><a href="#participa" data-i18n="footerJoin">Participar</a><a href="privacidad.html" id="footer-privacy" data-i18n="footerPrivacy">Privacidad</a><a href="retirar.html" id="footer-withdraw" data-i18n="footerWithdraw">Retirar un chat</a></div><div class="footer-extra"><span data-i18n="footerIndep">Proyecto independiente de WhatsApp y Meta.</span><span data-i18n="footerDraft">Recepción de muestras abierta · Investigación no comercial</span></div></div><div class="shell footer-bottom">© Our Story · <span data-i18n="footerCopyright">Investigación lingüística, no comercial.</span></div></footer>
   <script>
 // Solo valores públicos. No publiques claves secretas en GitHub.
 window.OUR_STORY_CONFIG = {
@@ -80,7 +80,7 @@ window.OUR_STORY_CONFIG = {
   publishableKey: 'sb_publishable_RlaWROXaaV08Hmm_-9kc0A_aTl0Htku',
   turnstileSiteKey: '0x4AAAAAAF4_R2q3zVpHa0aN',
   bucket: 'our-story-chats',
-  privacyApproved: false
+  privacyApproved: true
 };
 
 window.OUR_STORY_I18N = {
@@ -157,7 +157,7 @@ window.OUR_STORY_I18N = {
     "privacyNoteP": "La web necesita un almacenamiento privado y una revisión de protección de datos antes de admitir archivos reales.",
     "formTag": "FORMULARIO DE COLABORACIÓN",
     "formStatus": "Recepción privada",
-    "setupWarning": "Vista previa: la recepción está desactivada hasta configurar el almacenamiento privado y revisar la documentación de privacidad.",
+    "setupWarning": "Recepción de muestras abierta. Solo se envían archivos tras completar el formulario, aceptar la información de privacidad y superar la verificación.",
     "formStep1": "Selecciona la conversación",
     "formDrop": "Elegir archivo .txt o .zip",
     "formMax": "Sin multimedia · máximo 45 MB",
@@ -198,7 +198,7 @@ window.OUR_STORY_I18N = {
     "optionalCheckbox": "Sí, autorizo opcionalmente la publicación de resultados anónimos derivados de mi aportación.",
     "optionalNo": "Si no marcas esta casilla, tu preferencia será NO autorizar esa publicación.",
     "sendButton": "Enviar mi conversación",
-    "formDisclaimer": "Enviar un chat puede implicar datos personales de otras personas. Evita información íntima, sensible o identificativa y revisa la política de privacidad.",
+    "formDisclaimer": "Antes de compartir un chat, revisa y elimina nombres, números de teléfono, información íntima o sensible y cualquier dato de menores. Si no puedes hacerlo, no lo envíes. El juego funciona sin donación.",
     "successTitle": "¡Aportación recibida!",
     "successDesc": "Guarda este código para solicitar la retirada de tu aportación.",
     "copyButton": "Copiar",
@@ -222,7 +222,7 @@ window.OUR_STORY_I18N = {
     "footerPrivacy": "Privacidad",
     "footerWithdraw": "Retirar un chat",
     "footerIndep": "Proyecto independiente de WhatsApp y Meta.",
-    "footerDraft": "Versión de prueba. No recibe conversaciones reales.",
+    "footerDraft": "Recepción de muestras abierta · Investigación no comercial",
     "footerCopyright": "Investigación lingüística, no comercial.",
     "backToSite": "Volver a la web ↗",
     "privacyPageKicker": "INFORMACIÓN SOBRE PROTECCIÓN DE DATOS",
@@ -340,7 +340,7 @@ window.OUR_STORY_I18N = {
     "privacyNoteP": "The site needs private storage and a data-protection review before accepting real files.",
     "formTag": "CONTRIBUTION FORM",
     "formStatus": "Private upload",
-    "setupWarning": "Preview only: submissions are disabled until private storage is configured and the privacy documents are reviewed.",
+    "setupWarning": "Submissions are open. Files are uploaded only after you complete the form, accept the privacy notice and pass verification.",
     "formStep1": "Choose your conversation",
     "formDrop": "Choose a .txt or .zip file",
     "formMax": "Without media · up to 45 MB",
@@ -381,7 +381,7 @@ window.OUR_STORY_I18N = {
     "optionalCheckbox": "Yes, I optionally authorise publication of anonymous results derived from my contribution.",
     "optionalNo": "If you leave this box unticked, your preference will be NOT to authorise that publication.",
     "sendButton": "Send my conversation",
-    "formDisclaimer": "Sharing a chat can involve other people's personal data. Avoid intimate, sensitive or identifying information and check the privacy notice.",
+    "formDisclaimer": "Before sharing a chat, remove names, phone numbers, intimate or sensitive details and any data about minors. If you cannot do so, do not upload it. You can use the game without donating.",
     "successTitle": "Contribution received!",
     "successDesc": "Keep this code to request withdrawal of your contribution.",
     "copyButton": "Copy",
@@ -405,7 +405,7 @@ window.OUR_STORY_I18N = {
     "footerPrivacy": "Privacy",
     "footerWithdraw": "Withdraw a chat",
     "footerIndep": "Independent of WhatsApp and Meta.",
-    "footerDraft": "Preview version. Not accepting real conversations.",
+    "footerDraft": "Submissions open · Non-commercial research",
     "footerCopyright": "Non-commercial linguistic research.",
     "backToSite": "Back to the website ↗",
     "privacyPageKicker": "DATA PROTECTION INFORMATION",
@@ -523,7 +523,7 @@ window.OUR_STORY_I18N = {
     "privacyNoteP": "O site precisa de armazenamento privado e de revisão de proteção de dados antes de receber ficheiros reais.",
     "formTag": "FORMULÁRIO DE COLABORAÇÃO",
     "formStatus": "Envio privado",
-    "setupWarning": "Pré-visualização: os envios estão desativados até configurar o armazenamento privado e rever os documentos de privacidade.",
+    "setupWarning": "Receção de amostras aberta. Os ficheiros só são enviados depois de preencheres o formulário, aceitares a política de privacidade e concluíres a verificação.",
     "formStep1": "Seleciona a conversa",
     "formDrop": "Escolher ficheiro .txt ou .zip",
     "formMax": "Sem multimédia · máximo 45 MB",
@@ -564,7 +564,7 @@ window.OUR_STORY_I18N = {
     "optionalCheckbox": "Sim, autorizo opcionalmente a publicação de resultados anónimos derivados da minha contribuição.",
     "optionalNo": "Se não assinalares a caixa, a tua preferência será NÃO autorizar essa publicação.",
     "sendButton": "Enviar a minha conversa",
-    "formDisclaimer": "Partilhar um chat pode envolver dados pessoais de terceiros. Evita informação íntima, sensível ou identificável e consulta a política de privacidade.",
+    "formDisclaimer": "Antes de partilhares uma conversa, elimina nomes, telefones, dados íntimos ou sensíveis e dados de menores. Se não conseguires, não a envies. Podes jogar sem doar.",
     "successTitle": "Contribuição recebida!",
     "successDesc": "Guarda este código para solicitar a retirada da tua contribuição.",
     "copyButton": "Copiar",
@@ -588,7 +588,7 @@ window.OUR_STORY_I18N = {
     "footerPrivacy": "Privacidade",
     "footerWithdraw": "Retirar uma conversa",
     "footerIndep": "Projeto independente do WhatsApp e da Meta.",
-    "footerDraft": "Versão de teste. Não recebe conversas reais.",
+    "footerDraft": "Receção aberta · Investigação não comercial",
     "footerCopyright": "Investigação linguística não comercial.",
     "backToSite": "Voltar ao site ↗",
     "privacyPageKicker": "INFORMAÇÃO SOBRE PROTEÇÃO DE DADOS",
@@ -706,7 +706,7 @@ window.OUR_STORY_I18N = {
     "privacyNoteP": "Le site doit disposer d'un stockage privé et faire l'objet d'une vérification des règles de protection des données avant de recevoir de vrais fichiers.",
     "formTag": "FORMULAIRE DE PARTICIPATION",
     "formStatus": "Envoi privé",
-    "setupWarning": "Aperçu : les envois sont désactivés en attendant la configuration du stockage privé et la révision des documents de confidentialité.",
+    "setupWarning": "La collecte est ouverte. Les fichiers ne sont envoyés qu’après avoir rempli le formulaire, accepté l’avis de confidentialité et validé la vérification.",
     "formStep1": "Choisissez une conversation",
     "formDrop": "Choisir un fichier .txt ou .zip",
     "formMax": "Sans médias · maximum 45 Mo",
@@ -747,7 +747,7 @@ window.OUR_STORY_I18N = {
     "optionalCheckbox": "Oui, j'autorise facultativement la publication de résultats anonymes issus de ma contribution.",
     "optionalNo": "Si vous ne cochez pas cette case, votre choix sera de NE PAS autoriser cette publication.",
     "sendButton": "Envoyer ma conversation",
-    "formDisclaimer": "Partager un chat peut impliquer des données personnelles de tiers. Évitez les informations intimes, sensibles ou identifiantes et consultez la politique de confidentialité.",
+    "formDisclaimer": "Avant de partager une conversation, supprimez les noms, numéros, données intimes ou sensibles et toute donnée concernant des mineurs. Sinon, ne l’envoyez pas. Le jeu ne nécessite pas de don.",
     "successTitle": "Contribution reçue !",
     "successDesc": "Conservez ce code pour demander le retrait de votre contribution.",
     "copyButton": "Copier",
@@ -771,7 +771,7 @@ window.OUR_STORY_I18N = {
     "footerPrivacy": "Confidentialité",
     "footerWithdraw": "Retirer une conversation",
     "footerIndep": "Projet indépendant de WhatsApp et de Meta.",
-    "footerDraft": "Version de démonstration. Aucun vrai chat n'est reçu.",
+    "footerDraft": "Collecte ouverte · Recherche non commerciale",
     "footerCopyright": "Recherche linguistique non commerciale.",
     "backToSite": "Retour au site ↗",
     "privacyPageKicker": "INFORMATIONS SUR LA PROTECTION DES DONNÉES",
@@ -889,7 +889,7 @@ window.OUR_STORY_I18N = {
     "privacyNoteP": "Il sito necessita di uno spazio privato e di una verifica sulla protezione dei dati prima di accettare file reali.",
     "formTag": "MODULO DI PARTECIPAZIONE",
     "formStatus": "Invio privato",
-    "setupWarning": "Anteprima: gli invii sono disattivati fino alla configurazione dello spazio privato e alla verifica dei documenti sulla privacy.",
+    "setupWarning": "La raccolta è aperta. I file vengono inviati solo dopo aver compilato il modulo, accettato l’informativa e superato la verifica.",
     "formStep1": "Scegli la conversazione",
     "formDrop": "Scegli un file .txt o .zip",
     "formMax": "Senza media · massimo 45 MB",
@@ -930,7 +930,7 @@ window.OUR_STORY_I18N = {
     "optionalCheckbox": "Sì, autorizzo facoltativamente la pubblicazione di risultati anonimi derivati dal mio contributo.",
     "optionalNo": "Se non spunti la casella, la tua preferenza sarà di NON autorizzare tale pubblicazione.",
     "sendButton": "Invia la mia conversazione",
-    "formDisclaimer": "Condividere una chat può coinvolgere dati personali di terzi. Evita informazioni intime, sensibili o identificabili e consulta l'informativa sulla privacy.",
+    "formDisclaimer": "Prima di condividere una chat, elimina nomi, numeri di telefono, informazioni intime o sensibili e dati di minori. Se non puoi farlo, non inviare il file. Puoi giocare senza donare.",
     "successTitle": "Contributo ricevuto!",
     "successDesc": "Conserva questo codice per chiedere la rimozione del tuo contributo.",
     "copyButton": "Copia",
@@ -954,7 +954,7 @@ window.OUR_STORY_I18N = {
     "footerPrivacy": "Privacy",
     "footerWithdraw": "Ritirare una chat",
     "footerIndep": "Progetto indipendente da WhatsApp e Meta.",
-    "footerDraft": "Versione di prova. Non riceve conversazioni reali.",
+    "footerDraft": "Raccolta aperta · Ricerca non commerciale",
     "footerCopyright": "Ricerca linguistica non commerciale.",
     "backToSite": "Torna al sito ↗",
     "privacyPageKicker": "INFORMAZIONI SULLA PROTEZIONE DEI DATI",
@@ -1071,7 +1071,7 @@ window.OUR_STORY_I18N = {
     "privacyNoteP": "Bevor echte Dateien angenommen werden, braucht die Website einen privaten Speicher und eine Datenschutzprüfung.",
     "formTag": "TEILNAHMEFORMULAR",
     "formStatus": "Privater Upload",
-    "setupWarning": "Vorschau: Uploads sind deaktiviert, bis der private Speicher eingerichtet und die Datenschutzhinweise geprüft wurden.",
+    "setupWarning": "Die Einsendung ist geöffnet. Dateien werden erst nach Ausfüllen des Formulars, Zustimmung zu den Datenschutzhinweisen und Sicherheitsprüfung übertragen.",
     "formStep1": "Unterhaltung auswählen",
     "formDrop": ".txt- oder .zip-Datei auswählen",
     "formMax": "Ohne Medien · maximal 45 MB",
@@ -1112,7 +1112,7 @@ window.OUR_STORY_I18N = {
     "optionalCheckbox": "Ja, ich erlaube freiwillig die Veröffentlichung anonymer Ergebnisse aus meinem Beitrag.",
     "optionalNo": "Wenn du das Kästchen nicht aktivierst, gilt dein Wunsch als KEINE Erlaubnis für diese Veröffentlichung.",
     "sendButton": "Unterhaltung senden",
-    "formDisclaimer": "Das Teilen eines Chats kann personenbezogene Daten Dritter betreffen. Vermeide intime, sensible oder identifizierende Informationen und lies die Datenschutzhinweise.",
+    "formDisclaimer": "Entferne vor dem Teilen Namen, Telefonnummern, intime oder sensible Angaben und Daten Minderjähriger. Ist das nicht möglich, lade den Chat nicht hoch. Das Spiel ist auch ohne Spende nutzbar.",
     "successTitle": "Beitrag eingegangen!",
     "successDesc": "Bewahre diesen Code auf, um die Löschung deines Beitrags beantragen zu können.",
     "copyButton": "Kopieren",
@@ -1136,7 +1136,7 @@ window.OUR_STORY_I18N = {
     "footerPrivacy": "Datenschutz",
     "footerWithdraw": "Chat zurückziehen",
     "footerIndep": "Unabhängiges Projekt, nicht mit WhatsApp oder Meta verbunden.",
-    "footerDraft": "Testversion. Keine Annahme echter Chats.",
+    "footerDraft": "Einsendungen geöffnet · Nichtkommerzielle Forschung",
     "footerCopyright": "Nichtkommerzielle Sprachforschung.",
     "backToSite": "Zurück zur Website ↗",
     "privacyPageKicker": "INFORMATIONEN ZUM DATENSCHUTZ",
