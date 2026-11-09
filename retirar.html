@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#203e39">
+<title>Our Story · Retirar aportación</title>
+<style>
+:root{font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:#203d39;background:#fbf8f0;font-synthesis:none}*{box-sizing:border-box}body{margin:0;line-height:1.7}
+main{width:min(660px,calc(100% - 32px));margin:clamp(24px,6vw,70px) auto;padding:clamp(24px,5vw,50px);background:#fffefa;border-radius:24px;border:1px solid #dbe6dc;box-shadow:0 18px 55px #203c3915}
+a{color:#315f4d}.brand{font-family:Georgia,serif;font-size:28px;text-decoration:none;font-weight:800}.brand span{font-weight:400;font-style:italic;color:#bd855e}
+h1{font-family:Georgia,serif;font-size:clamp(40px,6vw,60px);font-weight:500;line-height:1.1;letter-spacing:-.05em;margin:30px 0 20px}
+p{color:#5d7066}label{display:block;margin-top:22px;font-weight:750;font-size:14px}
+input{margin-top:9px;width:100%;padding:15px 14px;border-radius:12px;border:1px solid #adc4b0;font:inherit;letter-spacing:.02em}
+button{border:0;border-radius:40px;padding:13px 22px;background:#254b40;color:#fff;font:inherit;cursor:pointer;font-weight:750;margin-top:20px}
+button:disabled{opacity:.5;cursor:wait}nav{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}
+select{border-radius:8px;background:#e8f0e9;border:1px solid #cedccc;padding:9px}
+#status{padding:14px;border-radius:12px;background:#eff5ef;margin-top:20px;white-space:pre-wrap;display:none}#status.visible{display:block}#status.error{background:#fff0e8;color:#8a3c28}#status.success{background:#e6f3e7;color:#225536}
+small{display:block;color:#63776b;margin-top:24px}
+</style>
+</head>
+<body><main>
+<nav><a href="index.html" class="brand">our<span>story</span>.</a><select id="lang" aria-label="Idioma"><option value="es">Español</option><option value="en">English</option><option value="pt">Português</option><option value="fr">Français</option><option value="it">Italiano</option><option value="de">Deutsch</option></select></nav>
+<h1 id="headline">Retirar tu aportación</h1>
+<p id="description">Puedes solicitar la eliminación del archivo de conversación que compartiste con Our Story. Necesitas el código de retirada que recibiste al enviar el chat. La eliminación de archivos almacenados no afecta a los datos ya anonimizados de forma irreversible.</p>
+<form id="withdraw-form">
+<label for="code" id="codeLabel">Código de retirada</label>
+<input id="code" name="withdrawalCode" autocomplete="off" placeholder="STORY-XXXXXXXX-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" spellcheck="false" required maxlength="47" minlength="47" pattern="STORY-[A-Fa-f0-9]{8}-[A-Fa-f0-9]{32}">
+<button type="submit" id="submit">Eliminar mi conversación</button>
+</form>
+<div id="status" role="status" aria-live="polite"></div>
+<small id="note">Este formulario no requiere que la recepción de nuevas conversaciones esté abierta. Si has perdido tu código o tienes otra consulta sobre tus datos, escribe a <a href="mailto:aranzazu.quintana@uca.es">aranzazu.quintana@uca.es</a>.</small>
+<p><a href="privacidad.html" id="policy">Consulta la política de privacidad</a></p>
+</main>
+<script>
+const dict={
+ es:{headline:'Retirar tu aportación',description:'Puedes solicitar la eliminación del archivo de conversación que compartiste con Our Story. Necesitas el código de retirada que recibiste al enviar el chat. La eliminación no puede deshacer una anonimización irreversible ya realizada.',codeLabel:'Código de retirada',submit:'Eliminar mi conversación',note:'Si has perdido tu código o tienes otra consulta sobre tus datos, escribe a',policy:'Consulta la política de privacidad',sending:'Tramitando la solicitud…',success:'El archivo asociado a tu código se ha eliminado del almacenamiento privado. Se ha marcado la aportación como retirada.',notFound:'No encontramos una aportación asociada a ese código. Compruébalo o contacta por correo.',invalid:'El código no tiene el formato esperado.',failure:'No se pudo completar la eliminación. Inténtalo de nuevo o contacta por correo.'},
+ en:{headline:'Withdraw your contribution',description:'You can request deletion of the chat file you donated to Our Story using the withdrawal code provided on submission. Deleting the file cannot reverse any irreversible anonymisation already completed.',codeLabel:'Withdrawal code',submit:'Delete my conversation',note:'If you lost your code or have questions about your data, email',policy:'Read the privacy notice',sending:'Processing request…',success:'The file associated with your code has been deleted from private storage, and your contribution is marked as withdrawn.',notFound:'No contribution matches this code. Check it or contact us by email.',invalid:'The code format is invalid.',failure:'We could not complete the deletion. Please try again or email us.'},
+ pt:{headline:'Retirar a tua contribuição',description:'Podes solicitar a eliminação do ficheiro de conversa partilhado com o Our Story usando o código de retirada recebido após o envio. A eliminação não reverte uma anonimização irreversível já efetuada.',codeLabel:'Código de retirada',submit:'Eliminar a minha conversa',note:'Se perdeste o código ou tens questões sobre os teus dados, escreve para',policy:'Consultar a política de privacidade',sending:'A processar o pedido…',success:'O ficheiro correspondente ao teu código foi eliminado do armazenamento privado e a contribuição foi marcada como retirada.',notFound:'Não foi encontrada uma contribuição com este código.',invalid:'Formato do código inválido.',failure:'Não foi possível concluir a eliminação. Tenta novamente ou escreve-nos.'},
+ fr:{headline:'Retirer votre contribution',description:'Vous pouvez demander la suppression du fichier de conversation partagé avec Our Story à l’aide du code de retrait remis lors de l’envoi. La suppression ne permet pas d’annuler une anonymisation irréversible déjà effectuée.',codeLabel:'Code de retrait',submit:'Supprimer ma conversation',note:'Si vous avez perdu votre code ou pour toute question, écrivez à',policy:'Consulter la politique de confidentialité',sending:'Traitement en cours…',success:'Le fichier associé à votre code a été supprimé du stockage privé. Votre contribution est marquée comme retirée.',notFound:'Aucune contribution ne correspond à ce code.',invalid:'Format de code invalide.',failure:'La suppression a échoué. Réessayez ou écrivez-nous.'},
+ it:{headline:'Ritirare il tuo contributo',description:'Puoi richiedere l’eliminazione del file della chat inviato a Our Story usando il codice di ritiro ricevuto al momento dell’invio. L’eliminazione non può annullare un’anonimizzazione irreversibile già effettuata.',codeLabel:'Codice di ritiro',submit:'Elimina la mia conversazione',note:'Se hai perso il codice o hai domande sui tuoi dati, scrivi a',policy:'Consulta l’informativa sulla privacy',sending:'Elaborazione in corso…',success:'Il file associato al codice è stato rimosso dallo spazio privato. Il contributo risulta ritirato.',notFound:'Non esiste un contributo associato a questo codice.',invalid:'Formato del codice non valido.',failure:'Impossibile completare l’eliminazione. Riprova o scrivici.'},
+ de:{headline:'Beitrag zurückziehen',description:'Du kannst die Löschung der Chatdatei beantragen, die du mit Our Story geteilt hast. Dazu brauchst du den Rückzugscode aus der Einsendebestätigung. Bereits unwiderruflich anonymisierte Daten lassen sich durch die Löschung nicht rückgängig machen.',codeLabel:'Rückzugscode',submit:'Meine Unterhaltung löschen',note:'Wenn du deinen Code verloren hast oder Fragen zu deinen Daten hast, schreib an',policy:'Datenschutzhinweise lesen',sending:'Anfrage wird bearbeitet…',success:'Die zu deinem Code gehörende Datei wurde aus dem privaten Speicher gelöscht und der Beitrag als zurückgezogen markiert.',notFound:'Zu diesem Code wurde kein Beitrag gefunden.',invalid:'Ungültiges Codeformat.',failure:'Die Löschung konnte nicht abgeschlossen werden. Bitte versuche es erneut oder schreib uns.'}
+};
+const $=id=>document.getElementById(id);let language='es';
+function translate(next){
+ language=dict[next]?next:'es';const t=dict[language];document.documentElement.lang=language;$('lang').value=language;
+ for(const id of ['headline','description','codeLabel','submit','policy'])$(id).textContent=t[id];
+ $('note').firstChild.textContent=t.note+' ';
+ $('policy').href='privacidad.html?lang='+language;
+}
+$('lang').addEventListener('change',e=>translate(e.target.value));
+translate(new URLSearchParams(location.search).get('lang')||'es');
+function show(message,type){const el=$('status');el.className='visible '+type;el.textContent=message;}
+$('withdraw-form').addEventListener('submit',async e=>{
+ e.preventDefault();const t=dict[language],code=$('code').value.trim().toUpperCase();
+ if(!/^STORY-[A-F0-9]{8}-[A-F0-9]{32}$/.test(code)){show(t.invalid,'error');return;}
+ $('submit').disabled=true;show(t.sending,'');
+ try{
+  const controller=new AbortController();const timer=setTimeout(()=>controller.abort(),20000);
+  let res;try{
+   res=await fetch('https://wklvosizkmoslaetxhqc.supabase.co/functions/v1/withdraw-donation',{
+    method:'POST',mode:'cors',cache:'no-store',signal:controller.signal,headers:{'Content-Type':'application/json','apikey':'sb_publishable_RlaWROXaaV08Hmm_-9kc0A_aTl0Htku'},
+    body:JSON.stringify({withdrawalCode:code})
+   });
+  }finally{clearTimeout(timer)}
+  const data=await res.json();
+  if(res.ok && data.ok===true && data.status==='withdrawn'){
+    $('code').value='';show(t.success,'success');
+  }else if(res.status===404)show(t.notFound,'error');
+  else if(res.status===400)show(t.invalid,'error');
+  else show(t.failure,'error');
+ }catch{show(t.failure,'error');}finally{$('submit').disabled=false;}
+});
+</script></body></html>
